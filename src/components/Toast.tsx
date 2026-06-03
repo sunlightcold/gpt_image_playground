@@ -35,7 +35,7 @@ export default function Toast() {
   }
 
   return (
-    <div className="fixed bottom-24 left-1/2 z-[120] pointer-events-none toast-enter">
+    <div className="fixed top-[calc(var(--safe-area-top)+1rem)] left-1/2 z-[120] pointer-events-none toast-enter">
       <div className="flex items-center gap-2.5 w-max max-w-[calc(100vw-32px)] sm:max-w-[min(44rem,80vw)] px-5 py-3 bg-white dark:bg-zinc-900 border-2 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] text-sm font-bold text-gray-800 dark:text-gray-200 rounded-none">
         <span className="flex-shrink-0">{getIcon()}</span>
         <span className="leading-5 whitespace-pre-line text-center">{toast.message}</span>
