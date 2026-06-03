@@ -569,12 +569,12 @@ describe('custom providers', () => {
     expect(profile.model).toBe('custom-source-model')
   })
 
-  it('enables streaming by default and preserves partial image count', () => {
-    expect(createDefaultOpenAIProfile().streamImages).toBe(true)
+  it('disables upstream streaming by default and preserves partial image count', () => {
+    expect(createDefaultOpenAIProfile().streamImages).toBe(false)
     expect(createDefaultOpenAIProfile().streamPartialImages).toBe(1)
-    expect(DEFAULT_SETTINGS.streamImages).toBe(true)
+    expect(DEFAULT_SETTINGS.streamImages).toBe(false)
     expect(DEFAULT_SETTINGS.streamPartialImages).toBe(1)
-    expect(DEFAULT_SETTINGS.profiles[0].streamImages).toBe(true)
+    expect(DEFAULT_SETTINGS.profiles[0].streamImages).toBe(false)
     expect(DEFAULT_SETTINGS.profiles[0].streamPartialImages).toBe(1)
 
     const normalized = normalizeSettings({
@@ -595,6 +595,37 @@ describe('custom providers', () => {
     })
 
     expect(clamped.profiles[0].streamPartialImages).toBe(3)
+  })
+
+  it('upgrades legacy default streaming to disabled for the default proxy API', () => {
+    const normalized = normalizeSettings({
+      streamImages: true,
+      profiles: [
+        {
+          ...DEFAULT_SETTINGS.profiles[0],
+          streamImages: true,
+        },
+      ],
+      activeProfileId: DEFAULT_OPENAI_PROFILE_ID,
+    })
+
+    expect(normalized.streamImages).toBe(false)
+    expect(normalized.profiles[0].streamImages).toBe(false)
+  })
+
+  it('preserves explicitly enabled streaming for custom OpenAI-compatible URLs', () => {
+    const normalized = normalizeSettings({
+      profiles: [
+        createDefaultOpenAIProfile({
+          baseUrl: 'https://api.example.com/v1',
+          streamImages: true,
+        }),
+      ],
+      activeProfileId: DEFAULT_OPENAI_PROFILE_ID,
+    })
+
+    expect(normalized.streamImages).toBe(true)
+    expect(normalized.profiles[0].streamImages).toBe(true)
   })
 
   it('enables Agent submit auto scroll by default', () => {

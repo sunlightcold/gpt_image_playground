@@ -14,13 +14,15 @@ import type {
   ReferenceImageEditAction,
 } from '../types'
 import { DEFAULT_AGENT_MAX_TOOL_ROUNDS, DEFAULT_STREAM_PARTIAL_IMAGES, DEFAULT_ZIP_DOWNLOAD_ROUTES, ZIP_DOWNLOAD_ROUTE_VALUES } from '../types'
-import { isApiProxyDynamic, shouldUseApiProxy } from './devProxy'
+import { isApiProxyDynamic, normalizeBaseUrl, shouldUseApiProxy } from './devProxy'
 import { readRuntimeEnv } from './runtimeEnv'
 import { isImportableConfigUrl } from './customProviderConfigUrl'
 
 const OPENAI_DEFAULT_BASE_URL = 'https://api.proxy2it.com/v1'
 const RAW_DEFAULT_API_URL = readRuntimeEnv(import.meta.env.VITE_DEFAULT_API_URL)
 const DEFAULT_OPENAI_API_PROXY = true
+const DEFAULT_OPENAI_STREAM_IMAGES = false
+const LEGACY_DEFAULT_OPENAI_STREAM_IMAGES = true
 const DOCKER_DEPLOYMENT = readRuntimeEnv(import.meta.env.VITE_DOCKER_DEPLOYMENT) === 'true'
 const DEFAULT_BASE_URL = isImportableConfigUrl(RAW_DEFAULT_API_URL)
   ? ''
@@ -299,7 +301,7 @@ export function createDefaultOpenAIProfile(overrides: Partial<ApiProfile> = {}):
     apiMode: 'images',
     codexCli: false,
     apiProxy: DEFAULT_OPENAI_API_PROXY,
-    streamImages: true,
+    streamImages: DEFAULT_OPENAI_STREAM_IMAGES,
     streamPartialImages: DEFAULT_STREAM_PARTIAL_IMAGES,
     ...overrides,
   }
@@ -347,7 +349,7 @@ export function switchApiProfileProvider(profile: ApiProfile, provider: ApiProvi
     codexCli: savedDraft?.codexCli ?? profile.codexCli,
     apiProxy: savedDraft?.apiProxy ?? DEFAULT_OPENAI_API_PROXY,
     responseFormatB64Json: savedDraft?.responseFormatB64Json,
-    streamImages: savedDraft?.streamImages ?? (profile.provider === 'openai' ? profile.streamImages : true),
+    streamImages: savedDraft?.streamImages ?? (profile.provider === 'openai' ? profile.streamImages : DEFAULT_OPENAI_STREAM_IMAGES),
     streamPartialImages: savedDraft?.streamPartialImages ?? (profile.provider === 'openai' ? profile.streamPartialImages : DEFAULT_STREAM_PARTIAL_IMAGES),
     providerDrafts,
   }
@@ -383,6 +385,11 @@ function normalizeProviderDrafts(input: unknown, customProviderIds: Set<string>)
   return entries.length ? Object.fromEntries(entries) : undefined
 }
 
+function isDefaultOpenAIBaseUrl(baseUrl: unknown): boolean {
+  if (typeof baseUrl !== 'string' || !baseUrl.trim()) return true
+  return normalizeBaseUrl(baseUrl) === normalizeBaseUrl(OPENAI_DEFAULT_BASE_URL)
+}
+
 export function normalizeApiProfile(input: unknown, fallback?: Partial<ApiProfile>, customProviderIds = new Set<string>()): ApiProfile {
   const record = input && typeof input === 'object' ? input as Record<string, unknown> : {}
   const rawProvider = typeof record.provider === 'string' ? record.provider : ''
@@ -395,6 +402,11 @@ export function normalizeApiProfile(input: unknown, fallback?: Partial<ApiProfil
   const shouldUpgradeLegacyDefaultTimeout =
     provider === 'openai' &&
     rawTimeout === LEGACY_DEFAULT_API_TIMEOUT &&
+    (typeof record.id !== 'string' || !record.id.trim() || record.id === DEFAULT_OPENAI_PROFILE_ID)
+  const shouldUpgradeLegacyDefaultStreaming =
+    provider === 'openai' &&
+    record.streamImages === LEGACY_DEFAULT_OPENAI_STREAM_IMAGES &&
+    isDefaultOpenAIBaseUrl(rawBaseUrl) &&
     (typeof record.id !== 'string' || !record.id.trim() || record.id === DEFAULT_OPENAI_PROFILE_ID)
 
   return {
@@ -410,7 +422,11 @@ export function normalizeApiProfile(input: unknown, fallback?: Partial<ApiProfil
     codexCli: Boolean(record.codexCli),
     apiProxy: typeof record.apiProxy === 'boolean' ? record.apiProxy : defaultApiProxy,
     responseFormatB64Json: record.responseFormatB64Json === true ? true : undefined,
-    streamImages: typeof record.streamImages === 'boolean' ? record.streamImages : defaults.streamImages,
+    streamImages: shouldUpgradeLegacyDefaultStreaming
+      ? DEFAULT_OPENAI_STREAM_IMAGES
+      : typeof record.streamImages === 'boolean'
+        ? record.streamImages
+        : defaults.streamImages,
     streamPartialImages: normalizeStreamPartialImages(record.streamPartialImages, defaults.streamPartialImages),
     providerDrafts: normalizeProviderDrafts(record.providerDrafts, customProviderIds),
   }
@@ -444,7 +460,11 @@ export function normalizeSettings(input: Partial<AppSettings> | unknown): AppSet
     codexCli: Boolean(record.codexCli),
     apiProxy: typeof record.apiProxy === 'boolean' ? record.apiProxy : DEFAULT_OPENAI_API_PROXY,
     responseFormatB64Json: record.responseFormatB64Json === true ? true : undefined,
-    streamImages: typeof record.streamImages === 'boolean' ? record.streamImages : true,
+    streamImages: record.streamImages === LEGACY_DEFAULT_OPENAI_STREAM_IMAGES && isDefaultOpenAIBaseUrl(record.baseUrl)
+      ? DEFAULT_OPENAI_STREAM_IMAGES
+      : typeof record.streamImages === 'boolean'
+        ? record.streamImages
+        : DEFAULT_OPENAI_STREAM_IMAGES,
     streamPartialImages: normalizeStreamPartialImages(record.streamPartialImages),
   })
   const profiles = Array.isArray(record.profiles) && record.profiles.length
@@ -566,6 +586,11 @@ export function getActiveApiProfile(settings: Partial<AppSettings> | unknown): A
     rawTimeout === LEGACY_DEFAULT_API_TIMEOUT &&
     profile.provider === 'openai' &&
     profile.id === DEFAULT_OPENAI_PROFILE_ID
+  const shouldIgnoreLegacyTopLevelStreaming =
+    record.streamImages === LEGACY_DEFAULT_OPENAI_STREAM_IMAGES &&
+    profile.provider === 'openai' &&
+    profile.id === DEFAULT_OPENAI_PROFILE_ID &&
+    isDefaultOpenAIBaseUrl(record.baseUrl ?? profile.baseUrl)
 
   return {
     ...profile,
@@ -576,7 +601,11 @@ export function getActiveApiProfile(settings: Partial<AppSettings> | unknown): A
     apiMode: record.apiMode === 'images' || record.apiMode === 'responses' ? record.apiMode : profile.apiMode,
     codexCli: typeof record.codexCli === 'boolean' ? record.codexCli : profile.codexCli,
     apiProxy: typeof record.apiProxy === 'boolean' ? record.apiProxy : profile.apiProxy,
-    streamImages: typeof record.streamImages === 'boolean' ? record.streamImages : profile.streamImages,
+    streamImages: shouldIgnoreLegacyTopLevelStreaming
+      ? profile.streamImages
+      : typeof record.streamImages === 'boolean'
+        ? record.streamImages
+        : profile.streamImages,
     streamPartialImages: normalizeStreamPartialImages(record.streamPartialImages, profile.streamPartialImages),
   }
 }
@@ -600,7 +629,7 @@ function isDefaultOpenAIProfile(profile: ApiProfile): boolean {
     profile.apiMode === 'images' &&
     profile.codexCli === false &&
     profile.apiProxy === DEFAULT_OPENAI_API_PROXY &&
-    profile.streamImages === true &&
+    profile.streamImages === DEFAULT_OPENAI_STREAM_IMAGES &&
     profile.streamPartialImages === DEFAULT_STREAM_PARTIAL_IMAGES
 }
 
@@ -756,7 +785,7 @@ export const DEFAULT_SETTINGS: AppSettings = normalizeSettings({
   apiMode: 'images',
   codexCli: false,
   apiProxy: DEFAULT_OPENAI_API_PROXY,
-  streamImages: true,
+  streamImages: DEFAULT_OPENAI_STREAM_IMAGES,
   streamPartialImages: DEFAULT_STREAM_PARTIAL_IMAGES,
   customProviders: [],
   clearInputAfterSubmit: false,

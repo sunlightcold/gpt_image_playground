@@ -119,10 +119,12 @@ describe('callImageApi', () => {
       settings: {
         ...DEFAULT_SETTINGS,
         apiKey: 'test-key',
+        baseUrl: 'https://api.example.com/v1',
         streamImages: true,
         streamPartialImages: 3,
         profiles: DEFAULT_SETTINGS.profiles.map((profile) => ({
           ...profile,
+          baseUrl: 'https://api.example.com/v1',
           apiKey: 'test-key',
           streamImages: true,
           streamPartialImages: 3,
@@ -172,9 +174,11 @@ describe('callImageApi', () => {
       settings: {
         ...DEFAULT_SETTINGS,
         apiKey: 'test-key',
+        baseUrl: 'https://api.example.com/v1',
         streamImages: true,
         profiles: DEFAULT_SETTINGS.profiles.map((profile) => ({
           ...profile,
+          baseUrl: 'https://api.example.com/v1',
           apiKey: 'test-key',
           streamImages: true,
         })),
@@ -213,9 +217,11 @@ describe('callImageApi', () => {
       settings: {
         ...DEFAULT_SETTINGS,
         apiKey: 'test-key',
+        baseUrl: 'https://api.example.com/v1',
         streamImages: true,
         profiles: DEFAULT_SETTINGS.profiles.map((profile) => ({
           ...profile,
+          baseUrl: 'https://api.example.com/v1',
           apiKey: 'test-key',
           streamImages: true,
         })),
@@ -262,10 +268,12 @@ describe('callImageApi', () => {
       settings: {
         ...DEFAULT_SETTINGS,
         apiKey: 'test-key',
+        baseUrl: 'https://api.example.com/v1',
         streamImages: true,
         streamPartialImages: 1,
         profiles: DEFAULT_SETTINGS.profiles.map((profile) => ({
           ...profile,
+          baseUrl: 'https://api.example.com/v1',
           apiKey: 'test-key',
           streamImages: true,
           streamPartialImages: 1,
@@ -315,11 +323,13 @@ describe('callImageApi', () => {
       settings: {
         ...DEFAULT_SETTINGS,
         apiKey: 'test-key',
+        baseUrl: 'https://api.example.com/v1',
         apiMode: 'responses',
         streamImages: true,
         streamPartialImages: 1,
         profiles: DEFAULT_SETTINGS.profiles.map((profile) => ({
           ...profile,
+          baseUrl: 'https://api.example.com/v1',
           apiKey: 'test-key',
           apiMode: 'responses',
           streamImages: true,
@@ -389,10 +399,12 @@ describe('callImageApi', () => {
       settings: {
         ...DEFAULT_SETTINGS,
         apiKey: 'test-key',
+        baseUrl: 'https://api.example.com/v1',
         apiMode: 'responses',
         streamImages: true,
         profiles: DEFAULT_SETTINGS.profiles.map((profile) => ({
           ...profile,
+          baseUrl: 'https://api.example.com/v1',
           apiKey: 'test-key',
           apiMode: 'responses',
           streamImages: true,
