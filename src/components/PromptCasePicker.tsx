@@ -30,9 +30,8 @@ type CasePickerProps = {
 const MAX_VISIBLE_CASES = 72
 const ALL_OPTION = { value: ALL_CASE_FILTER_VALUE, label: '全部' }
 
-function filterButtonClass(active: boolean, size: 'md' | 'sm' = 'md') {
-  const sizeClass = size === 'md' ? 'min-h-8 px-2.5 py-1.5 text-xs' : 'min-h-7 px-2 py-1 text-[11px]'
-  return `${sizeClass} shrink-0 rounded-none border font-black leading-tight transition-all ${
+function filterButtonClass(active: boolean) {
+  return `min-h-7 shrink-0 rounded-none border px-2 py-1 text-[11px] font-black leading-tight transition-all ${
     active
       ? 'border-black bg-[#FFE66D] text-slate-900 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-yellow-400 dark:text-black dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
       : 'border-slate-300 bg-white text-slate-600 hover:border-black hover:text-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400 dark:hover:border-white dark:hover:text-white'
@@ -162,7 +161,7 @@ export default function PromptCasePicker({
                   key={option.value}
                   type="button"
                   onClick={() => setStyle(option.value)}
-                  className={filterButtonClass(style === option.value, 'sm')}
+                  className={filterButtonClass(style === option.value)}
                 >
                   {option.label}
                 </button>
@@ -175,7 +174,7 @@ export default function PromptCasePicker({
                   key={option.value}
                   type="button"
                   onClick={() => setScene(option.value)}
-                  className={filterButtonClass(scene === option.value, 'sm')}
+                  className={filterButtonClass(scene === option.value)}
                 >
                   {option.label}
                 </button>
