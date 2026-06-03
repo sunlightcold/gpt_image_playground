@@ -47,6 +47,14 @@ function actionButtonClass(primary = false) {
   }`
 }
 
+function compactActionButtonClass(primary = false) {
+  return `inline-flex h-8 min-w-0 items-center justify-center rounded-none border-2 text-[11px] font-black transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 ${
+    primary
+      ? 'border-black bg-[#FFE66D] px-3 text-slate-900 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-yellow-400 dark:text-black dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
+      : 'w-8 shrink-0 border-black bg-white text-slate-900 hover:bg-slate-50 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700 dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
+  }`
+}
+
 export default function PromptCasePicker({
   onClose,
   onUseCase,
@@ -181,7 +189,7 @@ export default function PromptCasePicker({
             </div>
           ) : (
             <>
-              <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="mt-3 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
                 {visibleCases.map((caseItem) => (
                   <CaseCard
                     key={caseItem.id}
@@ -242,11 +250,11 @@ function CaseCard({
   onUse: (caseItem: GptImage2Case) => void
 }) {
   return (
-    <article className="flex min-h-[360px] flex-col overflow-hidden rounded-none border-2 border-black bg-white transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-zinc-950 dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+    <article className="grid min-h-[144px] grid-cols-[96px_minmax(0,1fr)] gap-2 overflow-hidden rounded-none border-2 border-black bg-white p-2 transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-zinc-950 dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] sm:grid-cols-[104px_minmax(0,1fr)]">
       <button
         type="button"
         onClick={() => onOpen(caseItem)}
-        className="group relative block aspect-[4/5] w-full overflow-hidden bg-slate-950 text-left"
+        className="group relative block h-full min-h-[128px] overflow-hidden bg-slate-950 text-left"
       >
         <img
           src={caseItem.image}
@@ -254,17 +262,17 @@ function CaseCard({
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
         />
-        <span className="absolute left-2 top-2 rounded-none border border-white/30 bg-black/80 px-2 py-1 text-[11px] font-black text-white backdrop-blur">
-          案例 {caseItem.id}
+        <span className="absolute left-1.5 top-1.5 rounded-none border border-white/30 bg-black/80 px-1.5 py-0.5 text-[10px] font-black text-white backdrop-blur">
+          {caseItem.id}
         </span>
-        <span className="absolute bottom-2 right-2 hidden items-center gap-1 rounded-none border border-white/30 bg-black/80 px-2 py-1 text-[11px] font-black text-white backdrop-blur group-hover:inline-flex">
+        <span className="absolute bottom-1.5 right-1.5 hidden items-center gap-1 rounded-none border border-white/30 bg-black/80 px-1.5 py-0.5 text-[10px] font-black text-white backdrop-blur group-hover:inline-flex">
           <PhotoIcon className="h-3 w-3" />
           详情
         </span>
       </button>
 
-      <div className="flex flex-1 flex-col p-3">
-        <div className="mb-1 flex min-w-0 items-center justify-between gap-2 text-[11px] font-black text-slate-500 dark:text-gray-400">
+      <div className="flex min-w-0 flex-col">
+        <div className="mb-1 flex min-w-0 items-center justify-between gap-2 text-[10px] font-black text-slate-500 dark:text-gray-400">
           <span className="min-w-0 truncate">{getCaseCategoryLabel(caseItem.category)}</span>
           {caseItem.sourceUrl ? (
             <a
@@ -280,39 +288,56 @@ function CaseCard({
           )}
         </div>
 
-        <h4 className="line-clamp-2 text-sm font-black leading-snug text-slate-900 dark:text-white">
+        <h4 className="line-clamp-1 text-sm font-black leading-snug text-slate-900 dark:text-white">
           {caseItem.title}
         </h4>
 
-        <p className="mt-2 line-clamp-4 flex-1 whitespace-pre-wrap break-words rounded-none border border-slate-200 bg-slate-50 p-2 text-xs font-bold leading-relaxed text-slate-600 dark:border-zinc-800 dark:bg-zinc-900 dark:text-gray-300">
-          {caseItem.promptPreview || getCasePromptPreview(caseItem.prompt, 180)}
+        <p className="mt-1 line-clamp-2 break-words rounded-none border border-slate-200 bg-slate-50 px-2 py-1.5 text-[11px] font-bold leading-relaxed text-slate-600 dark:border-zinc-800 dark:bg-zinc-900 dark:text-gray-300">
+          {caseItem.promptPreview || getCasePromptPreview(caseItem.prompt, 120)}
         </p>
 
-        <div className="mt-2 flex flex-wrap gap-1">
-          {getCaseTags(caseItem).map((tag) => (
+        <div className="mt-1.5 flex flex-wrap gap-1">
+          {getCaseTags(caseItem, 3).map((tag) => (
             <span
               key={`${caseItem.id}-${tag}`}
-              className="rounded-none border border-slate-300 bg-white px-1.5 py-0.5 text-[10px] font-bold text-slate-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400"
+              className="rounded-none border border-slate-300 bg-white px-1 py-0.5 text-[9px] font-bold leading-tight text-slate-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400"
             >
               {getCaseTagLabel(tag)}
             </span>
           ))}
         </div>
 
-        <div className="mt-3 grid grid-cols-2 gap-2">
-          <button type="button" onClick={() => onUse(caseItem)} className={actionButtonClass(true)}>
+        <div className="mt-auto flex items-center gap-1.5 pt-2">
+          <button type="button" onClick={() => onUse(caseItem)} className={compactActionButtonClass(true)}>
             使用
           </button>
-          <button type="button" onClick={() => onCopy(caseItem)} className={actionButtonClass()}>
+          <button
+            type="button"
+            onClick={() => onCopy(caseItem)}
+            className={compactActionButtonClass()}
+            aria-label={copied ? 'Prompt 已复制' : '复制 Prompt'}
+            title={copied ? '已复制' : '复制 Prompt'}
+          >
             <CopyIcon className="h-3.5 w-3.5" />
-            {copied ? '已复制' : '复制'}
           </button>
-          <button type="button" onClick={() => onOpen(caseItem)} className={actionButtonClass()}>
-            详情
+          <button
+            type="button"
+            onClick={() => onOpen(caseItem)}
+            className={compactActionButtonClass()}
+            aria-label="查看详情"
+            title="查看详情"
+          >
+            <PhotoIcon className="h-3.5 w-3.5" />
           </button>
-          <a href={caseItem.githubUrl} target="_blank" rel="noreferrer" className={actionButtonClass()}>
+          <a
+            href={caseItem.githubUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={compactActionButtonClass()}
+            aria-label="打开 GitHub 来源"
+            title="打开 GitHub 来源"
+          >
             <GithubIcon className="h-3.5 w-3.5" />
-            GitHub
           </a>
         </div>
       </div>
