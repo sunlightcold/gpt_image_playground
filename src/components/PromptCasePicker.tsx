@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from 'react'
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import {
   GPT_IMAGE_2_CASE_CATEGORIES,
@@ -228,10 +228,40 @@ export default function PromptCasePicker({
 }
 
 function FilterGroup({ label, children }: { label: string; children: ReactNode }) {
+  const rowRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    const row = rowRef.current
+    if (!row) return undefined
+    const rowEl = row
+
+    function handleWheel(event: WheelEvent) {
+      const horizontalDelta = Math.abs(event.deltaX)
+      const verticalDelta = Math.abs(event.deltaY)
+      const primaryDelta = horizontalDelta > verticalDelta ? event.deltaX : event.deltaY
+      const maxLeft = rowEl.scrollWidth - rowEl.clientWidth
+
+      if (maxLeft <= 0) return
+
+      const nextLeft = Math.max(0, Math.min(maxLeft, rowEl.scrollLeft + primaryDelta))
+      if (nextLeft === rowEl.scrollLeft) return
+
+      event.preventDefault()
+      event.stopPropagation()
+      rowEl.scrollLeft = nextLeft
+    }
+
+    rowEl.addEventListener('wheel', handleWheel, { passive: false })
+    return () => rowEl.removeEventListener('wheel', handleWheel)
+  }, [])
+
   return (
     <section className="min-w-0">
       <div className="mb-1.5 text-[10px] font-black text-slate-400 dark:text-gray-500">{label}</div>
-      <div className="hide-scrollbar -mx-1 flex gap-1.5 overflow-x-auto overscroll-x-contain px-1 pb-1 whitespace-nowrap">
+      <div
+        ref={rowRef}
+        className="hide-scrollbar -mx-1 flex gap-1.5 overflow-x-auto overscroll-x-contain px-1 pb-1 whitespace-nowrap"
+      >
         {children}
       </div>
     </section>
