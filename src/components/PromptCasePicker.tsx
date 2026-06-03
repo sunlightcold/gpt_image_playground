@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import {
   GPT_IMAGE_2_CASE_CATEGORIES,
@@ -31,8 +31,8 @@ const MAX_VISIBLE_CASES = 72
 const ALL_OPTION = { value: ALL_CASE_FILTER_VALUE, label: '全部' }
 
 function filterButtonClass(active: boolean, size: 'md' | 'sm' = 'md') {
-  const heightClass = size === 'md' ? 'h-8 px-2.5 text-xs' : 'h-7 px-2 text-[11px]'
-  return `${heightClass} shrink-0 rounded-none border font-black transition-all ${
+  const sizeClass = size === 'md' ? 'min-h-8 px-2.5 py-1.5 text-xs' : 'min-h-7 px-2 py-1 text-[11px]'
+  return `${sizeClass} rounded-none border font-black leading-tight transition-all ${
     active
       ? 'border-black bg-[#FFE66D] text-slate-900 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-yellow-400 dark:text-black dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
       : 'border-slate-300 bg-white text-slate-600 hover:border-black hover:text-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400 dark:hover:border-white dark:hover:text-white'
@@ -81,13 +81,15 @@ export default function PromptCasePicker({
     <div
       data-no-drag-select
       className="fixed inset-x-0 z-40 flex justify-center pointer-events-none safe-area-x"
-      style={{ bottom: 'calc(var(--input-bar-clearance, 0px) + 12px)' }}
+      style={{
+        top: 12,
+        bottom: 'calc(var(--input-bar-clearance, 0px) + 12px)',
+      }}
     >
       <div
         role="dialog"
         aria-label="GPT-Image2 案例"
-        className="pointer-events-auto flex w-full max-w-6xl flex-col overflow-hidden rounded-none border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] animate-dropdown-up dark:border-white dark:bg-zinc-900 dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)]"
-        style={{ maxHeight: 'calc(100dvh - var(--input-bar-clearance, 0px) - 24px)' }}
+        className="pointer-events-auto flex h-full min-h-0 w-full max-w-6xl flex-col overflow-hidden rounded-none border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] animate-dropdown-up dark:border-white dark:bg-zinc-900 dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)]"
       >
         <div className="flex shrink-0 items-start justify-between gap-3 border-b-2 border-black px-3 py-3 dark:border-white sm:px-4">
           <div className="min-w-0">
@@ -121,72 +123,65 @@ export default function PromptCasePicker({
           </button>
         </div>
 
-        <div className="shrink-0 space-y-2 border-b-2 border-black p-3 dark:border-white sm:p-4">
-          <label className="block">
-            <span className="mb-1 block text-[11px] font-black text-slate-500 dark:text-gray-400">搜索案例</span>
-            <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="标题、来源、分类、标签或 Prompt 内容"
-              className="h-10 w-full rounded-none border-2 border-black bg-white px-3 text-sm font-bold text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-zinc-950 dark:text-gray-100 dark:placeholder:text-gray-500 dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]"
-            />
-          </label>
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-3 custom-scrollbar sm:p-4">
+          <div className="space-y-3 border-b-2 border-black pb-3 dark:border-white">
+            <label className="block">
+              <span className="mb-1 block text-[11px] font-black text-slate-500 dark:text-gray-400">搜索案例</span>
+              <input
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="标题、来源、分类、标签或 Prompt 内容"
+                className="min-h-10 w-full rounded-none border-2 border-black bg-white px-3 py-2 text-sm font-bold text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-zinc-950 dark:text-gray-100 dark:placeholder:text-gray-500 dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]"
+              />
+            </label>
 
-          <div className="hide-scrollbar -mx-1 flex gap-1 overflow-x-auto px-1 pb-1">
-            {[ALL_OPTION, ...GPT_IMAGE_2_CASE_CATEGORIES].map((option) => (
-              <button
-                key={option.value}
-                type="button"
-                onClick={() => setCategory(option.value)}
-                className={filterButtonClass(category === option.value)}
-              >
-                {option.label}
-              </button>
-            ))}
+            <FilterGroup label="分类">
+              {[ALL_OPTION, ...GPT_IMAGE_2_CASE_CATEGORIES].map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setCategory(option.value)}
+                  className={filterButtonClass(category === option.value)}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </FilterGroup>
+
+            <FilterGroup label="风格">
+              {[ALL_OPTION, ...GPT_IMAGE_2_CASE_STYLES].map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setStyle(option.value)}
+                  className={filterButtonClass(style === option.value, 'sm')}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </FilterGroup>
+
+            <FilterGroup label="场景">
+              {[ALL_OPTION, ...GPT_IMAGE_2_CASE_SCENES].map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setScene(option.value)}
+                  className={filterButtonClass(scene === option.value, 'sm')}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </FilterGroup>
           </div>
 
-          <div className="grid gap-2 sm:grid-cols-2">
-            <div className="min-w-0">
-              <div className="mb-1 text-[10px] font-black text-slate-400 dark:text-gray-500">风格</div>
-              <div className="hide-scrollbar -mx-1 flex gap-1 overflow-x-auto px-1 pb-1">
-                {[ALL_OPTION, ...GPT_IMAGE_2_CASE_STYLES].map((option) => (
-                  <button
-                    key={option.value}
-                    type="button"
-                    onClick={() => setStyle(option.value)}
-                    className={filterButtonClass(style === option.value, 'sm')}
-                  >
-                    {option.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="min-w-0">
-              <div className="mb-1 text-[10px] font-black text-slate-400 dark:text-gray-500">场景</div>
-              <div className="hide-scrollbar -mx-1 flex gap-1 overflow-x-auto px-1 pb-1">
-                {[ALL_OPTION, ...GPT_IMAGE_2_CASE_SCENES].map((option) => (
-                  <button
-                    key={option.value}
-                    type="button"
-                    onClick={() => setScene(option.value)}
-                    className={filterButtonClass(scene === option.value, 'sm')}
-                  >
-                    {option.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="min-h-0 flex-1 overflow-y-auto p-3 custom-scrollbar sm:p-4">
           {visibleCases.length === 0 ? (
-            <div className="flex min-h-[120px] items-center justify-center border-2 border-dashed border-slate-300 bg-slate-50 px-4 text-center text-sm font-bold text-slate-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400">
+            <div className="mt-3 flex min-h-[120px] items-center justify-center border-2 border-dashed border-slate-300 bg-slate-50 px-4 text-center text-sm font-bold text-slate-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400">
               没有找到匹配案例
             </div>
           ) : (
             <>
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {visibleCases.map((caseItem) => (
                   <CaseCard
                     key={caseItem.id}
@@ -222,6 +217,15 @@ export default function PromptCasePicker({
   )
 
   return createPortal(panel, document.body)
+}
+
+function FilterGroup({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <section className="min-w-0">
+      <div className="mb-1.5 text-[10px] font-black text-slate-400 dark:text-gray-500">{label}</div>
+      <div className="flex flex-wrap gap-1.5">{children}</div>
+    </section>
+  )
 }
 
 function CaseCard({
