@@ -158,24 +158,14 @@ const Header: React.FC = () => {
               {showFavoriteCollectionTitle ? (
                 <>
                   <span className="min-w-0 truncate text-xs font-black border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black px-2.5 py-0.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hidden" title={favoriteCollectionTitle}>{favoriteCollectionTitle}</span>
-                  <a
-                    href="https://github.com/CookSleep/gpt_image_playground"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden text-sm font-black border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-black dark:text-white px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:inline hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all active:translate-x-0 active:translate-y-0 active:shadow-none"
-                  >
+                  <span className="hidden text-sm font-black border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-black dark:text-white px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:inline select-none">
                     Image Playground
-                  </a>
+                  </span>
                 </>
               ) : (
-                <a
-                  href="https://github.com/CookSleep/gpt_image_playground"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-black border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-black dark:text-white px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all active:translate-x-0 active:translate-y-0 active:shadow-none"
-                >
+                <span className="text-sm font-black border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-black dark:text-white px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] select-none">
                   Image Playground
-                </a>
+                </span>
               )}
               {hasUpdate && latestRelease && (
                 <a

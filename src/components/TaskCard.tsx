@@ -20,7 +20,6 @@ interface Props {
 
 const TaskActionButton: React.FC<{
   tooltip: string
-  className: string
   disabled?: boolean
   onClick?: () => void
   children: ReactNode
@@ -530,7 +529,7 @@ const TaskCard: React.FC<Props> = ({
           </div>
 
           {/* 右侧信息区域 */}
-          <div className="flex-1 p-3.5 flex flex-col min-w-0">
+          <div className="flex-1 p-3.5 flex flex-col justify-between min-w-0 h-full">
             <div className="flex-1 min-h-0 mb-2 overflow-hidden">
               {showPendingPrompt ? (
                 <div className="leading-relaxed">
@@ -538,16 +537,17 @@ const TaskCard: React.FC<Props> = ({
                   <p className="mt-1 text-xs text-slate-400 dark:text-zinc-500">输入内容将在响应完成时接收</p>
                 </div>
               ) : (
-                <p className="text-sm text-slate-700 dark:text-zinc-200 leading-relaxed line-clamp-3 font-medium">
+                <p className="text-sm text-slate-700 dark:text-zinc-200 leading-snug line-clamp-2 font-medium">
                   {task.prompt || '(无提示词)'}
                 </p>
               )}
             </div>
-            <div className="mt-auto flex flex-col gap-1.5">
-              {/* 参数与信息：横向滚动 */}
+            <div className="flex flex-col min-w-0 mt-auto pt-2">
+              {/* 参数与信息：左侧滚动，和右侧操作区保持同一行对齐 */}
               <div 
+                data-card-meta-row
                 data-tag-scroll-area
-                className="flex overflow-x-auto hide-scrollbar pt-0.5 gap-1.5 whitespace-nowrap mask-edge-r min-w-0 pr-2"
+                className="flex h-6 min-w-0 w-full items-center gap-1.5 overflow-x-auto hide-scrollbar whitespace-nowrap mask-edge-r mb-2"
                 onTouchStart={(e) => e.stopPropagation()}
                 onTouchMove={(e) => e.stopPropagation()}
                 onTouchEnd={(e) => e.stopPropagation()}
@@ -556,11 +556,11 @@ const TaskCard: React.FC<Props> = ({
                 {/* API Name */}
                 {(task.apiProfileName || task.apiProvider) && (
                   <span 
-                    className="flex items-center gap-1 px-2 py-0.5 border border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-[10px] font-bold flex-shrink-0"
+                    className="flex h-6 items-center gap-1 px-2 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300 text-[10px] font-semibold flex-shrink-0"
                     title={task.apiProfileName || task.apiProvider}
                   >
-                    <CodeIcon className="w-3 h-3 flex-shrink-0 text-slate-400" />
-                    <span className="truncate max-w-[8rem]">
+                    <CodeIcon className="w-3.5 h-3.5 flex-shrink-0 text-slate-400 dark:text-zinc-500" />
+                    <span className="truncate max-w-[8rem] font-bold">
                       {task.apiProfileName || task.apiProvider}
                     </span>
                   </span>
@@ -568,21 +568,21 @@ const TaskCard: React.FC<Props> = ({
                 {/* Model */}
                 {showModel && (
                   <span 
-                    className="flex items-center gap-1 px-2 py-0.5 border border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-[10px] font-bold flex-shrink-0"
+                    className="flex h-6 items-center gap-1 px-2 rounded-md bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300 text-[10px] font-semibold flex-shrink-0"
                     title={task.apiModel}
                   >
-                    <svg className="w-3 h-3 flex-shrink-0 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3.5 h-3.5 flex-shrink-0 text-slate-400 dark:text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
-                    <span className="truncate max-w-[8rem]">
+                    <span className="truncate max-w-[8rem] font-bold">
                       {task.apiModel}
                     </span>
                   </span>
                 )}
                 {/* Mask */}
                 {task.maskImageId && (
-                  <span className="flex items-center gap-1 px-2 py-0.5 border border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black text-[10px] font-bold flex-shrink-0">
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="flex h-6 items-center gap-1 px-2 rounded-md bg-yellow-100 dark:bg-yellow-950/45 text-yellow-800 dark:text-yellow-300 text-[10px] font-bold flex-shrink-0">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                     </svg>
                     局部重绘
@@ -590,34 +590,35 @@ const TaskCard: React.FC<Props> = ({
                 )}
                 {/* Params: only show if not default or mismatch */}
                 {showQuality && (
-                  <span className="flex items-center gap-1 px-2 py-0.5 border border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-[10px] font-bold flex-shrink-0">
-                    <span className="text-slate-400">质量</span>
-                    {qualityDisplay.isMismatch ? <ActualValueBadge value={qualityDisplay.displayValue} className="px-1 rounded-none" /> : <span className="text-slate-600 dark:text-zinc-300 font-extrabold">{qualityDisplay.displayValue}</span>}
+                  <span className="flex h-6 items-center gap-1.5 px-2 rounded-md bg-slate-50 dark:bg-zinc-800/40 text-slate-500 dark:text-zinc-400 text-[10px] font-semibold flex-shrink-0">
+                    <span className="text-slate-400 dark:text-zinc-500">质量</span>
+                    {qualityDisplay.isMismatch ? <ActualValueBadge value={qualityDisplay.displayValue} className="px-1 h-4 flex items-center rounded-none text-[9px] font-extrabold leading-none" /> : <span className="text-slate-600 dark:text-zinc-300 font-extrabold">{qualityDisplay.displayValue}</span>}
                   </span>
                 )}
                 {showSize && (
-                  <span className="flex items-center gap-1 px-2 py-0.5 border border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-[10px] font-bold flex-shrink-0">
-                    <span className="text-slate-400">尺寸</span>
-                    {sizeDisplay.isMismatch ? <ActualValueBadge value={sizeDisplay.displayValue} className="px-1 rounded-none" /> : <span className="text-slate-600 dark:text-zinc-300 font-extrabold">{sizeDisplay.displayValue}</span>}
+                  <span className="flex h-6 items-center gap-1.5 px-2 rounded-md bg-slate-50 dark:bg-zinc-800/40 text-slate-500 dark:text-zinc-400 text-[10px] font-semibold flex-shrink-0">
+                    <span className="text-slate-400 dark:text-zinc-500">尺寸</span>
+                    {sizeDisplay.isMismatch ? <ActualValueBadge value={sizeDisplay.displayValue} className="px-1 h-4 flex items-center rounded-none text-[9px] font-extrabold leading-none" /> : <span className="text-slate-600 dark:text-zinc-300 font-extrabold">{sizeDisplay.displayValue}</span>}
                   </span>
                 )}
                 {showFormat && (
-                  <span className="flex items-center gap-1 px-2 py-0.5 border border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-[10px] font-bold flex-shrink-0">
-                    <span className="text-slate-400">格式</span>
-                    {formatDisplay.isMismatch ? <ActualValueBadge value={formatDisplay.displayValue} className="px-1 rounded-none" /> : <span className="text-slate-600 dark:text-zinc-300 font-extrabold">{formatDisplay.displayValue}</span>}
+                  <span className="flex h-6 items-center gap-1.5 px-2 rounded-md bg-slate-50 dark:bg-zinc-800/40 text-slate-500 dark:text-zinc-400 text-[10px] font-semibold flex-shrink-0">
+                    <span className="text-slate-400 dark:text-zinc-500">格式</span>
+                    {formatDisplay.isMismatch ? <ActualValueBadge value={formatDisplay.displayValue} className="px-1 h-4 flex items-center rounded-none text-[9px] font-extrabold leading-none" /> : <span className="text-slate-600 dark:text-zinc-300 font-extrabold">{formatDisplay.displayValue}</span>}
                   </span>
                 )}
                 {showN && (
-                  <span className="flex items-center gap-1 px-2 py-0.5 border border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 text-[10px] font-bold flex-shrink-0">
-                    <span className="text-slate-400">数量</span>
-                    {nDisplay.isMismatch ? <ActualValueBadge value={nDisplay.displayValue} className="px-1 rounded-none" /> : <span className="text-slate-600 dark:text-zinc-300 font-extrabold">{nDisplay.displayValue}</span>}
+                  <span className="flex h-6 items-center gap-1.5 px-2 rounded-md bg-slate-50 dark:bg-zinc-800/40 text-slate-500 dark:text-zinc-400 text-[10px] font-semibold flex-shrink-0">
+                    <span className="text-slate-400 dark:text-zinc-500">数量</span>
+                    {nDisplay.isMismatch ? <ActualValueBadge value={nDisplay.displayValue} className="px-1 h-4 flex items-center rounded-none text-[9px] font-extrabold leading-none" /> : <span className="text-slate-600 dark:text-zinc-300 font-extrabold">{nDisplay.displayValue}</span>}
                   </span>
                 )}
               </div>
               {/* 操作按钮 */}
               <div
+                data-card-actions
                 data-tag-scroll-area
-                className="flex items-center gap-1 flex-shrink-0 mt-0.5 ml-auto max-w-full overflow-x-auto hide-scrollbar mask-edge-r pr-2"
+                className="flex h-7 w-full flex-shrink-0 items-center justify-end gap-1.5 border-t border-gray-100 dark:border-zinc-800/60 pt-2"
                 onClick={(e) => e.stopPropagation()}
                 onTouchStart={(e) => e.stopPropagation()}
                 onTouchMove={(e) => e.stopPropagation()}
@@ -628,7 +629,6 @@ const TaskCard: React.FC<Props> = ({
                   <TaskActionButton
                     tooltip="重试任务"
                     onClick={() => retryTask(task)}
-                    className="p-1.5 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/20 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition hover:scale-105 active:scale-95"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -638,11 +638,6 @@ const TaskCard: React.FC<Props> = ({
                 <TaskActionButton
                   tooltip={task.isFavorite ? '编辑收藏夹' : '收藏任务'}
                   onClick={() => openFavoritePicker([task.id])}
-                  className={`p-1.5 rounded-lg transition hover:scale-105 active:scale-95 ${
-                    task.isFavorite
-                      ? 'text-amber-500 hover:bg-amber-500/10'
-                      : 'text-gray-400 hover:text-amber-500 hover:bg-amber-500/10'
-                  }`}
                 >
                   <svg
                     className="w-4 h-4"
@@ -661,7 +656,6 @@ const TaskCard: React.FC<Props> = ({
                 <TaskActionButton
                   tooltip="复用配置"
                   onClick={onReuse}
-                  className="p-1.5 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/20 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition hover:scale-105 active:scale-95"
                 >
                   <svg
                     className="w-4 h-4"
@@ -680,7 +674,6 @@ const TaskCard: React.FC<Props> = ({
                 <TaskActionButton
                   tooltip="编辑输出"
                   onClick={onEditOutputs}
-                  className="p-1.5 rounded-lg hover:bg-green-50 dark:hover:bg-green-950/20 text-gray-400 hover:text-green-500 transition hover:scale-105 active:scale-95 disabled:opacity-30"
                   disabled={!task.outputImages?.length}
                 >
                   <svg
@@ -700,7 +693,6 @@ const TaskCard: React.FC<Props> = ({
                 <TaskActionButton
                   tooltip="删除任务"
                   onClick={onDelete}
-                  className="p-1.5 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/20 text-gray-400 hover:text-red-500 transition hover:scale-105 active:scale-95"
                 >
                   <svg
                     className="w-4 h-4"

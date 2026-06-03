@@ -763,7 +763,7 @@ export default function InputBar() {
     ? maskDraft ? '遮罩编辑' : '生成图像'
     : '请先配置 API'
   const submitTooltipText = activeAgentIsRunning ? '停止生成' : '尚未完成 API 配置，请在右上角设置中进行'
-  const promptPlaceholder = '描述你想生成的图片，可输入 @ 来指定参考图...'
+  const promptPlaceholder = '描述你想生成的图片...'
   const submitCurrentMode = useCallback(() => {
     if (appMode === 'agent') {
       void submitAgentMessage()
@@ -2384,7 +2384,7 @@ export default function InputBar() {
               className="col-start-1 row-start-1 min-h-[42px] w-full overflow-hidden ios-rounded-scroll-fix whitespace-pre-wrap break-words rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 pl-4 pr-10 py-3 text-sm leading-relaxed outline-none transition-all focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] dark:text-gray-150"
             />
             {prompt.length === 0 && (
-              <div className={`prompt-placeholder col-start-1 row-start-1 pointer-events-none pl-4 pr-10 py-3 text-sm leading-relaxed text-gray-400 dark:text-gray-500${
+              <div className={`prompt-placeholder col-start-1 row-start-1 relative z-10 pointer-events-none pl-4 pr-10 py-3 text-sm leading-relaxed text-gray-400 dark:text-gray-500${
                 isMobile && mobileCollapsed ? ' truncate' : ''
               }`}>
                 {promptPlaceholder}
@@ -2410,7 +2410,7 @@ export default function InputBar() {
             <div className="hidden sm:flex items-end justify-between gap-3">
               {renderParams('grid-cols-6')}
 
-              <div className="flex gap-2 flex-shrink-0 mb-0.5">
+              <div className="flex gap-2 flex-shrink-0">
                 <div
                   className="relative"
                   onMouseEnter={() => setAttachHover(true)}
@@ -2419,10 +2419,10 @@ export default function InputBar() {
                   <ButtonTooltip visible={attachHover} text={uploadImageTooltipText} />
                   <button
                     onClick={() => !atImageLimit && fileInputRef.current?.click()}
-                    className={`p-2.5 rounded-none border-2 border-black dark:border-white transition-all active:scale-95 ${
+                    className={`p-2 flex items-center justify-center rounded-none border-2 transition-all active:scale-95 ${
                       atImageLimit
-                        ? 'bg-slate-100 dark:bg-zinc-900 text-slate-300 dark:text-zinc-600 cursor-not-allowed opacity-40'
-                        : 'bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:bg-slate-100 cursor-pointer'
+                        ? 'bg-slate-100 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 text-slate-300 dark:text-zinc-700 cursor-not-allowed shadow-[2px_2px_0px_0px_rgba(0,0,0,0.15)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)]'
+                        : 'bg-white dark:bg-zinc-800 border-black dark:border-white text-slate-700 dark:text-zinc-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:bg-slate-100 cursor-pointer'
                     }`}
                     aria-label={uploadImageTooltipText}
                   >
@@ -2440,12 +2440,12 @@ export default function InputBar() {
                   <button
                     onClick={() => activeAgentIsRunning ? stopActiveAgentResponse() : hasSubmitApiConfig ? submitCurrentMode() : setShowSettings(true)}
                     disabled={activeAgentIsRunning ? false : hasSubmitApiConfig ? !canSubmit : false}
-                    className={`p-2.5 rounded-none border-2 border-black dark:border-white transition-all active:scale-95 ${
+                    className={`p-2 flex items-center justify-center rounded-none border-2 transition-all active:scale-95 ${
                       activeAgentIsRunning
-                        ? 'bg-rose-500 text-white hover:bg-rose-600 cursor-pointer'
+                        ? 'bg-rose-500 text-white border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:bg-rose-600 cursor-pointer'
                         : !hasSubmitApiConfig
-                        ? 'bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed opacity-40'
-                        : 'bg-[#FFE66D] dark:bg-yellow-400 text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] disabled:bg-slate-100 dark:disabled:bg-zinc-800 disabled:text-slate-400 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:disabled:hover:translate-y-0 disabled:hover:shadow-none cursor-pointer'
+                        ? 'bg-slate-100 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed shadow-[2px_2px_0px_0px_rgba(0,0,0,0.15)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)]'
+                        : 'bg-[#FFE66D] dark:bg-yellow-400 border-black dark:border-white text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] disabled:bg-slate-100 dark:disabled:bg-zinc-900 disabled:border-gray-200 dark:disabled:border-zinc-800 disabled:text-slate-300 dark:disabled:text-zinc-700 disabled:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.15)] dark:disabled:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)] disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.15)] cursor-pointer'
                     }`}
                     aria-label={submitButtonAriaLabel}
                   >
@@ -2484,10 +2484,10 @@ export default function InputBar() {
                         setShowMobileUploadMenu(!showMobileUploadMenu)
                       }
                     }}
-                    className={`p-2.5 rounded-none border-2 border-black dark:border-white transition-all shadow-sm flex-shrink-0 ${
+                    className={`h-11 w-11 flex items-center justify-center rounded-none border-2 transition-all flex-shrink-0 ${
                       atImageLimit
-                        ? 'bg-slate-100 dark:bg-zinc-900 text-slate-300 dark:text-zinc-600 cursor-not-allowed opacity-40'
-                        : 'bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
+                        ? 'bg-slate-100 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 text-slate-300 dark:text-zinc-700 cursor-not-allowed'
+                        : 'bg-white dark:bg-zinc-800 border-black dark:border-white text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
                     }`}
                     aria-label={uploadImageTooltipText}
                   >
@@ -2548,12 +2548,12 @@ export default function InputBar() {
                     onClick={() => activeAgentIsRunning ? stopActiveAgentResponse() : hasSubmitApiConfig ? submitCurrentMode() : setShowSettings(true)}
                     disabled={activeAgentIsRunning ? false : hasSubmitApiConfig ? !canSubmit : false}
                     aria-label={submitButtonAriaLabel}
-                    className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-none border-2 border-black dark:border-white text-sm font-bold transition-all shadow-sm cursor-pointer ${
+                    className={`h-11 w-full flex items-center justify-center gap-2 rounded-none border-2 text-sm font-bold transition-all shadow-sm cursor-pointer ${
                       activeAgentIsRunning
-                        ? 'bg-rose-500 text-white hover:bg-rose-600'
+                        ? 'bg-rose-500 text-white border-black dark:border-white hover:bg-rose-600'
                         : !hasSubmitApiConfig
-                        ? 'bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed opacity-40'
-                        : 'bg-[#FFE66D] dark:bg-yellow-400 text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] disabled:bg-slate-100 dark:disabled:bg-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed'
+                        ? 'bg-slate-100 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed'
+                        : 'bg-[#FFE66D] dark:bg-yellow-400 border-black dark:border-white text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] disabled:bg-slate-100 dark:disabled:bg-zinc-900 disabled:border-gray-200 dark:disabled:border-zinc-800 disabled:text-slate-300 dark:disabled:text-zinc-700 disabled:cursor-not-allowed'
                     }`}
                   >
                     {activeAgentIsRunning ? (
