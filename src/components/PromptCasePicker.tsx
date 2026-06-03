@@ -32,7 +32,7 @@ const ALL_OPTION = { value: ALL_CASE_FILTER_VALUE, label: '全部' }
 
 function filterButtonClass(active: boolean, size: 'md' | 'sm' = 'md') {
   const sizeClass = size === 'md' ? 'min-h-8 px-2.5 py-1.5 text-xs' : 'min-h-7 px-2 py-1 text-[11px]'
-  return `${sizeClass} rounded-none border font-black leading-tight transition-all ${
+  return `${sizeClass} shrink-0 rounded-none border font-black leading-tight transition-all ${
     active
       ? 'border-black bg-[#FFE66D] text-slate-900 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-yellow-400 dark:text-black dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
       : 'border-slate-300 bg-white text-slate-600 hover:border-black hover:text-slate-900 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400 dark:hover:border-white dark:hover:text-white'
@@ -231,7 +231,9 @@ function FilterGroup({ label, children }: { label: string; children: ReactNode }
   return (
     <section className="min-w-0">
       <div className="mb-1.5 text-[10px] font-black text-slate-400 dark:text-gray-500">{label}</div>
-      <div className="flex flex-wrap gap-1.5">{children}</div>
+      <div className="hide-scrollbar -mx-1 flex gap-1.5 overflow-x-auto overscroll-x-contain px-1 pb-1 whitespace-nowrap">
+        {children}
+      </div>
     </section>
   )
 }
