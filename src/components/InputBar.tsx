@@ -10,13 +10,15 @@ import { createMaskPreviewDataUrl } from '../lib/canvasImage'
 import { dismissAllTooltips } from '../lib/tooltipDismiss'
 import { getSafeBoundingClientRect } from '../lib/domRect'
 import { collectAgentRoundOutputImageSlots } from '../lib/agentImageReferences'
+import type { PromptTemplate } from '../data/gptImage2Templates'
 import { useHintTooltip } from '../hooks/useHintTooltip'
 import { useTooltip } from '../hooks/useTooltip'
 import { downloadImageEntriesAsZip, downloadImageIds, formatExportFileTime, getTaskOutputImageZipEntries } from '../lib/downloadImages'
 import Select from './Select'
 import SizePickerModal from './SizePickerModal'
+import PromptTemplatePicker from './PromptTemplatePicker'
 import ViewportTooltip from './ViewportTooltip'
-import { CloseIcon } from './icons'
+import { CloseIcon, CodeIcon } from './icons'
 
 
 function getMentionTagTextLength(el: Element) {
@@ -674,9 +676,11 @@ export default function InputBar() {
   const [isSingleLine, setIsSingleLine] = useState(true)
   const [submitHover, setSubmitHover] = useState(false)
   const [attachHover, setAttachHover] = useState(false)
+  const [templateHover, setTemplateHover] = useState(false)
   const [imageHintId, setImageHintId] = useState<string | null>(null)
   const [mobileCollapsed, setMobileCollapsed] = useState(false)
   const [showSizePicker, setShowSizePicker] = useState(false)
+  const [showTemplatePicker, setShowTemplatePicker] = useState(false)
   const [showMobileUploadMenu, setShowMobileUploadMenu] = useState(false)
   const [maskPreviewUrl, setMaskPreviewUrl] = useState('')
   const [imageDragIndex, setImageDragIndex] = useState<number | null>(null)
@@ -923,6 +927,27 @@ export default function InputBar() {
       textareaRef.current.focus()
     }
   }, [setPrompt])
+
+  const handleUseTemplate = useCallback((template: PromptTemplate) => {
+    isUserInputRef.current = false
+    setAtImageMenuDismissed(true)
+    setPrompt(template.prompt)
+    setShowTemplatePicker(false)
+    window.setTimeout(() => {
+      if (textareaRef.current) {
+        textareaRef.current.focus()
+        setContentEditableCursor(textareaRef.current, template.prompt.length)
+      }
+    }, 0)
+    showToast('已填入模板', 'success')
+  }, [setPrompt, showToast])
+
+  const handleAppendTemplate = useCallback((template: PromptTemplate) => {
+    setAtImageMenuDismissed(true)
+    insertPromptTextAtSelection(prompt.trim() ? `\n\n${template.prompt}` : template.prompt)
+    setShowTemplatePicker(false)
+    showToast('已追加模板', 'success')
+  }, [insertPromptTextAtSelection, prompt, showToast])
 
   useEffect(() => {
     setOutputCompressionInput(
@@ -2227,6 +2252,13 @@ export default function InputBar() {
             </div>
           </div>
         )}
+        {showTemplatePicker && (
+          <PromptTemplatePicker
+            onClose={() => setShowTemplatePicker(false)}
+            onUseTemplate={handleUseTemplate}
+            onAppendTemplate={handleAppendTemplate}
+          />
+        )}
         <div ref={cardRef} className="bg-white dark:bg-zinc-900 border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] rounded-none p-4 sm:p-5">
           {/* 移动端拖动条 */}
           <div
@@ -2369,6 +2401,25 @@ export default function InputBar() {
               <div className="flex gap-2 flex-shrink-0">
                 <div
                   className="relative"
+                  onMouseEnter={() => setTemplateHover(true)}
+                  onMouseLeave={() => setTemplateHover(false)}
+                >
+                  <ButtonTooltip visible={templateHover} text="查看模板" />
+                  <button
+                    type="button"
+                    onClick={() => setShowTemplatePicker((value) => !value)}
+                    className={`p-2 flex items-center justify-center rounded-none border-2 transition-all active:scale-95 ${
+                      showTemplatePicker
+                        ? 'bg-[#FFE66D] dark:bg-yellow-400 border-black dark:border-white text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
+                        : 'bg-white dark:bg-zinc-800 border-black dark:border-white text-slate-700 dark:text-zinc-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] hover:bg-slate-100 cursor-pointer'
+                    }`}
+                    aria-label="查看模板"
+                  >
+                    <CodeIcon className="w-5 h-5" />
+                  </button>
+                </div>
+                <div
+                  className="relative"
                   onMouseEnter={() => setAttachHover(true)}
                   onMouseLeave={() => setAttachHover(false)}
                 >
@@ -2429,6 +2480,18 @@ export default function InputBar() {
               </div>
 
               <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setShowTemplatePicker((value) => !value)}
+                  className={`h-11 w-11 flex items-center justify-center rounded-none border-2 transition-all flex-shrink-0 ${
+                    showTemplatePicker
+                      ? 'bg-[#FFE66D] dark:bg-yellow-400 border-black dark:border-white text-black'
+                      : 'bg-white dark:bg-zinc-800 border-black dark:border-white text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
+                  }`}
+                  aria-label="查看模板"
+                >
+                  <CodeIcon className="w-5 h-5" />
+                </button>
                 <div
                   className="relative"
                   onMouseEnter={() => setAttachHover(true)}
