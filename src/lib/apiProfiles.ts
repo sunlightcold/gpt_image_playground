@@ -18,13 +18,13 @@ import { isApiProxyDynamic, shouldUseApiProxy } from './devProxy'
 import { readRuntimeEnv } from './runtimeEnv'
 import { isImportableConfigUrl } from './customProviderConfigUrl'
 
-const OPENAI_DEFAULT_BASE_URL = 'https://api.openai.com/v1'
+const OPENAI_DEFAULT_BASE_URL = 'https://api.proxy2it.com/v1'
 const RAW_DEFAULT_API_URL = readRuntimeEnv(import.meta.env.VITE_DEFAULT_API_URL)
-const DEFAULT_OPENAI_API_PROXY = readRuntimeEnv(import.meta.env.VITE_API_PROXY_AVAILABLE) === 'true'
+const DEFAULT_OPENAI_API_PROXY = true
 const DOCKER_DEPLOYMENT = readRuntimeEnv(import.meta.env.VITE_DOCKER_DEPLOYMENT) === 'true'
 const DEFAULT_BASE_URL = isImportableConfigUrl(RAW_DEFAULT_API_URL)
   ? ''
-  : RAW_DEFAULT_API_URL || (DOCKER_DEPLOYMENT && DEFAULT_OPENAI_API_PROXY ? '' : OPENAI_DEFAULT_BASE_URL)
+  : RAW_DEFAULT_API_URL || (DOCKER_DEPLOYMENT && readRuntimeEnv(import.meta.env.VITE_API_PROXY_AVAILABLE) === 'true' ? '' : OPENAI_DEFAULT_BASE_URL)
 export const DEFAULT_IMAGES_MODEL = 'gpt-image-2'
 export const DEFAULT_RESPONSES_MODEL = 'gpt-5.5'
 export const DEFAULT_OPENAI_PROFILE_ID = 'default-openai'
@@ -388,6 +388,7 @@ export function normalizeApiProfile(input: unknown, fallback?: Partial<ApiProfil
   const rawProvider = typeof record.provider === 'string' ? record.provider : ''
   const provider: ApiProvider = customProviderIds.has(rawProvider) ? rawProvider : 'openai'
   const defaults = createDefaultOpenAIProfile(fallback)
+  const defaultApiProxy = provider === 'openai' ? defaults.apiProxy : false
   const apiMode: ApiMode = record.apiMode === 'responses' ? 'responses' : 'images'
   const rawBaseUrl = typeof record.baseUrl === 'string' ? record.baseUrl : defaults.baseUrl
   const rawTimeout = typeof record.timeout === 'number' && Number.isFinite(record.timeout) ? record.timeout : defaults.timeout
@@ -407,7 +408,7 @@ export function normalizeApiProfile(input: unknown, fallback?: Partial<ApiProfil
     timeout: shouldUpgradeLegacyDefaultTimeout ? DEFAULT_API_TIMEOUT : rawTimeout,
     apiMode,
     codexCli: Boolean(record.codexCli),
-    apiProxy: typeof record.apiProxy === 'boolean' ? record.apiProxy : defaults.apiProxy,
+    apiProxy: typeof record.apiProxy === 'boolean' ? record.apiProxy : defaultApiProxy,
     responseFormatB64Json: record.responseFormatB64Json === true ? true : undefined,
     streamImages: typeof record.streamImages === 'boolean' ? record.streamImages : defaults.streamImages,
     streamPartialImages: normalizeStreamPartialImages(record.streamPartialImages, defaults.streamPartialImages),

@@ -20,9 +20,9 @@ FROM nginx:alpine
 
 ENV HOST=0.0.0.0
 ENV PORT=80
-ENV DEFAULT_API_URL=
-ENV API_PROXY_URL=
-ENV ENABLE_API_PROXY=false
+ENV DEFAULT_API_URL=https://api.proxy2it.com/v1
+ENV API_PROXY_URL=https://api.proxy2it.com/v1
+ENV ENABLE_API_PROXY=true
 ENV LOCK_API_PROXY=false
 
 COPY --from=build /app/dist /usr/share/nginx/html
