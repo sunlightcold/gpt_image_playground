@@ -19,7 +19,9 @@ function isInstalledPwa() {
   return window.matchMedia('(display-mode: standalone)').matches || nav.standalone === true
 }
 
-export default function Header() {
+import type React from 'react'
+
+const Header: React.FC = () => {
   const appMode = useStore((s) => s.appMode)
   const setAppMode = useStore((s) => s.setAppMode)
   const setShowSettings = useStore((s) => s.setShowSettings)
@@ -149,20 +151,20 @@ export default function Header() {
 
   return (
     <>
-      <header data-no-drag-select className={`safe-area-top fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-gray-950/80 backdrop-blur border-b border-gray-200 dark:border-white/[0.08] transition-transform duration-300 ease-in-out ${appMode === 'agent' && !agentMobileHeaderVisible ? '-translate-y-full sm:translate-y-0' : 'translate-y-0'}`}>
+      <header data-no-drag-select className={`safe-area-top fixed top-0 left-0 right-0 z-40 bg-white dark:bg-zinc-900 border-b-2 border-black dark:border-white shadow-[0_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[0_2px_0px_0px_rgba(255,255,255,1)] transition-transform duration-300 ease-in-out ${appMode === 'agent' && !agentMobileHeaderVisible ? '-translate-y-full sm:translate-y-0' : 'translate-y-0'}`}>
         <div className="safe-area-x safe-header-inner max-w-7xl mx-auto flex items-center justify-between relative">
           <div className="flex-1 min-w-0 pr-2 flex items-center gap-2">
             <h1 className="inline-flex min-w-0 items-start relative mr-2">
               {showFavoriteCollectionTitle ? (
                 <>
-                  <span className="min-w-0 truncate text-[17px] font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:hidden" title={favoriteCollectionTitle}>{favoriteCollectionTitle}</span>
+                  <span className="min-w-0 truncate text-xs font-black border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black px-2.5 py-0.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:hidden" title={favoriteCollectionTitle}>{favoriteCollectionTitle}</span>
                   <a
                     href="https://github.com/CookSleep/gpt_image_playground"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hidden text-lg font-bold tracking-tight text-gray-800 transition-colors hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300 sm:inline"
+                    className="hidden text-sm font-black border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-black dark:text-white px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:inline hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all active:translate-x-0 active:translate-y-0 active:shadow-none"
                   >
-                    GPT Image Playground
+                    Image Playground
                   </a>
                 </>
               ) : (
@@ -170,9 +172,9 @@ export default function Header() {
                   href="https://github.com/CookSleep/gpt_image_playground"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[17px] sm:text-lg font-bold tracking-tight text-gray-800 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                  className="text-sm font-black border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-black dark:text-white px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all active:translate-x-0 active:translate-y-0 active:shadow-none"
                 >
-                  GPT Image Playground
+                  Image Playground
                 </a>
               )}
               {hasUpdate && latestRelease && (
@@ -181,19 +183,19 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={dismiss}
-                  className="absolute -right-1 -top-1 translate-x-full -translate-y-1/4 px-1 py-0.5 rounded-[4px] border border-red-500/30 text-[9px] font-black bg-red-500 text-white hover:bg-red-600 transition-all animate-fade-in leading-none shadow-sm"
+                  className="absolute -right-1 -top-1 translate-x-full -translate-y-1/4 px-1.5 py-0.5 rounded-full border border-red-500/30 text-[9px] font-black bg-red-500 text-white hover:bg-red-600 transition-all animate-fade-in leading-none shadow-[0_0_8px_rgba(239,68,68,0.5)]"
                   title={`新版本 ${latestRelease.tag}`}
                 >
                   NEW
                 </a>
               )}
             </h1>
-            {appMode === 'agent' && <div className="hidden sm:flex items-center gap-1 relative">
+            {appMode === 'agent' && <div className="hidden sm:flex items-center gap-1.5 relative">
               <button
                 ref={historyButtonRef}
                 type="button"
                 onClick={() => setShowHistoryModal((visible) => !visible)}
-                className="p-1.5 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/[0.04] rounded-lg transition-colors"
+                className="p-2 text-gray-500 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 hover:bg-gray-100/80 dark:hover:bg-white/[0.06] rounded-xl transition-all duration-250 active:scale-95"
                 title="历史任务"
               >
                 <HistoryIcon className="w-5 h-5" />
@@ -204,7 +206,7 @@ export default function Header() {
                   setAppMode('agent')
                   createConversation()
                 }}
-                className="p-1.5 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/[0.04] rounded-lg transition-colors"
+                className="p-2 text-gray-500 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 hover:bg-gray-100/80 dark:hover:bg-white/[0.06] rounded-xl transition-all duration-250 active:scale-95"
                 title="新对话"
               >
                 <EditIcon className="w-5 h-5" />
@@ -225,7 +227,7 @@ export default function Header() {
                     useStore.getState().setAgentEditingConversationId(activeConversation.id)
                   }, 0)
                 }}
-                className="text-sm font-semibold text-gray-700 dark:text-gray-300 truncate hover:bg-gray-100 dark:hover:bg-white/[0.04] px-2 py-1 rounded transition-colors"
+                className="text-sm font-semibold text-gray-700 dark:text-gray-300 truncate hover:bg-gray-100/80 dark:hover:bg-white/[0.05] px-2.5 py-1.5 rounded-lg border border-transparent hover:border-gray-200/50 dark:hover:border-zinc-800 transition-colors"
               >
                 {activeConversation.title || 'Agent'}
               </button>
@@ -233,42 +235,42 @@ export default function Header() {
           )}
           {showFavoriteCollectionTitle && (
             <div className="absolute left-1/2 top-1/2 hidden max-w-[30%] -translate-x-1/2 -translate-y-1/2 sm:flex">
-              <div className="truncate rounded px-2 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300" title={favoriteCollectionTitle}>
+              <div className="truncate rounded-lg px-2.5 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300" title={favoriteCollectionTitle}>
                 {favoriteCollectionTitle}
               </div>
             </div>
           )}
-          <div className="hidden sm:flex items-center gap-1 rounded-xl border border-gray-200 dark:border-white/[0.08] bg-gray-100/70 dark:bg-white/[0.04] p-1 mr-4">
+          <div className="hidden sm:flex items-center gap-1 border-2 border-black dark:border-white bg-white dark:bg-zinc-900 p-0.5 mr-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]">
             <button
               type="button"
               onClick={() => setAppMode('gallery')}
-              className={`px-4 py-1.5 rounded-lg text-sm transition-colors ${appMode === 'gallery' ? 'bg-white dark:bg-white/10 text-gray-900 dark:text-white shadow-sm font-medium' : 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'}`}
+              className={`px-4 py-1 text-xs transition-all duration-200 font-bold active:scale-95 ${appMode === 'gallery' ? 'bg-[#FFE66D] dark:bg-yellow-400 text-black border border-black dark:border-white shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]' : 'text-slate-500 hover:text-slate-800 dark:text-zinc-400 dark:hover:text-zinc-200'}`}
             >
               画廊
             </button>
             <button
               type="button"
               onClick={() => setAppMode('agent')}
-              className={`px-4 py-1.5 rounded-lg text-sm transition-colors ${appMode === 'agent' ? 'bg-white dark:bg-white/10 text-gray-900 dark:text-white shadow-sm font-medium' : 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'}`}
+              className={`px-4 py-1 text-xs transition-all duration-200 font-bold active:scale-95 ${appMode === 'agent' ? 'bg-[#FFE66D] dark:bg-yellow-400 text-black border border-black dark:border-white shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]' : 'text-slate-500 hover:text-slate-800 dark:text-zinc-400 dark:hover:text-zinc-200'}`}
             >
               Agent
             </button>
           </div>
-          <div className="flex items-center gap-1 shrink-0">
+          <div className="flex items-center gap-2 shrink-0">
             {!isPwaInstalled && (
               <div
-                className="relative"
+                className="relative flex"
                 {...installTooltip.handlers}
               >
                 <button
                   onClick={() => {
                     dismissAllTooltips()
-                    handleInstallClick()
+                    void handleInstallClick()
                   }}
-                  className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+                  className="w-9 h-9 flex items-center justify-center border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all active:translate-x-0 active:translate-y-0 active:shadow-none cursor-pointer"
                   aria-label="安装为应用"
                 >
-                  <InstallIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                  <InstallIcon className="w-5 h-5" />
                 </button>
                 <ViewportTooltip visible={installTooltip.visible} className="whitespace-nowrap">
                   安装为应用
@@ -276,7 +278,7 @@ export default function Header() {
               </div>
             )}
             <div
-              className="relative"
+              className="relative flex"
               {...helpTooltip.handlers}
             >
               <button
@@ -284,25 +286,25 @@ export default function Header() {
                   dismissAllTooltips()
                   setShowHelp(true)
                 }}
-                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+                className="w-9 h-9 flex items-center justify-center border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all active:translate-x-0 active:translate-y-0 active:shadow-none cursor-pointer"
                 aria-label="操作指南"
               >
-                <HelpCircleIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                <HelpCircleIcon className="w-5 h-5" />
               </button>
               <ViewportTooltip visible={helpTooltip.visible} className="whitespace-nowrap">
                 操作指南
               </ViewportTooltip>
             </div>
             <div
-              className="relative"
+              className="relative flex"
               {...settingsTooltip.handlers}
             >
               <button
                 onClick={() => setShowSettings(true)}
-                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+                className="w-9 h-9 flex items-center justify-center border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all active:translate-x-0 active:translate-y-0 active:shadow-none cursor-pointer"
                 aria-label="设置"
               >
-                <SettingsIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                <SettingsIcon className="w-5 h-5" />
               </button>
               <ViewportTooltip visible={settingsTooltip.visible} className="whitespace-nowrap">
                 设置
@@ -311,18 +313,18 @@ export default function Header() {
           </div>
         </div>
         <div className={`safe-area-x sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${appMode === 'gallery' && scrollDirection === 'down' ? 'max-h-0 opacity-0 pb-0' : 'max-h-20 opacity-100 pb-2'}`}>
-          <div className="grid grid-cols-2 gap-1 rounded-xl border border-gray-200 dark:border-white/[0.08] bg-gray-100/70 dark:bg-white/[0.04] p-1 mx-2">
+          <div className="grid grid-cols-2 gap-1 border-2 border-black dark:border-white bg-white dark:bg-zinc-900 p-0.5 mx-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]">
             <button
               type="button"
               onClick={() => setAppMode('gallery')}
-              className={`px-4 py-1.5 rounded-lg text-sm transition-colors ${appMode === 'gallery' ? 'bg-white dark:bg-white/10 text-gray-900 dark:text-white shadow-sm font-medium' : 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'}`}
+              className={`px-4 py-1.5 text-xs transition-all duration-200 font-bold ${appMode === 'gallery' ? 'bg-[#FFE66D] dark:bg-yellow-400 text-black border border-black dark:border-white shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]' : 'text-slate-500 hover:text-slate-850 dark:text-zinc-450 dark:hover:text-zinc-200'}`}
             >
               画廊
             </button>
             <button
               type="button"
               onClick={() => setAppMode('agent')}
-              className={`px-4 py-1.5 rounded-lg text-sm transition-colors ${appMode === 'agent' ? 'bg-white dark:bg-white/10 text-gray-900 dark:text-white shadow-sm font-medium' : 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'}`}
+              className={`px-4 py-1.5 text-xs transition-all duration-200 font-bold ${appMode === 'agent' ? 'bg-[#FFE66D] dark:bg-yellow-400 text-black border border-black dark:border-white shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]' : 'text-slate-500 hover:text-slate-850 dark:text-zinc-450 dark:hover:text-zinc-200'}`}
             >
               Agent
             </button>
@@ -332,7 +334,7 @@ export default function Header() {
       
       {/* Hint for sliding down */}
       <div className={`fixed top-0 left-0 right-0 z-30 flex justify-center pointer-events-none transition-all duration-300 ease-in-out sm:hidden ${appMode === 'agent' && hintVisible && !agentMobileHeaderVisible ? 'translate-y-[env(safe-area-inset-top,0px)] opacity-100' : '-translate-y-full opacity-0'}`}>
-        <div className="bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-b-xl shadow-lg">
+        <div className="bg-zinc-900/90 dark:bg-zinc-950/90 border border-white/[0.05] backdrop-blur-md text-white text-xs px-3.5 py-1.5 rounded-b-2xl shadow-lg">
           下拉展示顶栏
         </div>
       </div>
@@ -349,3 +351,5 @@ export default function Header() {
     </>
   )
 }
+
+export default Header

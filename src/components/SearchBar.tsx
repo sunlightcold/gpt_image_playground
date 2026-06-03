@@ -1,8 +1,9 @@
+import type React from 'react'
 import { useStore } from '../store'
 import Select from './Select'
 import { ChevronLeftIcon, FavoriteIcon, CollectionManageIcon } from './icons'
 
-export default function SearchBar() {
+const SearchBar: React.FC = () => {
   const searchQuery = useStore((s) => s.searchQuery)
   const setSearchQuery = useStore((s) => s.setSearchQuery)
   const filterStatus = useStore((s) => s.filterStatus)
@@ -27,10 +28,10 @@ export default function SearchBar() {
       <div className="flex gap-2 flex-shrink-0 z-20">
         <button
           onClick={handleFavoriteClick}
-          className={`p-2.5 rounded-xl border transition-all ${
+          className={`p-2.5 rounded-sm border-2 transition-all duration-200 active:scale-95 ${
             filterFavorite
-              ? 'border-yellow-400 bg-yellow-50 dark:bg-yellow-500/10 text-yellow-500'
-              : 'border-gray-200 dark:border-white/[0.08] bg-white dark:bg-gray-900 text-gray-400 hover:bg-gray-50 dark:hover:bg-white/[0.06]'
+              ? 'border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] font-bold'
+              : 'border-black dark:border-white bg-white dark:bg-zinc-855 text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:bg-slate-50 dark:hover:bg-zinc-800'
           }`}
           title={activeFavoriteCollectionId ? '返回收藏夹' : filterFavorite ? '退出收藏夹视图' : '收藏夹'}
         >
@@ -39,7 +40,7 @@ export default function SearchBar() {
         {inCollectionOverview && (
           <button
             onClick={openManageCollectionsModal}
-            className="p-2.5 rounded-xl border border-gray-200 dark:border-white/[0.08] bg-white dark:bg-gray-900 text-gray-400 hover:bg-gray-50 dark:hover:bg-white/[0.06] transition-all"
+            className="p-2.5 rounded-sm border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all duration-200 active:scale-95"
             title="管理收藏夹"
           >
             <CollectionManageIcon className="w-5 h-5" />
@@ -56,14 +57,14 @@ export default function SearchBar() {
                 { label: '生成中', value: 'running' },
                 { label: '失败', value: 'error' },
               ]}
-              className="px-3 py-2.5 rounded-xl border border-gray-200 dark:border-white/[0.08] bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-white/[0.06] text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition"
+              className="px-3 py-2.5 rounded-sm border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-sm font-bold text-slate-700 dark:text-zinc-200 focus:outline-none shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:bg-slate-50 transition-all cursor-pointer"
             />
           </div>
         )}
       </div>
       <div className="relative flex-1 z-10">
         <svg
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500"
+          className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -80,9 +81,11 @@ export default function SearchBar() {
           onChange={(e) => setSearchQuery(e.target.value)}
           type="text"
           placeholder={inCollectionOverview ? '搜索收藏夹名称...' : '搜索提示词、参数...'}
-          className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-white/[0.08] bg-white dark:bg-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition"
+          className="w-full pl-10 pr-4 py-2.5 rounded-sm border-2 border-black dark:border-white bg-white dark:bg-zinc-900 text-slate-900 dark:text-white text-sm focus:outline-none shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:bg-slate-50/50 dark:hover:bg-zinc-900/20 transition-all duration-200"
         />
       </div>
     </div>
   )
 }
+
+export default SearchBar

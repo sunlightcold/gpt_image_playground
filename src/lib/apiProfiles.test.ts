@@ -138,6 +138,20 @@ describe('mergeImportedSettings', () => {
     expect(merged.activeProfileId).toBe('imported-openai-a')
   })
 
+  it('upgrades the legacy default OpenAI timeout to the current default', () => {
+    const normalized = normalizeSettings({
+      timeout: 600,
+      profiles: [{
+        ...DEFAULT_SETTINGS.profiles[0],
+        timeout: 600,
+      }],
+      activeProfileId: DEFAULT_OPENAI_PROFILE_ID,
+    })
+
+    expect(normalized.timeout).toBe(6000)
+    expect(normalized.profiles[0].timeout).toBe(6000)
+  })
+
   it('appends imported legacy settings as a new profile when current settings are customized', () => {
     const current = mergeImportedSettings(DEFAULT_SETTINGS, {
       baseUrl: 'https://current.example.com/v1',

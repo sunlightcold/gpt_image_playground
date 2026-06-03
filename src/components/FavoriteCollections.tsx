@@ -516,9 +516,13 @@ export function FavoriteCollectionsView() {
   return (
     <div data-favorite-collections-root className="relative min-h-[50vh]">
       {filteredCards.length === 0 ? (
-        <div className="py-32 text-center text-gray-400 dark:text-gray-500">
-          <FavoriteIcon className="mx-auto mb-4 h-12 w-12 text-gray-300 dark:text-gray-600" />
-          <p className="text-sm">{cards.length === 0 ? '还没有收藏的图片' : '没有找到匹配的收藏夹'}</p>
+        <div className="py-32 flex flex-col items-center justify-center">
+          <div className="inline-block border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black px-6 py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-black text-base mb-4">
+            ⭐ 收藏夹
+          </div>
+          <p className="text-sm font-bold text-slate-700 dark:text-zinc-300">
+            {cards.length === 0 ? '还没有收藏的图片' : '没有找到匹配的收藏夹'}
+          </p>
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 pb-10">
@@ -867,32 +871,32 @@ export function FavoriteCollectionPickerModal() {
   }
 
   return createPortal(
-    <div data-no-drag-select className="fixed inset-0 z-[105] flex items-center justify-center p-4 sm:p-0" onClick={closePicker}>
+    <div data-no-drag-select className="fixed inset-0 z-[105] flex items-center justify-center p-4" onClick={closePicker}>
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm animate-overlay-in" />
-      <div ref={modalRef} className="relative z-10 flex max-h-[85vh] w-full max-w-[400px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl border border-gray-200 dark:border-[#333] dark:bg-[#1c1c1e] animate-modal-in" onClick={(e) => e.stopPropagation()}>
-        <div className="px-6 pt-6 pb-4 shrink-0 relative border-b border-gray-100 dark:border-[#333]">
-          <FavoriteActionButton tooltip="关闭" onClick={closePicker} wrapperClassName="absolute right-5 top-5 inline-flex" className="shrink-0 rounded-full p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-white/[0.06] dark:hover:text-gray-200">
+      <div ref={modalRef} className="relative z-10 flex max-h-[85vh] w-full max-w-[400px] flex-col overflow-hidden rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] animate-modal-in" onClick={(e) => e.stopPropagation()}>
+        <div className="px-6 pt-6 pb-4 shrink-0 relative border-b-2 border-black dark:border-white bg-slate-50 dark:bg-zinc-950">
+          <FavoriteActionButton tooltip="关闭" onClick={closePicker} wrapperClassName="absolute right-5 top-5 inline-flex" className="w-8 h-8 flex items-center justify-center border border-black dark:border-white bg-white dark:bg-zinc-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer rounded-none text-gray-700 dark:text-zinc-200">
             <CloseIcon className="h-5 w-5" />
           </FavoriteActionButton>
-          <h2 className="mb-2 pr-8 flex items-center gap-2.5 text-lg font-semibold text-gray-800 dark:text-gray-100 leading-snug">
-            <FavoriteIcon filled className="h-5 w-5 shrink-0 text-yellow-500" />
+          <h2 className="mb-2 pr-8 flex items-center gap-2.5 text-lg font-black text-gray-800 dark:text-gray-100 leading-snug">
+            <FavoriteIcon filled className="h-5 w-5 shrink-0 text-slate-900 dark:text-yellow-400" />
             保存到收藏夹
           </h2>
-          <p className="text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed">
+          <p className="text-[13px] text-gray-500 dark:text-gray-400 font-bold leading-relaxed">
             取消勾选会将任务从对应的收藏夹中移除。
           </p>
         </div>
         <div className="flex-1 flex flex-col min-h-0 overflow-hidden pt-3 pb-1">
           <div className="flex items-center justify-between mb-1.5 px-6 shrink-0">
-            <span className="text-[13px] font-medium text-gray-500 dark:text-gray-400">选择要保存的收藏夹</span>
+            <span className="text-[13px] font-bold text-gray-500 dark:text-gray-400">选择要保存的收藏夹</span>
             <div className="flex gap-4">
-              <button type="button" onClick={() => setCheckedIds(selectableCollections.map((collection) => collection.id))} className="text-[13px] font-medium text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">全选</button>
-              <button type="button" onClick={() => setCheckedIds([])} className="text-[13px] font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors">取消</button>
+              <button type="button" onClick={() => setCheckedIds(selectableCollections.map((collection) => collection.id))} className="text-[13px] font-bold text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors cursor-pointer">全选</button>
+              <button type="button" onClick={() => setCheckedIds([])} className="text-[13px] font-bold text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors cursor-pointer">取消</button>
             </div>
           </div>
           <div className="flex-1 overflow-y-auto custom-scrollbar relative">
             {selectableCollections.length === 0 ? (
-              <div className="py-8 text-center text-sm text-gray-400 dark:text-gray-500">暂无收藏夹</div>
+              <div className="py-8 text-center text-sm font-bold text-gray-400 dark:text-gray-500">暂无收藏夹</div>
             ) : selectableCollections.map((collection) => {
               const isDefault = collection.id === defaultFavoriteCollectionId
               const canDelete = collections.length > 1
@@ -919,10 +923,10 @@ export function FavoriteCollectionPickerModal() {
                 onDrop={(e) => handleDrop(e, collection.id)}
               >
                 {dragOverId === collection.id && dragDropPosition === 'before' && draggedId !== collection.id && (
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-blue-500 z-40 pointer-events-none" />
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-slate-900 dark:bg-white z-40 pointer-events-none" />
                 )}
                 {dragOverId === collection.id && dragDropPosition === 'after' && draggedId !== collection.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 z-40 pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-slate-900 dark:bg-white z-40 pointer-events-none" />
                 )}
                 <div className="flex h-12 cursor-pointer items-center flex-1 min-w-0 gap-3 pl-4 pr-3">
                   <div 
@@ -942,7 +946,7 @@ export function FavoriteCollectionPickerModal() {
                   {editingId === collection.id ? (
                     <input
                       type="text"
-                      className="h-6 min-w-0 flex-1 rounded border border-blue-400/50 bg-white px-1.5 py-0 text-[15px] leading-6 text-gray-900 shadow-sm outline-none focus:border-blue-500 dark:border-white/20 dark:bg-black/20 dark:text-white dark:focus:border-white/40"
+                      className="h-7 min-w-0 flex-1 rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 px-1.5 py-0 text-[15px] leading-6 text-gray-900 dark:text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] outline-none focus:border-black dark:focus:border-white"
                       value={editingName}
                       onChange={(e) => setEditingName(e.target.value)}
                       onKeyDown={handleRenameKeyDown}
@@ -951,7 +955,7 @@ export function FavoriteCollectionPickerModal() {
                       onBlur={confirmRename}
                     />
                   ) : (
-                    <span className="min-w-0 flex-1 truncate text-[15px] font-medium text-gray-700 dark:text-gray-200" title={collection.name}>{collection.name}</span>
+                    <span className="min-w-0 flex-1 truncate text-[15px] font-bold text-gray-700 dark:text-gray-200" title={collection.name}>{collection.name}</span>
                   )}
                 </div>
                 <div className={`flex shrink-0 items-center justify-end gap-2 overflow-hidden pr-4 transition-all duration-150 ${editingId === collection.id ? 'w-12' : 'w-28'}`}>
@@ -963,17 +967,17 @@ export function FavoriteCollectionPickerModal() {
                           e.stopPropagation()
                           confirmRename()
                         }}
-                        className="p-1.5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-md text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-300 transition-colors"
+                        className="p-1.5 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 border border-transparent hover:border-black dark:hover:border-white transition-all rounded-none text-green-600 dark:text-green-400"
                       >
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                       </FavoriteActionButton>
                     ) : (
                       <>
-                        <FavoriteActionButton tooltip={isDefault ? '取消默认收藏夹' : '设为默认收藏夹'} onClick={(e) => handleSetDefault(e, collection)} className={`p-1.5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-md transition-colors ${isDefault ? 'text-yellow-500 dark:text-yellow-400' : 'text-gray-400 hover:text-yellow-500 dark:hover:text-yellow-400'}`}><FavoriteIcon filled={isDefault} className="w-3.5 h-3.5" /></FavoriteActionButton>
-                        <FavoriteActionButton tooltip="重命名" onClick={(e) => startRename(e, collection)} className="p-1.5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-md text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors"><EditIcon className="w-3.5 h-3.5" /></FavoriteActionButton>
-                        <FavoriteActionButton tooltip={canDelete ? '删除' : '至少保留一个收藏夹'} disabled={!canDelete} onClick={(e) => handleDelete(e, collection)} className={`p-1.5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-md transition-colors ${canDelete ? 'text-gray-400 hover:text-red-500 dark:hover:text-red-400' : 'text-gray-300 dark:text-gray-600 cursor-not-allowed'}`}><TrashIcon className="w-3.5 h-3.5" /></FavoriteActionButton>
+                        <FavoriteActionButton tooltip={isDefault ? '取消默认收藏夹' : '设为默认收藏夹'} onClick={(e) => handleSetDefault(e, collection)} className={`p-1.5 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 border border-transparent hover:border-black dark:hover:border-white transition-all rounded-none ${isDefault ? 'text-yellow-500 dark:text-yellow-400' : 'text-gray-400 hover:text-yellow-500 dark:hover:text-yellow-400'}`}><FavoriteIcon filled={isDefault} className="w-3.5 h-3.5" /></FavoriteActionButton>
+                        <FavoriteActionButton tooltip="重命名" onClick={(e) => startRename(e, collection)} className="p-1.5 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 border border-transparent hover:border-black dark:hover:border-white transition-all rounded-none text-gray-400 hover:text-gray-700 dark:hover:text-white"><EditIcon className="w-3.5 h-3.5" /></FavoriteActionButton>
+                        <FavoriteActionButton tooltip={canDelete ? '删除' : '至少保留一个收藏夹'} disabled={!canDelete} onClick={(e) => handleDelete(e, collection)} className={`p-1.5 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 border border-transparent hover:border-black dark:hover:border-white transition-all rounded-none ${canDelete ? 'text-gray-400 hover:text-red-500 dark:hover:text-red-400' : 'text-gray-300 dark:text-gray-600 cursor-not-allowed'}`}><TrashIcon className="w-3.5 h-3.5" /></FavoriteActionButton>
                       </>
                     )}
                   </div>
@@ -981,7 +985,7 @@ export function FavoriteCollectionPickerModal() {
             )})}
           </div>
         </div>
-        <div className="border-t border-gray-200 p-6 dark:border-[#333] shrink-0">
+        <div className="border-t-2 border-black dark:border-white p-6 shrink-0 bg-slate-50 dark:bg-zinc-950">
           <div className="flex gap-3">
             <input
               value={draft}
@@ -991,20 +995,20 @@ export function FavoriteCollectionPickerModal() {
               }}
               type="text"
               placeholder="新建收藏夹..."
-              className="min-w-0 flex-1 rounded-xl border border-gray-300 bg-transparent px-4 py-2 text-sm outline-none transition focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:border-white/10 dark:text-white dark:focus:border-white/30 dark:focus:ring-white/30"
+              className="min-w-0 flex-1 rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 px-4 py-2 text-sm outline-none transition-all focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] text-slate-900 dark:text-white"
             />
             <button 
               type="button" 
               onClick={handleCreate} 
               disabled={!draft.trim()}
-              className="inline-flex items-center justify-center rounded-xl bg-gray-200 px-5 py-2 text-sm font-medium text-gray-800 transition hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-white/10 dark:text-gray-300 dark:hover:bg-white/20"
+              className="inline-flex items-center justify-center rounded-none border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 px-5 py-2 text-sm font-bold text-gray-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none transition-all cursor-pointer"
             >
               新建
             </button>
           </div>
           <div className="mt-5 flex gap-4">
-            <button type="button" onClick={closePicker} className="flex-1 rounded-xl border border-gray-200 bg-transparent px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors dark:border-white/10 dark:text-gray-200 dark:hover:bg-white/[0.04]">取消</button>
-            <button type="button" onClick={handleConfirm} className="flex-1 rounded-xl bg-blue-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-600 transition-colors shadow-sm border border-transparent">确认</button>
+            <button type="button" onClick={closePicker} className="flex-1 rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-800 px-4 py-2.5 text-sm font-bold text-gray-700 dark:text-gray-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] transition-all cursor-pointer">取消</button>
+            <button type="button" onClick={handleConfirm} className="flex-1 rounded-none border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 px-4 py-2.5 text-sm font-bold text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] transition-all cursor-pointer">确认</button>
           </div>
         </div>
       </div>
@@ -1301,24 +1305,24 @@ export function ManageCollectionsModal() {
   }
 
   return createPortal(
-    <div data-no-drag-select className="fixed inset-0 z-[105] flex items-center justify-center p-4 sm:p-0" onClick={closeManage}>
+    <div data-no-drag-select className="fixed inset-0 z-[105] flex items-center justify-center p-4" onClick={closeManage}>
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm animate-overlay-in" />
-      <div ref={modalRef} className="relative z-10 flex max-h-[85vh] w-full max-w-[400px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl border border-gray-200 dark:border-[#333] dark:bg-[#1c1c1e] animate-modal-in" onClick={(e) => e.stopPropagation()}>
-        <div className="px-6 pt-6 pb-4 shrink-0 relative border-b border-gray-100 dark:border-[#333]">
-          <FavoriteActionButton tooltip="关闭" onClick={closeManage} wrapperClassName="absolute right-5 top-5 inline-flex" className="shrink-0 rounded-full p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-white/[0.06] dark:hover:text-gray-200">
+      <div ref={modalRef} className="relative z-10 flex max-h-[85vh] w-full max-w-[400px] flex-col overflow-hidden rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] animate-modal-in" onClick={(e) => e.stopPropagation()}>
+        <div className="px-6 pt-6 pb-4 shrink-0 relative border-b-2 border-black dark:border-white bg-slate-50 dark:bg-zinc-950">
+          <FavoriteActionButton tooltip="关闭" onClick={closeManage} wrapperClassName="absolute right-5 top-5 inline-flex" className="w-8 h-8 flex items-center justify-center border border-black dark:border-white bg-white dark:bg-zinc-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer rounded-none text-gray-700 dark:text-zinc-200">
             <CloseIcon className="h-5 w-5" />
           </FavoriteActionButton>
-          <h2 className="mb-2 pr-8 flex items-center gap-2.5 text-lg font-semibold text-gray-800 dark:text-gray-100 leading-snug">
+          <h2 className="mb-2 pr-8 flex items-center gap-2.5 text-lg font-black text-gray-800 dark:text-gray-100 leading-snug">
             管理收藏夹
           </h2>
-          <p className="text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed">
+          <p className="text-[13px] text-gray-500 dark:text-gray-400 font-bold leading-relaxed">
             在这里管理你的收藏夹列表及排序。
           </p>
         </div>
         <div className="flex-1 flex flex-col min-h-0 overflow-hidden pt-3 pb-1">
           <div className="flex-1 overflow-y-auto custom-scrollbar relative">
             {selectableCollections.length === 0 ? (
-              <div className="py-8 text-center text-sm text-gray-400 dark:text-gray-500">暂无收藏夹</div>
+              <div className="py-8 text-center text-sm font-bold text-gray-400 dark:text-gray-500">暂无收藏夹</div>
             ) : selectableCollections.map((collection) => {
               const isDefault = collection.id === defaultFavoriteCollectionId
               const canDelete = collections.length > 1
@@ -1340,10 +1344,10 @@ export function ManageCollectionsModal() {
                 onDrop={(e) => handleDrop(e, collection.id)}
               >
                 {dragOverId === collection.id && dragDropPosition === 'before' && draggedId !== collection.id && (
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-blue-500 z-40 pointer-events-none" />
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-slate-900 dark:bg-white z-40 pointer-events-none" />
                 )}
                 {dragOverId === collection.id && dragDropPosition === 'after' && draggedId !== collection.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 z-40 pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-slate-900 dark:bg-white z-40 pointer-events-none" />
                 )}
                 <div className="flex h-12 items-center flex-1 min-w-0 gap-3 pl-4 pr-3">
                   <div 
@@ -1356,7 +1360,7 @@ export function ManageCollectionsModal() {
                   {editingId === collection.id ? (
                     <input
                       type="text"
-                      className="h-6 min-w-0 flex-1 rounded border border-blue-400/50 bg-white px-1.5 py-0 text-[15px] leading-6 text-gray-900 shadow-sm outline-none focus:border-blue-500 dark:border-white/20 dark:bg-black/20 dark:text-white dark:focus:border-white/40"
+                      className="h-7 min-w-0 flex-1 rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 px-1.5 py-0 text-[15px] leading-6 text-gray-900 dark:text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] outline-none focus:border-black dark:focus:border-white"
                       value={editingName}
                       onChange={(e) => setEditingName(e.target.value)}
                       onKeyDown={handleRenameKeyDown}
@@ -1365,7 +1369,7 @@ export function ManageCollectionsModal() {
                       onBlur={confirmRename}
                     />
                   ) : (
-                    <span className="min-w-0 flex-1 truncate text-[15px] font-medium text-gray-700 dark:text-gray-200" title={collection.name}>{collection.name}</span>
+                    <span className="min-w-0 flex-1 truncate text-[15px] font-bold text-gray-700 dark:text-gray-200" title={collection.name}>{collection.name}</span>
                   )}
                 </div>
                 <div className={`flex shrink-0 items-center justify-end gap-2 overflow-hidden pr-4 transition-all duration-150 ${editingId === collection.id ? 'w-12' : 'w-28'}`}>
@@ -1377,17 +1381,17 @@ export function ManageCollectionsModal() {
                           e.stopPropagation()
                           confirmRename()
                         }}
-                        className="p-1.5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-md text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-300 transition-colors"
+                        className="p-1.5 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 border border-transparent hover:border-black dark:hover:border-white transition-all rounded-none text-green-600 dark:text-green-400"
                       >
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                       </FavoriteActionButton>
                     ) : (
                       <>
-                        <FavoriteActionButton tooltip={isDefault ? '取消默认收藏夹' : '设为默认收藏夹'} onClick={(e) => handleSetDefault(e, collection)} className={`p-1.5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-md transition-colors ${isDefault ? 'text-yellow-500 dark:text-yellow-400' : 'text-gray-400 hover:text-yellow-500 dark:hover:text-yellow-400'}`}><FavoriteIcon filled={isDefault} className="w-3.5 h-3.5" /></FavoriteActionButton>
-                        <FavoriteActionButton tooltip="重命名" onClick={(e) => startRename(e, collection)} className="p-1.5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-md text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors"><EditIcon className="w-3.5 h-3.5" /></FavoriteActionButton>
-                        <FavoriteActionButton tooltip={canDelete ? '删除' : '至少保留一个收藏夹'} disabled={!canDelete} onClick={(e) => handleDelete(e, collection)} className={`p-1.5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-md transition-colors ${canDelete ? 'text-gray-400 hover:text-red-500 dark:hover:text-red-400' : 'text-gray-300 dark:text-gray-600 cursor-not-allowed'}`}><TrashIcon className="w-3.5 h-3.5" /></FavoriteActionButton>
+                        <FavoriteActionButton tooltip={isDefault ? '取消默认收藏夹' : '设为默认收藏夹'} onClick={(e) => handleSetDefault(e, collection)} className={`p-1.5 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 border border-transparent hover:border-black dark:hover:border-white transition-all rounded-none ${isDefault ? 'text-yellow-500 dark:text-yellow-400' : 'text-gray-400 hover:text-yellow-500 dark:hover:text-yellow-400'}`}><FavoriteIcon filled={isDefault} className="w-3.5 h-3.5" /></FavoriteActionButton>
+                        <FavoriteActionButton tooltip="重命名" onClick={(e) => startRename(e, collection)} className="p-1.5 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 border border-transparent hover:border-black dark:hover:border-white transition-all rounded-none text-gray-400 hover:text-gray-700 dark:hover:text-white"><EditIcon className="w-3.5 h-3.5" /></FavoriteActionButton>
+                        <FavoriteActionButton tooltip={canDelete ? '删除' : '至少保留一个收藏夹'} disabled={!canDelete} onClick={(e) => handleDelete(e, collection)} className={`p-1.5 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 border border-transparent hover:border-black dark:hover:border-white transition-all rounded-none ${canDelete ? 'text-gray-400 hover:text-red-500 dark:hover:text-red-400' : 'text-gray-300 dark:text-gray-600 cursor-not-allowed'}`}><TrashIcon className="w-3.5 h-3.5" /></FavoriteActionButton>
                       </>
                     )}
                   </div>
@@ -1395,7 +1399,7 @@ export function ManageCollectionsModal() {
             )})}
           </div>
         </div>
-        <div className="border-t border-gray-200 p-6 dark:border-[#333] shrink-0">
+        <div className="border-t-2 border-black dark:border-white p-6 shrink-0 bg-slate-50 dark:bg-zinc-950">
           <div className="flex gap-3">
             <input
               value={draft}
@@ -1405,13 +1409,13 @@ export function ManageCollectionsModal() {
               }}
               type="text"
               placeholder="新建收藏夹..."
-              className="min-w-0 flex-1 rounded-xl border border-gray-300 bg-transparent px-4 py-2 text-sm outline-none transition focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:border-white/10 dark:text-white dark:focus:border-white/30 dark:focus:ring-white/30"
+              className="min-w-0 flex-1 rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 px-4 py-2 text-sm outline-none transition-all focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] text-slate-900 dark:text-white"
             />
             <button 
               type="button" 
               onClick={handleCreate} 
               disabled={!draft.trim()}
-              className="inline-flex items-center justify-center rounded-xl bg-gray-200 px-5 py-2 text-sm font-medium text-gray-800 transition hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-white/10 dark:text-gray-300 dark:hover:bg-white/20"
+              className="inline-flex items-center justify-center rounded-none border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 px-5 py-2 text-sm font-bold text-gray-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none transition-all cursor-pointer"
             >
               新建
             </button>

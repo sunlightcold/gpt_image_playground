@@ -14,7 +14,7 @@ import type {
   ReferenceImageEditAction,
 } from '../types'
 import { DEFAULT_AGENT_MAX_TOOL_ROUNDS, DEFAULT_STREAM_PARTIAL_IMAGES, DEFAULT_ZIP_DOWNLOAD_ROUTES, ZIP_DOWNLOAD_ROUTE_VALUES } from '../types'
-import { shouldUseApiProxy } from './devProxy'
+import { isApiProxyDynamic, shouldUseApiProxy } from './devProxy'
 import { readRuntimeEnv } from './runtimeEnv'
 import { isImportableConfigUrl } from './customProviderConfigUrl'
 
@@ -30,7 +30,8 @@ export const DEFAULT_RESPONSES_MODEL = 'gpt-5.5'
 export const DEFAULT_FAL_BASE_URL = 'https://fal.run'
 export const DEFAULT_FAL_MODEL = 'openai/gpt-image-2'
 export const DEFAULT_OPENAI_PROFILE_ID = 'default-openai'
-export const DEFAULT_API_TIMEOUT = 600
+const LEGACY_DEFAULT_API_TIMEOUT = 600
+export const DEFAULT_API_TIMEOUT = 6000
 
 const BUILT_IN_PROVIDER_IDS = new Set<ApiProvider>(['openai', 'fal'])
 const DEFAULT_CUSTOM_PROVIDER_PATHS = {
@@ -427,6 +428,11 @@ export function normalizeApiProfile(input: unknown, fallback?: Partial<ApiProfil
   const defaults = provider === 'fal' ? createDefaultFalProfile(fallback) : createDefaultOpenAIProfile(fallback)
   const apiMode: ApiMode = record.apiMode === 'responses' ? 'responses' : 'images'
   const rawBaseUrl = typeof record.baseUrl === 'string' ? record.baseUrl : defaults.baseUrl
+  const rawTimeout = typeof record.timeout === 'number' && Number.isFinite(record.timeout) ? record.timeout : defaults.timeout
+  const shouldUpgradeLegacyDefaultTimeout =
+    provider === 'openai' &&
+    rawTimeout === LEGACY_DEFAULT_API_TIMEOUT &&
+    (typeof record.id !== 'string' || !record.id.trim() || record.id === DEFAULT_OPENAI_PROFILE_ID)
 
   return {
     ...defaults,
@@ -436,7 +442,7 @@ export function normalizeApiProfile(input: unknown, fallback?: Partial<ApiProfil
     baseUrl: provider === 'fal' ? rawBaseUrl.trim().replace(/\/+$/, '') || DEFAULT_FAL_BASE_URL : rawBaseUrl,
     apiKey: typeof record.apiKey === 'string' ? record.apiKey : defaults.apiKey,
     model: typeof record.model === 'string' && record.model.trim() ? record.model : defaults.model,
-    timeout: typeof record.timeout === 'number' && Number.isFinite(record.timeout) ? record.timeout : defaults.timeout,
+    timeout: shouldUpgradeLegacyDefaultTimeout ? DEFAULT_API_TIMEOUT : rawTimeout,
     apiMode,
     codexCli: Boolean(record.codexCli),
     apiProxy: typeof record.apiProxy === 'boolean' ? record.apiProxy : defaults.apiProxy,
@@ -468,7 +474,9 @@ export function normalizeSettings(input: Partial<AppSettings> | unknown): AppSet
     baseUrl: typeof record.baseUrl === 'string' ? record.baseUrl : DEFAULT_BASE_URL,
     apiKey: typeof record.apiKey === 'string' ? record.apiKey : '',
     model: typeof record.model === 'string' && record.model.trim() ? record.model : DEFAULT_IMAGES_MODEL,
-    timeout: typeof record.timeout === 'number' && Number.isFinite(record.timeout) ? record.timeout : DEFAULT_API_TIMEOUT,
+    timeout: typeof record.timeout === 'number' && Number.isFinite(record.timeout) && record.timeout !== LEGACY_DEFAULT_API_TIMEOUT
+      ? record.timeout
+      : DEFAULT_API_TIMEOUT,
     apiMode: record.apiMode === 'responses' ? 'responses' : 'images',
     codexCli: Boolean(record.codexCli),
     apiProxy: typeof record.apiProxy === 'boolean' ? record.apiProxy : DEFAULT_OPENAI_API_PROXY,
@@ -591,13 +599,18 @@ export function getActiveApiProfile(settings: Partial<AppSettings> | unknown): A
   const record = settings && typeof settings === 'object' ? settings as Record<string, unknown> : {}
   const normalized = normalizeSettings(settings)
   const profile = normalized.profiles.find((p) => p.id === normalized.activeProfileId) ?? normalized.profiles[0] ?? createDefaultOpenAIProfile()
+  const rawTimeout = typeof record.timeout === 'number' && Number.isFinite(record.timeout) ? record.timeout : undefined
+  const shouldIgnoreLegacyTopLevelTimeout =
+    rawTimeout === LEGACY_DEFAULT_API_TIMEOUT &&
+    profile.provider === 'openai' &&
+    profile.id === DEFAULT_OPENAI_PROFILE_ID
 
   return {
     ...profile,
     baseUrl: typeof record.baseUrl === 'string' ? record.baseUrl : profile.baseUrl,
     apiKey: typeof record.apiKey === 'string' ? record.apiKey : profile.apiKey,
     model: typeof record.model === 'string' && record.model.trim() ? record.model : profile.model,
-    timeout: typeof record.timeout === 'number' && Number.isFinite(record.timeout) ? record.timeout : profile.timeout,
+    timeout: rawTimeout === undefined || shouldIgnoreLegacyTopLevelTimeout ? profile.timeout : rawTimeout,
     apiMode: record.apiMode === 'images' || record.apiMode === 'responses' ? record.apiMode : profile.apiMode,
     codexCli: typeof record.codexCli === 'boolean' ? record.codexCli : profile.codexCli,
     apiProxy: typeof record.apiProxy === 'boolean' ? record.apiProxy : profile.apiProxy,
@@ -608,7 +621,7 @@ export function getActiveApiProfile(settings: Partial<AppSettings> | unknown): A
 
 export function validateApiProfile(profile: ApiProfile): string | null {
   if (!profile.name.trim()) return '缺少名称'
-  if (profile.provider !== 'fal' && !profile.baseUrl.trim() && !shouldUseApiProxy(profile.apiProxy)) return '缺少 API URL'
+  if (profile.provider !== 'fal' && !profile.baseUrl.trim() && (!shouldUseApiProxy(profile.apiProxy) || isApiProxyDynamic())) return '缺少 API URL'
   if (!profile.apiKey.trim()) return '缺少 API Key'
   if (!profile.model.trim()) return '缺少模型 ID'
   return null

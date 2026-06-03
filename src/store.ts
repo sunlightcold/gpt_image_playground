@@ -1854,6 +1854,9 @@ function getApiRequestNetworkErrorHint(
   }
 
   if (elapsedSeconds >= 55 && elapsedSeconds <= 75) {
+    if (usesApiProxy) {
+      return `提示：请求等待约 60 秒后被断开，通常是上游 API 或其中间网关在长时间无最终响应时主动关闭连接，而非浏览器跨域问题。可尝试使用支持流式或异步任务轮询的接口，或降低图片尺寸/质量后重试。${getTimeoutStreamingHint(profile)}`
+    }
     return `提示：请求等待约 60 秒后被断开，这通常是 Nginx 等反向代理的默认超时，而非接口本身报错。可调大代理的超时时间（如 proxy_read_timeout），或降低图片尺寸/质量后重试。${getTimeoutStreamingHint(profile)}`
   }
 

@@ -143,7 +143,7 @@
 <details>
 <summary><strong>☁️ 方式二：Cloudflare Workers 部署</strong></summary>
 
-项目已内置 Wrangler 配置，可将 Vite 构建产物作为 Cloudflare Workers 静态资源部署。
+项目已内置 Wrangler 配置，可将 Vite 构建产物作为 Cloudflare Workers 静态资源部署，并通过同源 `/api-proxy/` 提供动态 API 代理。开启页面设置中的 **API 代理** 后，请求会经当前 Worker 转发到当前配置里的 API URL，可用于绕过上游接口不支持浏览器 CORS 的问题。
 
 **1. 登录 Cloudflare**
 
@@ -157,7 +157,14 @@ npx wrangler login
 npm run deploy:cf
 ```
 
-部署脚本会先执行 `npm run build`，再通过 `wrangler deploy` 上传 `dist/` 目录。
+部署脚本会先执行 `npm run build:cf`，再通过 `wrangler deploy` 上传 `dist/` 目录。
+
+Cloudflare Workers 部署默认在构建时启用动态 API 代理标记：
+
+- `VITE_API_PROXY_AVAILABLE=true`：页面显示并允许开启 **API 代理**。
+- `VITE_API_PROXY_DYNAMIC=true`：代理开启后仍保留 API URL 可编辑，并将当前 API URL 作为 Worker 的转发目标。
+
+动态代理不限制上游白名单，只要求 API URL 为合法的 `http/https` 地址。若部署为公开站点，建议在 Cloudflare 侧增加 Access、WAF 或限流规则，避免被滥用为开放代理。
 
 **配置默认 API URL**：Cloudflare Workers 的环境变量不会自动改写已经构建好的静态文件。若需预设默认 API 地址，请在构建前设置 `VITE_DEFAULT_API_URL` 后再部署。
 
@@ -199,7 +206,7 @@ $env:VITE_DEFAULT_API_URL="https://api.openai.com/v1"; npm run deploy:cf
 >
 > 这样前端设置页只会显示空值或占位地址，真实 API 地址仅存在于服务器侧的 `API_PROXY_URL`，不会暴露给用户。
 >
-> 自定义服务商开启代理仅支持同步返回图片的配置；包含 `taskIdPath` 或 `poll` 的异步任务自定义服务商暂不支持 API 代理。
+> 自定义服务商开启代理支持同步返回图片，也支持通过 `taskIdPath` / `poll` 在同一上游继续轮询异步任务。若异步结果返回的是第三方图片 URL，浏览器后续下载该图片时仍取决于该 URL 本身的跨域与可访问性。
 
 > 💡 **兼容迁移**：旧版本中的 `API_URL` 已拆分为 `DEFAULT_API_URL` 和 `API_PROXY_URL`。容器启动时会自动将遗留的 `API_URL` 作为两个新变量的兜底值，实现无缝兼容。建议更新配置文件，逐步迁移至新变量。
 
@@ -238,7 +245,7 @@ docker run -d -p 8080:80 \
   ghcr.io/cooksleep/gpt_image_playground:latest
 ```
 
-> 上例中 `DEFAULT_API_URL` 为同步自定义服务商配置分享 URL，profile 的 `baseUrl` 留空且 `apiProxy:true`；真实 API 地址仅在 `API_PROXY_URL` 中配置，前端不可见。异步任务自定义服务商暂不支持开启代理。
+> 上例中 `DEFAULT_API_URL` 为自定义服务商配置分享 URL，profile 的 `baseUrl` 留空且 `apiProxy:true`；真实 API 地址仅在 `API_PROXY_URL` 中配置，前端不可见。
 
 *(注：使用 host 网络时加 `--network host`，修改容器监听端口使用 `-e PORT=28080`)*
 
@@ -275,9 +282,11 @@ npm install
 npm run dev
 ```
 
-**2. 本地开发跨域代理 (可选)**
+**2. 本地开发跨域代理**
 
-如果在本地开发时遇到浏览器的 CORS 限制，可开启本地代理转发：
+本地开发服务器默认提供动态同源代理。如果在本地开发时遇到浏览器的 CORS 限制，直接在页面设置中开启 **API 代理** 即可。开启后，浏览器会请求 `http://localhost:5173/api-proxy/...`，Vite 开发服务器会根据当前配置中的 API URL 动态转发到对应上游。
+
+如需强制使用固定上游，也可以创建 `dev-proxy.config.json`：
 
 ```bash
 cp dev-proxy.config.example.json dev-proxy.config.json

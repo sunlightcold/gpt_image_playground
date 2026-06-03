@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { DEFAULT_PARAMS } from '../types'
 import { DEFAULT_SETTINGS } from './apiProfiles'
 import { callImageApi } from './api'
+import { API_PROXY_BASE_URL_HEADER, API_PROXY_TRANSPORT_EVENT_STREAM, API_PROXY_TRANSPORT_HEADER } from './devProxy'
 
 describe('callImageApi', () => {
   afterEach(() => {
@@ -424,6 +425,8 @@ describe('callImageApi', () => {
         apiKey: 'test-key',
         apiProxy: true,
         baseUrl: 'http://api.example.com/v1',
+        streamImages: false,
+        profiles: DEFAULT_SETTINGS.profiles.map((profile) => ({ ...profile, streamImages: false })),
       },
       prompt: 'prompt',
       params: { ...DEFAULT_PARAMS },
@@ -434,6 +437,38 @@ describe('callImageApi', () => {
       '/api-proxy/images/generations',
       expect.objectContaining({ method: 'POST' }),
     )
+    expect((fetchMock.mock.calls[0][1] as RequestInit).headers).toMatchObject({
+      [API_PROXY_BASE_URL_HEADER]: 'http://api.example.com/v1',
+      [API_PROXY_TRANSPORT_HEADER]: API_PROXY_TRANSPORT_EVENT_STREAM,
+    })
+  })
+
+  it('does not request stream-wrapped proxy responses for upstream event streams', async () => {
+    vi.stubEnv('VITE_API_PROXY_AVAILABLE', 'true')
+    const fetchMock = vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response([
+      'data: {"type":"image_generation.partial_image","b64_json":"cGFydGlhbA==","partial_image_index":1}',
+      '',
+      'data: {"type":"image_generation.completed","b64_json":"aW1hZ2U="}',
+      '',
+    ].join('\n'), {
+      status: 200,
+      headers: { 'Content-Type': 'text/event-stream' },
+    }))
+
+    await callImageApi({
+      settings: {
+        ...DEFAULT_SETTINGS,
+        apiKey: 'test-key',
+        apiProxy: true,
+        baseUrl: 'http://api.example.com/v1',
+        streamImages: true,
+      },
+      prompt: 'prompt',
+      params: { ...DEFAULT_PARAMS },
+      inputImageDataUrls: [],
+    })
+
+    expect((fetchMock.mock.calls[0][1] as RequestInit).headers).not.toHaveProperty(API_PROXY_TRANSPORT_HEADER)
   })
 
   it('uses the same-origin API proxy path when API proxy is enabled and base URL is empty', async () => {
@@ -461,6 +496,7 @@ describe('callImageApi', () => {
       '/api-proxy/images/generations',
       expect.objectContaining({ method: 'POST' }),
     )
+    expect((fetchMock.mock.calls[0][1] as RequestInit).headers).not.toHaveProperty(API_PROXY_BASE_URL_HEADER)
   })
 
   it('uses the same-origin API proxy path for sync custom providers', async () => {
@@ -510,16 +546,28 @@ describe('callImageApi', () => {
       '/api-proxy/custom/images',
       expect.objectContaining({ method: 'POST' }),
     )
+    expect((fetchMock.mock.calls[0][1] as RequestInit).headers).not.toHaveProperty(API_PROXY_BASE_URL_HEADER)
   })
 
-  it('rejects API proxy for async custom providers', async () => {
+  it('uses the same-origin API proxy path for async custom providers', async () => {
     vi.stubEnv('VITE_API_PROXY_AVAILABLE', 'true')
     const fetchMock = vi.spyOn(globalThis, 'fetch')
+      .mockResolvedValueOnce(new Response(JSON.stringify({ task_id: 'task-1' }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({
+        status: 'done',
+        data: [{ b64_json: 'aW1hZ2U=' }],
+      }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      }))
 
     await expect(callImageApi({
       settings: {
         ...DEFAULT_SETTINGS,
-        baseUrl: '',
+        baseUrl: 'https://api.example.com/v1',
         apiKey: 'test-key',
         apiProxy: true,
         customProviders: [{
@@ -547,7 +595,7 @@ describe('callImageApi', () => {
           ...DEFAULT_SETTINGS.profiles[0],
           id: 'profile-custom-async-proxy',
           provider: 'custom-async-proxy',
-          baseUrl: '',
+          baseUrl: 'https://api.example.com/v1',
           apiKey: 'test-key',
           model: 'model',
           apiProxy: true,
@@ -557,9 +605,19 @@ describe('callImageApi', () => {
       prompt: 'prompt',
       params: { ...DEFAULT_PARAMS },
       inputImageDataUrls: [],
-    })).rejects.toThrow('异步任务的自定义服务商')
+    })).resolves.toEqual({
+      images: ['data:image/png;base64,aW1hZ2U='],
+    })
 
-    expect(fetchMock).not.toHaveBeenCalled()
+    expect(fetchMock).toHaveBeenCalledTimes(2)
+    expect(fetchMock.mock.calls[0][0]).toBe('/api-proxy/images/generations')
+    expect(fetchMock.mock.calls[1][0]).toBe('/api-proxy/images/tasks/task-1')
+    expect((fetchMock.mock.calls[0][1] as RequestInit).headers).toMatchObject({
+      [API_PROXY_BASE_URL_HEADER]: 'https://api.example.com/v1',
+    })
+    expect((fetchMock.mock.calls[1][1] as RequestInit).headers).toMatchObject({
+      [API_PROXY_BASE_URL_HEADER]: 'https://api.example.com/v1',
+    })
   })
 
   it('uses the same-origin API proxy path when API proxy is locked', async () => {
@@ -588,6 +646,9 @@ describe('callImageApi', () => {
       '/api-proxy/images/generations',
       expect.objectContaining({ method: 'POST' }),
     )
+    expect((fetchMock.mock.calls[0][1] as RequestInit).headers).toMatchObject({
+      [API_PROXY_BASE_URL_HEADER]: 'http://api.example.com/v1',
+    })
   })
 
   it('does not add cache request headers that require extra CORS allow-list entries', async () => {

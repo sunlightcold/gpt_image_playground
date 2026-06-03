@@ -389,19 +389,19 @@ export default function DetailModal() {
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       onClick={() => setDetailTaskId(null)}
     >
-      <div className="absolute inset-0 bg-black/20 dark:bg-black/40 backdrop-blur-md animate-overlay-in" />
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm animate-overlay-in" />
       <div
         ref={modalRef}
-        className="relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border border-white/50 dark:border-white/[0.08] rounded-3xl shadow-[0_8px_40px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_40px_rgb(0,0,0,0.4)] max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col md:flex-row z-10 ring-1 ring-black/5 dark:ring-white/10 animate-modal-in"
+        className="relative bg-white dark:bg-zinc-900 border-2 border-black dark:border-white rounded-none shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col md:flex-row z-10 animate-modal-in"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex h-14 items-center justify-end px-4 md:hidden">
           <button
             onClick={() => setDetailTaskId(null)}
-            className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-white/[0.06] transition text-gray-400"
+            className="w-8 h-8 flex items-center justify-center border border-black dark:border-white bg-white dark:bg-zinc-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer rounded-none text-gray-700 dark:text-zinc-200"
             aria-label="关闭"
           >
-            <CloseIcon className="w-6 h-6" />
+            <CloseIcon className="w-5 h-5" />
           </button>
         </div>
 
@@ -723,7 +723,7 @@ export default function DetailModal() {
         <div className="md:w-1/2 w-full p-5 overflow-y-auto overscroll-contain flex flex-col">
           <button
             onClick={() => setDetailTaskId(null)}
-            className="absolute top-3 right-3 hidden p-1 rounded-full hover:bg-gray-100 dark:hover:bg-white/[0.06] transition text-gray-400 z-10 md:block"
+            className="absolute top-3 right-3 hidden w-8 h-8 md:flex items-center justify-center border border-black dark:border-white bg-white dark:bg-zinc-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer rounded-none text-gray-700 dark:text-zinc-200 z-10"
             aria-label="关闭"
           >
             <CloseIcon className="w-5 h-5" />
@@ -897,37 +897,37 @@ export default function DetailModal() {
           </div>
 
           {/* 操作按钮 */}
-          <div className="grid grid-cols-4 sm:flex gap-2 pt-4 border-t border-gray-100 dark:border-white/[0.08]">
+          <div className="grid grid-cols-4 sm:flex gap-2 pt-4 border-t-2 border-black dark:border-white">
             <button
               onClick={handleReuse}
-              className="col-span-2 sm:flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-500/20 transition text-sm font-medium whitespace-nowrap"
+              className="col-span-2 sm:flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-none border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] transition-all text-sm font-black whitespace-nowrap cursor-pointer"
             >
               <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
               </svg>
               复用配置
             </button>
             <button
               onClick={handleEdit}
               disabled={!outputLen}
-              className="col-span-2 sm:flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-green-50 dark:bg-green-500/10 text-green-600 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-500/20 disabled:opacity-40 disabled:cursor-not-allowed transition text-sm font-medium whitespace-nowrap"
+              className="col-span-2 sm:flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-none border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] transition-all text-sm font-black whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:-translate-x-0 disabled:-translate-y-0 disabled:shadow-none"
             >
               <EditIcon className="w-4 h-4 flex-shrink-0" />
               编辑输出
             </button>
             <button
               onClick={handleDelete}
-              className="col-span-3 sm:flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-500/20 transition text-sm font-medium whitespace-nowrap"
+              className="col-span-3 sm:flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-none border-2 border-black dark:border-white bg-red-100 hover:bg-red-200 dark:bg-red-950/40 text-red-650 dark:text-red-400 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] transition-all text-sm font-black whitespace-nowrap cursor-pointer"
             >
               <TrashIcon className="w-4 h-4 flex-shrink-0" />
               删除任务
             </button>
             <button
               onClick={handleToggleFavorite}
-              className={`col-span-1 sm:flex-none sm:w-11 w-full flex items-center justify-center rounded-xl transition ${
+              className={`col-span-1 sm:flex-none sm:w-11 w-full flex items-center justify-center rounded-none border-2 border-black dark:border-white transition-all cursor-pointer ${
                 task.isFavorite
-                  ? 'bg-yellow-50 text-yellow-500 hover:bg-yellow-100 dark:bg-yellow-500/10 dark:hover:bg-yellow-500/20'
-                  : 'bg-gray-50 text-gray-400 hover:bg-yellow-50 hover:text-yellow-500 dark:bg-white/[0.04] dark:hover:bg-yellow-500/10'
+                  ? 'bg-[#FFE66D] dark:bg-yellow-400 text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)]'
+                  : 'bg-white dark:bg-zinc-800 text-gray-400 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 hover:text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)]'
               }`}
               title={task.isFavorite ? '编辑收藏夹' : '收藏任务'}
             >
@@ -951,9 +951,9 @@ export default function DetailModal() {
             rawUrlsBackdropPointerDownRef.current = false
           }}
         >
-          <div ref={rawUrlsModalRef} className="flex w-full max-w-2xl max-h-[90vh] flex-col overflow-hidden rounded-2xl bg-white shadow-xl dark:bg-[#1c1c1e]" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4 dark:border-white/[0.08] shrink-0">
-              <h3 className="text-base font-semibold text-gray-900 dark:text-white">原始图片链接 ({rawImageUrls.length})</h3>
+          <div ref={rawUrlsModalRef} className="flex w-full max-w-2xl max-h-[90vh] flex-col overflow-hidden rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] animate-modal-in" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between border-b-2 border-black dark:border-white bg-slate-50 dark:bg-zinc-950 px-5 py-4 shrink-0">
+              <h3 className="text-base font-black text-gray-900 dark:text-white">原始图片链接 ({rawImageUrls.length})</h3>
               <div className="flex items-center gap-2">
                 <button
                   type="button"
@@ -965,7 +965,7 @@ export default function DetailModal() {
                       showToast(getClipboardFailureMessage('复制失败', err), 'error')
                     }
                   }}
-                  className="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-50 dark:bg-white/[0.04] text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/[0.08] transition-colors text-xs font-medium"
+                  className="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-none border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer text-xs font-bold"
                 >
                   <CopyIcon className="w-3.5 h-3.5" />
                   全部复制
@@ -973,7 +973,7 @@ export default function DetailModal() {
                 <button
                   type="button"
                   onClick={() => setShowRawUrlsModal(false)}
-                  className="rounded-full p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500 dark:hover:bg-white/[0.08] dark:hover:text-gray-300 transition-colors"
+                  className="w-8 h-8 flex items-center justify-center border border-black dark:border-white bg-white dark:bg-zinc-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer rounded-none text-gray-700 dark:text-zinc-200"
                 >
                   <CloseIcon className="w-5 h-5" />
                 </button>
@@ -982,9 +982,9 @@ export default function DetailModal() {
             <div className="flex-1 min-h-0 overflow-y-auto p-3 sm:p-5 bg-gray-50/50 dark:bg-black/20 overscroll-contain">
               <div className="space-y-2.5">
                 {rawImageUrls.map((url, i) => (
-                  <div key={i} className="group flex items-center gap-3 p-3 sm:p-4 rounded-xl bg-white dark:bg-[#1c1c1e] border border-gray-100 dark:border-white/[0.06] shadow-sm hover:shadow-md transition-all">
+                  <div key={i} className="group flex items-center gap-3 p-3 sm:p-4 rounded-none bg-white dark:bg-zinc-900 border-2 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all hover:bg-slate-50 dark:hover:bg-zinc-850">
                     <div className="flex-1 min-w-0 flex flex-col gap-1">
-                      <div className="text-xs font-medium text-gray-400 dark:text-gray-500">
+                      <div className="text-xs font-black text-slate-800 dark:text-zinc-300">
                         图片 {i + 1}
                       </div>
                       <div className="text-sm text-gray-700 dark:text-gray-300 truncate select-text" title={url}>
@@ -1001,7 +1001,7 @@ export default function DetailModal() {
                           showToast(getClipboardFailureMessage('复制失败', err), 'error')
                         }
                       }}
-                      className="flex-shrink-0 p-2 sm:px-3 sm:py-1.5 flex items-center justify-center gap-1.5 rounded-lg bg-gray-50 dark:bg-white/[0.04] text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/[0.08] transition-colors text-xs font-medium border border-transparent dark:border-white/[0.04]"
+                      className="flex-shrink-0 p-2 sm:px-3 sm:py-1.5 flex items-center justify-center gap-1.5 rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-800 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all text-xs font-bold cursor-pointer"
                       title="复制链接"
                     >
                       <CopyIcon className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
@@ -1029,14 +1029,14 @@ export default function DetailModal() {
         >
           <div
             ref={rawResponseModalRef}
-            className="flex w-full max-w-3xl max-h-[90vh] flex-col overflow-hidden rounded-2xl bg-white shadow-xl dark:bg-[#1c1c1e]"
+            className="flex w-full max-w-3xl max-h-[90vh] flex-col overflow-hidden rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] animate-modal-in"
             onPointerDown={(e) => {
               if (!(e.target as Element).closest('[data-selectable-text]')) clearTextSelection()
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4 dark:border-white/[0.08] shrink-0">
-              <h3 className="text-base font-semibold text-gray-900 dark:text-white">原始响应数据</h3>
+            <div className="flex items-center justify-between border-b-2 border-black dark:border-white bg-slate-50 dark:bg-zinc-950 px-5 py-4 shrink-0">
+              <h3 className="text-base font-black text-gray-900 dark:text-white">原始响应数据</h3>
               <div className="flex items-center gap-2">
                 <button
                   type="button"
@@ -1048,7 +1048,7 @@ export default function DetailModal() {
                       showToast(getClipboardFailureMessage('复制失败', err), 'error')
                     }
                   }}
-                  className="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-50 dark:bg-white/[0.04] text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/[0.08] transition-colors text-xs font-medium"
+                  className="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-none border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer text-xs font-bold"
                 >
                   <CopyIcon className="w-3.5 h-3.5" />
                   全部复制
@@ -1056,14 +1056,14 @@ export default function DetailModal() {
                 <button
                   type="button"
                   onClick={() => setShowRawResponseModal(false)}
-                  className="rounded-full p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500 dark:hover:bg-white/[0.08] dark:hover:text-gray-300 transition-colors"
+                  className="w-8 h-8 flex items-center justify-center border border-black dark:border-white bg-white dark:bg-zinc-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer rounded-none text-gray-700 dark:text-zinc-200"
                 >
                   <CloseIcon className="w-5 h-5" />
                 </button>
               </div>
             </div>
             <div className="flex-1 min-h-0 overflow-y-auto p-5 bg-gray-50/50 dark:bg-black/20 overscroll-contain">
-              <pre data-selectable-text className="text-[11px] sm:text-xs text-gray-600 dark:text-gray-300 font-mono whitespace-pre-wrap break-all select-text">
+              <pre data-selectable-text className="text-[11px] sm:text-xs text-gray-600 dark:text-gray-300 font-mono whitespace-pre-wrap break-all select-text font-bold">
                 {task.rawResponsePayload.replace(/"(b64_json|base64|data)":\s*"[^"]+"/g, '"$1": "<base64_data>"')}
               </pre>
             </div>

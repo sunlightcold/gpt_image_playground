@@ -160,9 +160,9 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
   }
 
   const buttonClass = (active: boolean) => {
-    return `rounded-xl border px-3 py-2 text-sm transition ${active
-      ? 'border-blue-400 bg-blue-50 text-blue-600 dark:border-blue-500/50 dark:bg-blue-500/10 dark:text-blue-300'
-      : 'border-gray-200/70 bg-white/60 text-gray-600 hover:bg-gray-50 dark:border-white/[0.08] dark:bg-white/[0.03] dark:text-gray-300 dark:hover:bg-white/[0.06]'
+    return `rounded-none border-2 px-3 py-2 text-sm font-bold transition-all cursor-pointer ${active
+      ? 'border-black bg-[#FFE66D] text-black dark:border-white dark:bg-yellow-400 dark:text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
+      : 'border-black dark:border-white bg-white hover:bg-slate-50 dark:bg-zinc-800 dark:text-gray-300 dark:hover:bg-zinc-700'
     }`
   }
 
@@ -176,43 +176,43 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm animate-overlay-in" />
       <div
         ref={modalRef}
-        className="relative z-10 w-full max-w-md rounded-3xl border border-white/50 bg-white/95 p-5 shadow-2xl ring-1 ring-black/5 animate-modal-in dark:border-white/[0.08] dark:bg-gray-900/95 dark:ring-white/10"
+        className="relative z-10 w-full max-w-md rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-900 p-5 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] animate-modal-in"
       >
         <div className="mb-5 flex items-start justify-between gap-4">
           <div>
-            <h3 className="text-base font-semibold text-gray-800 dark:text-gray-100">设置图像尺寸</h3>
-            <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">当前：{currentSize || 'auto'}</p>
+            <h3 className="text-base font-black text-gray-800 dark:text-gray-100">设置图像尺寸</h3>
+            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400 font-bold">当前：{currentSize || 'auto'}</p>
           </div>
           <button
             onClick={onClose}
-            className="rounded-full p-1 text-gray-400 transition hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-white/[0.06] dark:hover:text-gray-200"
+            className="w-8 h-8 flex items-center justify-center border border-black dark:border-white bg-white dark:bg-zinc-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer rounded-none text-gray-700 dark:text-zinc-200"
             aria-label="关闭"
           >
             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
         <div className="space-y-6">
-          <div className="flex rounded-xl bg-gray-100/80 p-1 dark:bg-white/[0.04]">
+          <div className="flex rounded-none border-2 border-black dark:border-white bg-slate-50 dark:bg-zinc-950 p-1">
             {allowAuto && (
               <button
                 onClick={() => setMode('auto')}
-                className={`flex-1 rounded-lg py-1.5 text-sm font-medium transition ${mode === 'auto' ? 'bg-white text-gray-800 shadow-sm dark:bg-gray-700 dark:text-gray-100' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}
+                className={`flex-1 rounded-none py-1.5 text-sm font-bold transition-all cursor-pointer ${mode === 'auto' ? 'bg-[#FFE66D] dark:bg-yellow-400 text-black border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 border border-transparent'}`}
               >
                 自动
               </button>
             )}
             <button
               onClick={() => setMode('ratio')}
-              className={`flex-1 rounded-lg py-1.5 text-sm font-medium transition ${mode === 'ratio' ? 'bg-white text-gray-800 shadow-sm dark:bg-gray-700 dark:text-gray-100' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}
+              className={`flex-1 rounded-none py-1.5 text-sm font-bold transition-all cursor-pointer ${mode === 'ratio' ? 'bg-[#FFE66D] dark:bg-yellow-400 text-black border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 border border-transparent'}`}
             >
               按比例
             </button>
             <button
               onClick={() => setMode('resolution')}
-              className={`flex-1 rounded-lg py-1.5 text-sm font-medium transition ${mode === 'resolution' ? 'bg-white text-gray-800 shadow-sm dark:bg-gray-700 dark:text-gray-100' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}
+              className={`flex-1 rounded-none py-1.5 text-sm font-bold transition-all cursor-pointer ${mode === 'resolution' ? 'bg-[#FFE66D] dark:bg-yellow-400 text-black border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 border border-transparent'}`}
             >
               自定义宽高
             </button>
@@ -222,13 +222,13 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
             {mode === 'auto' && (
               <div className="flex h-full animate-fade-in items-center justify-center pt-8 pb-4 text-center">
                 <div>
-                  <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-blue-500 dark:bg-blue-500/10">
+                  <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-none border-2 border-black bg-[#FFE66D] text-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                     <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h4 className="text-sm font-medium text-gray-800 dark:text-gray-200">自动尺寸</h4>
-                  <p className="mt-2 text-xs text-gray-400 leading-relaxed dark:text-gray-500">
+                  <h4 className="text-sm font-bold text-gray-800 dark:text-gray-200">自动尺寸</h4>
+                  <p className="mt-2 text-xs text-gray-550 leading-relaxed dark:text-gray-405 font-bold">
                     不向模型传递具体的分辨率参数
                     <br />
                     由模型自己决定生成尺寸
@@ -240,7 +240,7 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
             {mode === 'ratio' && (
               <div className="space-y-5 animate-fade-in">
                 <section>
-                  <div className="mb-2 text-xs font-medium text-gray-400 dark:text-gray-500">基准分辨率</div>
+                  <div className="mb-2 text-xs font-bold text-gray-500 dark:text-gray-400">基准分辨率</div>
                   <div className="grid grid-cols-3 gap-2">
                     {TIERS.map((item) => (
                       <button key={item} className={buttonClass(tier === item)} onClick={() => setTier(item)}>
@@ -251,7 +251,7 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
                 </section>
 
                 <section>
-                  <div className="mb-2 text-xs font-medium text-gray-400 dark:text-gray-500">图像比例</div>
+                  <div className="mb-2 text-xs font-bold text-gray-500 dark:text-gray-400">图像比例</div>
                   <div className="grid grid-cols-4 gap-2">
                     {RATIOS.map((item) => {
                       const [w, h] = item.value.split(':').map(Number)
@@ -265,7 +265,7 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
                         >
                           <div className="flex h-5 w-5 items-center justify-center">
                             <div
-                              className="border-[1.5px] border-current rounded-[3px] opacity-60"
+                              className="border-2 border-current rounded-none opacity-80"
                               style={{
                                 width: isHorizontal || isSquare ? '100%' : `${(w / h) * 100}%`,
                                 height: !isHorizontal || isSquare ? '100%' : `${(h / w) * 100}%`,
@@ -284,15 +284,15 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
 
                 {ratio === 'custom' && (
                   <label className="block animate-fade-in">
-                    <span className="mb-2 block text-xs font-medium text-gray-400 dark:text-gray-500">输入自定义比例</span>
+                    <span className="mb-2 block text-xs font-bold text-gray-500 dark:text-gray-400">输入自定义比例</span>
                     <input
                       value={customRatio}
                       onChange={(e) => setCustomRatio(e.target.value)}
                       placeholder="例如 5:4 / 2.39:1"
-                      className={`w-full rounded-xl border px-3 py-2 text-sm outline-none transition ${
+                      className={`w-full rounded-none border-2 px-3 py-2 text-sm outline-none transition-all ${
                         customRatioValid
-                          ? 'border-gray-200/70 bg-white/60 text-gray-700 focus:border-blue-300 dark:border-white/[0.08] dark:bg-white/[0.03] dark:text-gray-200 dark:focus:border-blue-500/50'
-                          : 'border-red-300 bg-white/60 text-gray-700 focus:border-red-400 dark:border-red-500/40 dark:bg-white/[0.03] dark:text-gray-200'
+                          ? 'border-black dark:border-white bg-white dark:bg-zinc-950 text-gray-700 dark:text-gray-250 focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
+                          : 'border-red-500 bg-white dark:bg-zinc-950 text-red-500'
                       }`}
                     />
                   </label>
@@ -303,7 +303,7 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
             {mode === 'resolution' && (
               <div className="space-y-5 animate-fade-in">
                 <section>
-                  <div className="mb-4 text-xs font-medium text-gray-400 dark:text-gray-500">输入具体像素值</div>
+                  <div className="mb-4 text-xs font-bold text-gray-500 dark:text-gray-400">输入具体像素值</div>
                   <div className="flex items-center gap-4">
                     <label className="flex-1">
                       <span className="mb-1.5 block text-xs text-gray-500 dark:text-gray-400">宽度 (Width)</span>
@@ -311,13 +311,13 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
                         type="number"
                         value={customW}
                         onChange={(e) => setCustomW(e.target.value)}
-                        className="w-full rounded-xl border border-gray-200/70 bg-white/60 px-3 py-2 text-sm text-gray-700 outline-none transition focus:border-blue-300 dark:border-white/[0.08] dark:bg-white/[0.03] dark:text-gray-200 dark:focus:border-blue-500/50"
+                        className="w-full rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 px-3 py-2 text-sm text-gray-700 dark:text-gray-200 outline-none transition-all focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] font-bold"
                         placeholder="例如 1024"
                       />
                     </label>
-                    <div className="mt-5 text-gray-300 dark:text-gray-600">
+                    <div className="mt-5 text-gray-455 dark:text-gray-550">
                       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </div>
                     <label className="flex-1">
@@ -326,28 +326,28 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
                         type="number"
                         value={customH}
                         onChange={(e) => setCustomH(e.target.value)}
-                        className="w-full rounded-xl border border-gray-200/70 bg-white/60 px-3 py-2 text-sm text-gray-700 outline-none transition focus:border-blue-300 dark:border-white/[0.08] dark:bg-white/[0.03] dark:text-gray-200 dark:focus:border-blue-500/50"
+                        className="w-full rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 px-3 py-2 text-sm text-gray-700 dark:text-gray-200 outline-none transition-all focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] font-bold"
                         placeholder="例如 1024"
                       />
                     </label>
                   </div>
                 </section>
-                <div className="rounded-xl border border-gray-200/80 bg-gray-50/80 p-3 text-xs text-gray-600 dark:border-white/[0.05] dark:bg-white/[0.02] dark:text-gray-400">
+                <div className="rounded-none border-2 border-black dark:border-white bg-[#FFE66D]/10 dark:bg-yellow-400/5 p-3 text-xs text-gray-600 dark:text-gray-400 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]">
                   <div className="flex items-start gap-2">
-                    <svg className="mt-[2px] h-4 w-4 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg className="mt-[2px] h-4 w-4 flex-shrink-0 text-slate-900 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <div className="whitespace-pre-line leading-relaxed">{SIZE_LIMIT_TEXT}</div>
+                    <div className="whitespace-pre-line leading-relaxed font-bold">{SIZE_LIMIT_TEXT}</div>
                   </div>
                 </div>
               </div>
             )}
           </div>
 
-          <div className="rounded-2xl bg-gray-50 px-4 py-3 dark:bg-white/[0.03]">
-            <div className="text-xs text-gray-400 dark:text-gray-500">将使用</div>
+          <div className="rounded-none border-2 border-black dark:border-white bg-slate-50 dark:bg-zinc-950 px-4 py-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]">
+            <div className="text-xs text-gray-500 dark:text-gray-400 font-bold">将使用</div>
             <div className="mt-1 flex items-center gap-2">
-              <span className="font-mono text-lg font-semibold text-gray-800 dark:text-gray-100">
+              <span className="font-mono text-lg font-black text-gray-800 dark:text-gray-100">
                 {previewSize || '尺寸无效'}
               </span>
               {isClamped && (
@@ -361,7 +361,7 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
                   onClick={showHint}
                 >
                   <svg className="w-5 h-5 text-yellow-500 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <ViewportTooltip visible={hintVisible} className="w-56 whitespace-pre-line text-center">
                     {SIZE_LIMIT_TEXT}
@@ -372,17 +372,19 @@ export default function SizePickerModal({ currentSize, onSelect, onClose, allowA
           </div>
         </div>
 
-        <div className="mt-5 flex gap-2">
+        <div className="mt-5 flex gap-3">
           <button
+            type="button"
             onClick={onClose}
-            className="flex-1 rounded-xl bg-gray-100 px-4 py-2.5 text-sm text-gray-600 transition hover:bg-gray-200 dark:bg-white/[0.06] dark:text-gray-300 dark:hover:bg-white/[0.1]"
+            className="flex-1 rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-800 py-2.5 text-sm font-bold text-gray-750 dark:text-gray-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] cursor-pointer transition-all"
           >
             取消
           </button>
           <button
+            type="button"
             onClick={applySize}
             disabled={!previewSize}
-            className="flex-1 rounded-xl bg-blue-500 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-blue-600 disabled:cursor-not-allowed disabled:opacity-50"
+            className="flex-1 rounded-none border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 py-2.5 text-sm font-bold text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] cursor-pointer disabled:opacity-50 disabled:-translate-x-0 disabled:-translate-y-0 disabled:shadow-none transition-all"
           >
             确定
           </button>

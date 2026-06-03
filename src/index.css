@@ -6,16 +6,16 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 240 10% 10%;
-  --muted: 240 5% 96%;
-  --muted-foreground: 240 4% 46%;
-  --border: 240 6% 90%;
-  --input: 240 6% 90%;
-  --primary: 221 83% 53%;
+  --background: 240 10% 98.5%;
+  --foreground: 240 10% 12%;
+  --muted: 240 5% 94%;
+  --muted-foreground: 240 5% 42%;
+  --border: 240 6% 89%;
+  --input: 240 6% 89%;
+  --primary: 250 85% 58%;
   --primary-foreground: 0 0% 100%;
-  --sidebar: 240 5% 96%;
-  --sidebar-foreground: 240 10% 10%;
+  --sidebar: 240 5% 95%;
+  --sidebar-foreground: 240 10% 12%;
   --font-ui-sans: 'HarmonyOS Sans SC', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   --font-mono: 'Maple Mono', 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
   --safe-area-top: env(safe-area-inset-top, 0px);
@@ -31,8 +31,36 @@ html {
 
 body {
   padding: 0;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   -webkit-user-select: none;
   user-select: none;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -10%;
+  left: -5%;
+  width: 45vw;
+  height: 45vh;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+  z-index: -10;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -5%;
+  right: -5%;
+  width: 50vw;
+  height: 50vh;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.04) 0%, transparent 75%);
+  z-index: -10;
+  pointer-events: none;
 }
 
 input,
@@ -48,7 +76,7 @@ select,
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 transparent;
+  scrollbar-color: rgba(99, 102, 241, 0.2) transparent;
 }
 
 img {
@@ -71,20 +99,28 @@ body.drag-selecting * {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: 240 10% 4%;
+    --background: 248 18% 5%;
     --foreground: 0 0% 98%;
-    --muted: 240 4% 16%;
+    --muted: 248 12% 10%;
     --muted-foreground: 240 5% 65%;
-    --border: 240 4% 22%;
-    --input: 240 4% 22%;
-    --primary: 217 91% 60%;
+    --border: 248 12% 12%;
+    --input: 248 12% 14%;
+    --primary: 250 85% 63%;
     --primary-foreground: 0 0% 100%;
-    --sidebar: 240 5% 12%;
+    --sidebar: 248 15% 7%;
     --sidebar-foreground: 0 0% 98%;
   }
 
+  body::before {
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  }
+
+  body::after {
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 75%);
+  }
+
   * {
-    scrollbar-color: #3f3f46 transparent;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
   }
 }
 

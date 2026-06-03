@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { buildApiUrl } from './devProxy'
+import { API_PROXY_BASE_URL_HEADER, API_PROXY_TRANSPORT_EVENT_STREAM, API_PROXY_TRANSPORT_HEADER, buildApiUrl, createApiProxyHeaders, unwrapApiProxyStreamResponse } from './devProxy'
 
 describe('buildApiUrl', () => {
   it('uses the same-origin proxy prefix when API proxy is enabled', () => {
@@ -35,5 +35,52 @@ describe('buildApiUrl', () => {
     expect(buildApiUrl('http://api.example.com/v1', 'responses', null, false)).toBe(
       'http://api.example.com/v1/responses',
     )
+  })
+
+  it('passes the normalized dynamic proxy target in a request header', () => {
+    expect(createApiProxyHeaders('api.example.com', true)).toEqual({
+      [API_PROXY_BASE_URL_HEADER]: 'https://api.example.com',
+    })
+  })
+
+  it('can request a stream-wrapped proxy response', () => {
+    expect(createApiProxyHeaders('api.example.com', true, { streamResponse: true })).toEqual({
+      [API_PROXY_BASE_URL_HEADER]: 'https://api.example.com',
+      [API_PROXY_TRANSPORT_HEADER]: API_PROXY_TRANSPORT_EVENT_STREAM,
+    })
+  })
+
+  it('omits the dynamic proxy target header when proxying is disabled or the base URL is empty', () => {
+    expect(createApiProxyHeaders('https://api.example.com/v1', false)).toEqual({})
+    expect(createApiProxyHeaders('', true)).toEqual({})
+  })
+
+  it('unwraps stream-wrapped proxy responses back to normal responses', async () => {
+    const wrapped = new Response([
+      'event: ping',
+      'data: {"ts":1}',
+      '',
+      'event: response-start',
+      'data: {"status":201,"statusText":"Created","headers":[["Content-Type","application/json"]]}',
+      '',
+      'event: body',
+      'data: {"chunk":"{\\"ok\\":"}',
+      '',
+      'event: body',
+      'data: {"chunk":"true}"}',
+      '',
+      'event: response-end',
+      'data: {}',
+      '',
+    ].join('\n'), {
+      headers: {
+        'Content-Type': 'text/event-stream',
+        [API_PROXY_TRANSPORT_HEADER]: API_PROXY_TRANSPORT_EVENT_STREAM,
+      },
+    })
+
+    const response = await unwrapApiProxyStreamResponse(wrapped)
+    expect(response.status).toBe(201)
+    expect(await response.json()).toEqual({ ok: true })
   })
 })

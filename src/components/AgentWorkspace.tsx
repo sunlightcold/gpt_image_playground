@@ -988,17 +988,28 @@ export default function AgentWorkspace() {
           onTouchEnd={handleTouchEnd}
         >
           {!conversation ? (
-            <div className="py-20 text-center text-gray-400">
-              <p className="mb-3">还没有 Agent 对话</p>
-              <button type="button" onClick={createConversation} className="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 transition-colors">创建对话</button>
+            <div className="py-20 flex flex-col items-center justify-center">
+              <p className="mb-4 text-sm font-bold text-slate-700 dark:text-zinc-300">还没有 Agent 对话</p>
+              <button
+                type="button"
+                aria-label="新建对话"
+                onClick={createConversation}
+                className="px-4 py-2 text-sm font-black border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0 active:shadow-none transition-all duration-200"
+              >
+                新建对话
+              </button>
             </div>
           ) : (
             (() => {
               if (activeMessages.length === 0) {
                 return (
-                  <div className="py-20 text-center text-gray-400">
-                    <p className="mb-2">开始新的 Agent 对话</p>
-                    <p className="text-xs">在底部输入框发送消息即可创建第一轮对话。</p>
+                  <div className="py-20 flex flex-col items-center justify-center">
+                    <div className="inline-block border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black px-6 py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-black text-base mb-4">
+                      💬 开始新的 Agent 对话
+                    </div>
+                    <p className="text-sm font-bold text-slate-700 dark:text-zinc-300">
+                      在底部输入框发送消息，即可创建第一轮对话
+                    </p>
                   </div>
                 )
               }

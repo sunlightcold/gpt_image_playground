@@ -342,7 +342,7 @@ function BatchActionButton({
   children,
 }: {
   tooltip: string
-  className: string
+  className?: string
   onClick: () => void | Promise<void>
   children: ReactNode
 }) {
@@ -356,7 +356,7 @@ function BatchActionButton({
           tooltipState.dismiss()
           void onClick()
         }}
-        className={className}
+        className={`w-8 h-8 flex items-center justify-center border border-black dark:border-white bg-white dark:bg-zinc-800 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,1)] hover:bg-[#FFE66D] hover:text-black dark:hover:bg-yellow-400 dark:hover:text-black active:translate-x-0 active:translate-y-0 active:shadow-none transition-all cursor-pointer rounded-none ${className || ''}`}
         aria-label={tooltip}
       >
         {children}
@@ -1579,7 +1579,7 @@ export default function InputBar() {
     }
   }, [])
 
-  const selectClass = 'px-3 py-1.5 rounded-xl border border-gray-200/60 dark:border-white/[0.08] bg-white/50 dark:bg-white/[0.03] hover:bg-white dark:hover:bg-white/[0.06] text-xs transition-all duration-200 shadow-sm'
+  const selectClass = 'px-3 py-1.5 rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-800 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 text-xs font-bold text-slate-700 dark:text-zinc-200 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none cursor-pointer'
 
   const getTouchDropIndex = (touch: React.Touch) => {
     const target = document
@@ -1890,7 +1890,7 @@ export default function InputBar() {
           action: () => clearInputImages(),
         })
       }
-      className="w-[52px] h-[52px] rounded-xl border border-dashed border-gray-300 dark:border-white/[0.08] flex flex-col items-center justify-center gap-0.5 text-gray-400 dark:text-gray-500 hover:text-red-500 hover:border-red-300 hover:bg-red-50/50 dark:hover:bg-red-950/30 transition-all cursor-pointer flex-shrink-0"
+      className="w-[52px] h-[52px] rounded-none border-2 border-dashed border-black dark:border-white flex flex-col items-center justify-center gap-0.5 text-slate-500 dark:text-zinc-400 hover:text-rose-500 hover:border-rose-500 hover:bg-rose-500/10 dark:hover:bg-rose-500/10 transition-all cursor-pointer flex-shrink-0"
       title={maskTargetImage ? '清空遮罩主图、参考图和遮罩' : '清空全部参考图'}
     >
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1935,7 +1935,7 @@ export default function InputBar() {
         <button
           type="button"
           onClick={() => { dismissAllTooltips(); setShowSizePicker(true) }}
-          className="px-3 py-1.5 rounded-xl border border-gray-200/60 dark:border-white/[0.08] bg-white/50 dark:bg-white/[0.03] hover:bg-white dark:hover:bg-white/[0.06] focus:outline-none text-xs text-left transition-all duration-200 shadow-sm font-mono"
+          className="px-3 py-1.5 rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-800 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 text-xs font-bold text-slate-700 dark:text-zinc-200 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] active:translate-x-0 active:translate-y-0 active:shadow-none cursor-pointer text-left font-mono"
           title="选择尺寸"
         >
           {displaySize}
@@ -1963,7 +1963,7 @@ export default function InputBar() {
           options={qualityOptions}
           disabled={settings.codexCli}
           className={settings.codexCli
-            ? 'px-3 py-1.5 rounded-xl border border-gray-200/60 dark:border-white/[0.08] bg-gray-100/50 dark:bg-white/[0.05] opacity-50 cursor-not-allowed text-xs transition-all duration-200 shadow-sm'
+            ? 'px-3 py-1.5 rounded-none border-2 border-black dark:border-white bg-slate-100 dark:bg-zinc-800 opacity-50 cursor-not-allowed text-xs transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
             : selectClass}
         />
         <ButtonTooltip
@@ -2003,10 +2003,10 @@ export default function InputBar() {
           min={0}
           max={100}
           placeholder="0-100"
-          className={`px-3 py-1.5 rounded-xl border border-gray-200/60 dark:border-white/[0.08] focus:outline-none text-xs transition-all duration-200 shadow-sm ${
+          className={`px-3 py-1.5 rounded-none border-2 border-black dark:border-white focus:outline-none text-xs transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] font-bold ${
             compressionDisabled
-              ? 'bg-gray-100/50 dark:bg-white/[0.05] opacity-50 cursor-not-allowed'
-              : 'bg-white/50 dark:bg-white/[0.03]'
+              ? 'bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed opacity-50'
+              : 'bg-white dark:bg-zinc-950 text-slate-900 dark:text-white'
             }`}
         />
         <ButtonTooltip
@@ -2035,7 +2035,7 @@ export default function InputBar() {
           ]}
           disabled={moderationDisabled}
           className={moderationDisabled
-            ? 'px-3 py-1.5 rounded-xl border border-gray-200/60 dark:border-white/[0.08] bg-gray-100/50 dark:bg-white/[0.05] opacity-50 cursor-not-allowed text-xs transition-all duration-200 shadow-sm'
+            ? 'px-3 py-1.5 rounded-none border-2 border-black dark:border-white bg-slate-100 dark:bg-zinc-800 opacity-50 cursor-not-allowed text-xs transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'
             : selectClass}
         />
         <ButtonTooltip
@@ -2078,10 +2078,10 @@ export default function InputBar() {
           type={agentAutoImageCount ? 'text' : 'number'}
           min={agentAutoImageCount ? undefined : 1}
           max={agentAutoImageCount ? undefined : outputImageLimit}
-          className={`px-3 py-1.5 rounded-xl border border-gray-200/60 dark:border-white/[0.08] focus:outline-none text-xs transition-all duration-200 shadow-sm ${
+          className={`px-3 py-1.5 rounded-none border-2 border-black dark:border-white focus:outline-none text-xs transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] font-bold ${
             agentAutoImageCount
-              ? 'bg-gray-100/50 dark:bg-white/[0.05] opacity-50 cursor-not-allowed'
-              : 'bg-white/50 dark:bg-white/[0.03]'
+              ? 'bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed opacity-50'
+              : 'bg-white dark:bg-zinc-950 text-slate-900 dark:text-white'
           }`}
         />
         <ButtonTooltip visible={nLimitHint.visible} text={nLimitHintText} />
@@ -2138,10 +2138,14 @@ export default function InputBar() {
         />
       )}
 
-      <div data-input-bar className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-30 w-full max-w-4xl px-3 sm:px-4 transition-all duration-300">
+      <div
+        data-input-bar
+        className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-30 w-full max-w-7xl safe-area-x transition-all duration-300"
+        style={{ paddingRight: 'calc(max(1rem, var(--safe-area-right)) + 8px)' }}
+      >
         {showFavoriteCollectionBatchBar && (
           <div className="flex justify-center mb-3">
-            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-lg rounded-full flex items-center p-1 border border-gray-200/50 dark:border-white/10 pointer-events-auto">
+            <div className="bg-white dark:bg-zinc-900 border-2 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] rounded-none flex items-center p-1.5 pointer-events-auto gap-1">
               <BatchActionButton
                 onClick={clearFavoriteCollectionSelection}
                 className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -2151,7 +2155,7 @@ export default function InputBar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </BatchActionButton>
-              <div className="w-px h-5 bg-gray-200 dark:bg-white/20 mx-1"></div>
+              <div className="w-px h-5 bg-black dark:bg-white mx-1"></div>
               <BatchActionButton
                 onClick={handleSelectAllVisibleFavoriteCollections}
                 className="p-2 text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
@@ -2172,7 +2176,7 @@ export default function InputBar() {
                   <path d="M8 12h8M13 9l3 3-3 3" />
                 </svg>
               </BatchActionButton>
-              <div className="w-px h-5 bg-gray-200 dark:bg-white/20 mx-1"></div>
+              <div className="w-px h-5 bg-black dark:bg-white mx-1"></div>
               <BatchActionButton
                 onClick={handleDownloadSelectedFavoriteCollections}
                 className="p-2 text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-300 transition-colors"
@@ -2182,7 +2186,7 @@ export default function InputBar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
               </BatchActionButton>
-              <div className="w-px h-5 bg-gray-200 dark:bg-white/20 mx-1"></div>
+              <div className="w-px h-5 bg-black dark:bg-white mx-1"></div>
               <BatchActionButton
                 onClick={handleDeleteSelectedFavoriteCollections}
                 className="p-2 text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 transition-colors"
@@ -2197,7 +2201,7 @@ export default function InputBar() {
         )}
         {showTaskBatchBar && (
           <div className="flex justify-center mb-3">
-            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-lg rounded-full flex items-center p-1 border border-gray-200/50 dark:border-white/10 pointer-events-auto">
+            <div className="bg-white dark:bg-zinc-900 border-2 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] rounded-none flex items-center p-1.5 pointer-events-auto gap-1">
               <BatchActionButton
                 onClick={clearSelection}
                 className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -2207,7 +2211,7 @@ export default function InputBar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </BatchActionButton>
-              <div className="w-px h-5 bg-gray-200 dark:bg-white/20 mx-1"></div>
+              <div className="w-px h-5 bg-black dark:bg-white mx-1"></div>
               <BatchActionButton
                 onClick={handleSelectAllVisibleTasks}
                 className="p-2 text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
@@ -2228,7 +2232,7 @@ export default function InputBar() {
                   <path d="M8 12h8M13 9l3 3-3 3" />
                 </svg>
               </BatchActionButton>
-              <div className="w-px h-5 bg-gray-200 dark:bg-white/20 mx-1"></div>
+              <div className="w-px h-5 bg-black dark:bg-white mx-1"></div>
               <BatchActionButton
                 onClick={handleToggleFavorite}
                 className="p-2 text-yellow-500 dark:text-yellow-400 hover:text-yellow-600 dark:hover:text-yellow-300 transition-colors"
@@ -2244,7 +2248,7 @@ export default function InputBar() {
                   </svg>
                 )}
               </BatchActionButton>
-              <div className="w-px h-5 bg-gray-200 dark:bg-white/20 mx-1"></div>
+              <div className="w-px h-5 bg-black dark:bg-white mx-1"></div>
               <BatchActionButton
                 onClick={handleDownloadSelected}
                 className="p-2 text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-300 transition-colors"
@@ -2254,10 +2258,10 @@ export default function InputBar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
               </BatchActionButton>
-              <div className="w-px h-5 bg-gray-200 dark:bg-white/20 mx-1"></div>
+              <div className="w-px h-5 bg-black dark:bg-white mx-1"></div>
               <BatchActionButton
                 onClick={handleDeleteSelected}
-                className="p-2 text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 transition-colors"
+                className="p-2 text-rose-500 hover:text-rose-600 transition-colors"
                 tooltip="删除选中"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2267,7 +2271,7 @@ export default function InputBar() {
             </div>
           </div>
         )}
-        <div ref={cardRef} className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-2xl border border-white/50 dark:border-white/[0.08] shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-2xl sm:rounded-3xl p-3 sm:p-4 ring-1 ring-black/5 dark:ring-white/10">
+        <div ref={cardRef} className="bg-white dark:bg-zinc-900 border-2 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] rounded-none p-4 sm:p-5">
           {/* 移动端拖动条 */}
           <div
             ref={handleRef}
@@ -2377,7 +2381,7 @@ export default function InputBar() {
                 syncMentionTagSelection(el)
               }}
               aria-label={promptPlaceholder}
-              className="col-start-1 row-start-1 min-h-[42px] w-full overflow-hidden ios-rounded-scroll-fix whitespace-pre-wrap break-words rounded-2xl border border-gray-200/60 bg-white/50 pl-4 pr-10 py-3 text-sm leading-relaxed shadow-sm outline-none transition-[border-color,box-shadow] duration-200 focus:ring-1 focus:ring-blue-300/40 dark:border-white/[0.08] dark:bg-white/[0.03] dark:text-gray-100 dark:focus:ring-blue-500/30"
+              className="col-start-1 row-start-1 min-h-[42px] w-full overflow-hidden ios-rounded-scroll-fix whitespace-pre-wrap break-words rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 pl-4 pr-10 py-3 text-sm leading-relaxed outline-none transition-all focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] dark:text-gray-150"
             />
             {prompt.length === 0 && (
               <div className={`prompt-placeholder col-start-1 row-start-1 pointer-events-none pl-4 pr-10 py-3 text-sm leading-relaxed text-gray-400 dark:text-gray-500${
@@ -2415,10 +2419,10 @@ export default function InputBar() {
                   <ButtonTooltip visible={attachHover} text={uploadImageTooltipText} />
                   <button
                     onClick={() => !atImageLimit && fileInputRef.current?.click()}
-                    className={`p-2.5 rounded-xl transition-all shadow-sm ${
+                    className={`p-2.5 rounded-none border-2 border-black dark:border-white transition-all active:scale-95 ${
                       atImageLimit
-                        ? 'bg-gray-200 dark:bg-white/[0.04] text-gray-300 dark:text-gray-500 cursor-not-allowed'
-                        : 'bg-gray-200 dark:bg-white/[0.06] hover:bg-gray-300 dark:hover:bg-white/[0.1] text-gray-500 dark:text-gray-300 hover:shadow'
+                        ? 'bg-slate-100 dark:bg-zinc-900 text-slate-300 dark:text-zinc-600 cursor-not-allowed opacity-40'
+                        : 'bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:bg-slate-100 cursor-pointer'
                     }`}
                     aria-label={uploadImageTooltipText}
                   >
@@ -2436,12 +2440,12 @@ export default function InputBar() {
                   <button
                     onClick={() => activeAgentIsRunning ? stopActiveAgentResponse() : hasSubmitApiConfig ? submitCurrentMode() : setShowSettings(true)}
                     disabled={activeAgentIsRunning ? false : hasSubmitApiConfig ? !canSubmit : false}
-                    className={`p-2.5 rounded-xl transition-all shadow-sm hover:shadow ${
+                    className={`p-2.5 rounded-none border-2 border-black dark:border-white transition-all active:scale-95 ${
                       activeAgentIsRunning
-                        ? 'bg-red-500 text-white hover:bg-red-600'
+                        ? 'bg-rose-500 text-white hover:bg-rose-600 cursor-pointer'
                         : !hasSubmitApiConfig
-                        ? 'bg-gray-300 dark:bg-white/[0.06] text-white cursor-pointer'
-                        : 'bg-blue-500 text-white hover:bg-blue-600 disabled:bg-gray-300 dark:disabled:bg-white/[0.04] disabled:opacity-50 disabled:cursor-not-allowed'
+                        ? 'bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed opacity-40'
+                        : 'bg-[#FFE66D] dark:bg-yellow-400 text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] disabled:bg-slate-100 dark:disabled:bg-zinc-800 disabled:text-slate-400 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:disabled:hover:translate-y-0 disabled:hover:shadow-none cursor-pointer'
                     }`}
                     aria-label={submitButtonAriaLabel}
                   >
@@ -2480,10 +2484,10 @@ export default function InputBar() {
                         setShowMobileUploadMenu(!showMobileUploadMenu)
                       }
                     }}
-                    className={`p-2.5 rounded-xl transition-all shadow-sm flex-shrink-0 ${
+                    className={`p-2.5 rounded-none border-2 border-black dark:border-white transition-all shadow-sm flex-shrink-0 ${
                       atImageLimit
-                        ? 'bg-gray-200 dark:bg-white/[0.04] text-gray-300 dark:text-gray-500 cursor-not-allowed'
-                        : 'bg-gray-200 dark:bg-white/[0.06] hover:bg-gray-300 dark:hover:bg-white/[0.1] text-gray-500 dark:text-gray-300'
+                        ? 'bg-slate-100 dark:bg-zinc-900 text-slate-300 dark:text-zinc-600 cursor-not-allowed opacity-40'
+                        : 'bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
                     }`}
                     aria-label={uploadImageTooltipText}
                   >
@@ -2504,9 +2508,9 @@ export default function InputBar() {
                         className="fixed inset-0 z-40"
                         onClick={() => setShowMobileUploadMenu(false)}
                       />
-                      <div className="absolute bottom-full left-0 mb-2 w-32 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
+                      <div className="absolute bottom-full left-0 mb-2 w-32 bg-white dark:bg-zinc-900 rounded-none border-2 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] overflow-hidden z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
                         <button
-                          className="w-full px-4 py-3 text-left text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700/50 flex items-center gap-2 transition-colors"
+                          className="w-full px-4 py-3 text-left text-sm text-gray-700 dark:text-gray-200 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 hover:text-black dark:hover:text-black flex items-center gap-2 transition-colors cursor-pointer"
                           onClick={() => {
                             setShowMobileUploadMenu(false)
                             cameraInputRef.current?.click()
@@ -2519,7 +2523,7 @@ export default function InputBar() {
                           拍照
                         </button>
                         <button
-                          className="w-full px-4 py-3 text-left text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700/50 flex items-center gap-2 transition-colors"
+                          className="w-full px-4 py-3 text-left text-sm text-gray-700 dark:text-gray-200 hover:bg-[#FFE66D] dark:hover:bg-yellow-400 hover:text-black dark:hover:text-black flex items-center gap-2 transition-colors cursor-pointer"
                           onClick={() => {
                             setShowMobileUploadMenu(false)
                             fileInputRef.current?.click()
@@ -2544,12 +2548,12 @@ export default function InputBar() {
                     onClick={() => activeAgentIsRunning ? stopActiveAgentResponse() : hasSubmitApiConfig ? submitCurrentMode() : setShowSettings(true)}
                     disabled={activeAgentIsRunning ? false : hasSubmitApiConfig ? !canSubmit : false}
                     aria-label={submitButtonAriaLabel}
-                    className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm ${
+                    className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-none border-2 border-black dark:border-white text-sm font-bold transition-all shadow-sm cursor-pointer ${
                       activeAgentIsRunning
-                        ? 'bg-red-500 text-white hover:bg-red-600'
+                        ? 'bg-rose-500 text-white hover:bg-rose-600'
                         : !hasSubmitApiConfig
-                        ? 'bg-gray-300 dark:bg-white/[0.06] text-white cursor-pointer'
-                        : 'bg-blue-500 text-white hover:bg-blue-600 disabled:bg-gray-300 dark:disabled:bg-white/[0.04] disabled:opacity-50 disabled:cursor-not-allowed'
+                        ? 'bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed opacity-40'
+                        : 'bg-[#FFE66D] dark:bg-yellow-400 text-black hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,1)] disabled:bg-slate-100 dark:disabled:bg-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed'
                     }`}
                   >
                     {activeAgentIsRunning ? (

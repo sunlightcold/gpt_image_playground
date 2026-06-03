@@ -259,26 +259,20 @@ export default function TaskGrid() {
 
   if (!filteredTasks.length) {
     return (
-      <div className="text-center py-20 text-gray-400 dark:text-gray-500">
+      <div className="text-center py-20">
         {searchQuery || filterFavorite ? (
-          <p className="text-sm">没有找到匹配的任务</p>
+          <div className="inline-block border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black px-6 py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-black text-sm">
+            没有找到匹配的任务
+          </div>
         ) : (
-          <>
-            <svg
-              className="w-16 h-16 mx-auto mb-4 text-gray-200 dark:text-gray-700"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1}
-                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
-            </svg>
-            <p className="text-sm">输入提示词开始生成图片</p>
-          </>
+          <div className="flex flex-col items-center justify-center">
+            <div className="inline-block border-2 border-black dark:border-white bg-[#FFE66D] dark:bg-yellow-400 text-black px-6 py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-black text-base mb-4">
+              ✨ 准备好开始了吗？
+            </div>
+            <p className="text-sm font-bold text-slate-700 dark:text-zinc-300">
+              在下方输入框填写提示词，即可开始生成图片
+            </p>
+          </div>
         )}
       </div>
     )
