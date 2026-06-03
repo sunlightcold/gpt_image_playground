@@ -361,6 +361,7 @@ export default function SettingsModal() {
   const activeCustomProviderAsync = isAsyncCustomProvider(activeCustomProvider)
   const apiProxyChecked = activeProfileApiProxyEligible && (apiProxyLocked || activeProfile.apiProxy)
   const apiProxyEnabled = apiProxyAvailable && activeProfileApiProxyEligible && apiProxyChecked
+  const apiUrlLockedByProxy = apiProxyEnabled && apiProxyLocked
   const defaultProviderOrder = ['openai', ...draft.customProviders.map(p => p.id)]
   const providerOrder = draft.providerOrder || defaultProviderOrder
 
@@ -1645,13 +1646,15 @@ export default function SettingsModal() {
                     onChange={(e) => updateActiveProfile({ baseUrl: e.target.value })}
                     onBlur={(e) => commitActiveProfilePatch({ baseUrl: e.target.value })}
                     type="text"
-                    disabled={apiProxyEnabled}
+                    disabled={apiUrlLockedByProxy}
                     placeholder={DEFAULT_SETTINGS.baseUrl}
-                    className={`w-full rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 font-bold px-3 py-2.5 text-sm text-slate-900 dark:text-white outline-none transition focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] duration-200 ${apiProxyEnabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    className={`w-full rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 font-bold px-3 py-2.5 text-sm text-slate-900 dark:text-white outline-none transition focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] duration-200 ${apiUrlLockedByProxy ? 'opacity-50 cursor-not-allowed' : ''}`}
                   />
                   <div data-selectable-text className="mt-1.5 min-h-[22px] flex items-center text-xs text-gray-500 dark:text-gray-500">
-                    {apiProxyEnabled ? (
-                      <span className="text-yellow-600 dark:text-yellow-500 font-medium">已开启代理，实际请求目标由部署端决定，此处设置被忽略。</span>
+                    {apiUrlLockedByProxy ? (
+                      <span className="text-yellow-600 dark:text-yellow-500 font-medium">部署端已锁定代理目标，此处 API URL 设置不会参与请求。</span>
+                    ) : apiProxyEnabled ? (
+                      <span className="text-yellow-600 dark:text-yellow-500 font-medium">已开启代理，此处 API URL 会作为上游目标交给同源代理代请求。</span>
                     ) : (
                       <span>支持通过查询参数覆盖：<code className="bg-gray-100 dark:bg-white/[0.06] px-1 py-0.5 font-mono rounded">?apiUrl=</code></span>
                     )}
@@ -1679,7 +1682,7 @@ export default function SettingsModal() {
                     </button>
                   </div>
                   <div data-selectable-text className="text-xs text-gray-500 dark:text-gray-500">
-                    {apiProxyLocked ? '部署端已锁定代理开启，请求经服务器转发到上游 API，上方 URL 设置将失效。' : '开启后请求经服务器转发到上游 API，可绕过浏览器跨域限制，上方 URL 设置将失效。'}
+                    {apiProxyLocked ? '部署端已锁定代理开启，请求经服务器转发到固定上游 API。' : '开启后浏览器请求同源 /api-proxy/，并把上方 API URL 作为上游目标交给代理端请求，可绕过浏览器跨域限制。'}
                   </div>
                 </div>
               )}
