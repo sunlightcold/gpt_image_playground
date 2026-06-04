@@ -17,7 +17,7 @@ import { downloadImageEntriesAsZip, downloadImageIds, formatExportFileTime, getT
 import Select from './Select'
 import SizePickerModal from './SizePickerModal'
 import ViewportTooltip from './ViewportTooltip'
-import { CloseIcon, PhotoIcon } from './icons'
+import { CloseIcon, ImageStackIcon } from './icons'
 
 const PromptCasePicker = lazy(() => import('./PromptCasePicker'))
 
@@ -2417,7 +2417,7 @@ export default function InputBar() {
                     }`}
                     aria-label="查看案例"
                   >
-                    <PhotoIcon className="w-5 h-5" />
+                    <ImageStackIcon className="w-5 h-5" />
                   </button>
                 </div>
                 <div
@@ -2492,7 +2492,7 @@ export default function InputBar() {
                   }`}
                   aria-label="查看案例"
                 >
-                  <PhotoIcon className="w-5 h-5" />
+                  <ImageStackIcon className="w-5 h-5" />
                 </button>
                 <div
                   className="relative"
