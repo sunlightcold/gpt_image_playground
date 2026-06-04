@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
+import { useVirtualizer } from '@tanstack/react-virtual'
 import {
   GPT_IMAGE_2_CASE_CATEGORIES,
   GPT_IMAGE_2_CASE_SCENES,
@@ -27,8 +28,8 @@ type CasePickerProps = {
   onAppendCase: (caseItem: GptImage2Case) => void
 }
 
-const MAX_VISIBLE_CASES = 72
 const ALL_OPTION = { value: ALL_CASE_FILTER_VALUE, label: '全部' }
+const CASE_ROW_ESTIMATE_SIZE = 162
 
 function filterButtonClass(active: boolean) {
   return `min-h-7 shrink-0 rounded-none border px-2 py-1 text-[11px] font-black leading-tight transition-all ${
@@ -68,7 +69,7 @@ export default function PromptCasePicker({
   const [detailCase, setDetailCase] = useState<GptImage2Case | null>(null)
 
   const cases = useMemo(() => filterPromptCases({ category, style, scene, query }), [category, query, scene, style])
-  const visibleCases = cases.slice(0, MAX_VISIBLE_CASES)
+  const caseListResetKey = `${query}\n${category}\n${style}\n${scene}`
   useCloseOnEscape(true, detailCase ? () => setDetailCase(null) : onClose)
 
   async function copyCasePrompt(caseItem: GptImage2Case) {
@@ -130,8 +131,8 @@ export default function PromptCasePicker({
           </button>
         </div>
 
-        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-3 custom-scrollbar sm:p-4">
-          <div className="space-y-3 border-b-2 border-black pb-3 dark:border-white">
+        <div className="flex min-h-0 flex-1 flex-col">
+          <div className="shrink-0 space-y-3 border-b-2 border-black p-3 dark:border-white sm:p-4">
             <label className="block">
               <span className="mb-1 block text-[11px] font-black text-slate-500 dark:text-gray-400">搜索案例</span>
               <input
@@ -182,31 +183,14 @@ export default function PromptCasePicker({
             </FilterGroup>
           </div>
 
-          {visibleCases.length === 0 ? (
-            <div className="mt-3 flex min-h-[120px] items-center justify-center border-2 border-dashed border-slate-300 bg-slate-50 px-4 text-center text-sm font-bold text-slate-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400">
-              没有找到匹配案例
-            </div>
-          ) : (
-            <>
-              <div className="mt-3 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
-                {visibleCases.map((caseItem) => (
-                  <CaseCard
-                    key={caseItem.id}
-                    caseItem={caseItem}
-                    copied={copiedCaseId === caseItem.id}
-                    onCopy={copyCasePrompt}
-                    onOpen={setDetailCase}
-                    onUse={onUseCase}
-                  />
-                ))}
-              </div>
-              {cases.length > visibleCases.length && (
-                <div className="mt-3 border border-dashed border-slate-300 bg-slate-50 px-3 py-2 text-center text-xs font-bold text-slate-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400">
-                  当前显示前 {visibleCases.length} 条，可继续搜索或筛选缩小范围
-                </div>
-              )}
-            </>
-          )}
+          <VirtualCaseGrid
+            cases={cases}
+            copiedCaseId={copiedCaseId}
+            resetKey={caseListResetKey}
+            onCopy={copyCasePrompt}
+            onOpen={setDetailCase}
+            onUse={onUseCase}
+          />
         </div>
       </div>
 
@@ -224,6 +208,110 @@ export default function PromptCasePicker({
   )
 
   return createPortal(panel, document.body)
+}
+
+function getCaseGridColumns() {
+  if (typeof window === 'undefined') return 1
+  if (window.matchMedia('(min-width: 1024px)').matches) return 3
+  if (window.matchMedia('(min-width: 768px)').matches) return 2
+  return 1
+}
+
+function useResponsiveCaseColumns() {
+  const [columns, setColumns] = useState(getCaseGridColumns)
+
+  useEffect(() => {
+    const updateColumns = () => setColumns(getCaseGridColumns())
+    updateColumns()
+    window.addEventListener('resize', updateColumns)
+    return () => window.removeEventListener('resize', updateColumns)
+  }, [])
+
+  return columns
+}
+
+function chunkCasesIntoRows(cases: GptImage2Case[], columns: number) {
+  const rows: GptImage2Case[][] = []
+  for (let index = 0; index < cases.length; index += columns) {
+    rows.push(cases.slice(index, index + columns))
+  }
+  return rows
+}
+
+function VirtualCaseGrid({
+  cases,
+  copiedCaseId,
+  resetKey,
+  onCopy,
+  onOpen,
+  onUse,
+}: {
+  cases: GptImage2Case[]
+  copiedCaseId: number | null
+  resetKey: string
+  onCopy: (caseItem: GptImage2Case) => void
+  onOpen: (caseItem: GptImage2Case) => void
+  onUse: (caseItem: GptImage2Case) => void
+}) {
+  const scrollRef = useRef<HTMLDivElement | null>(null)
+  const columns = useResponsiveCaseColumns()
+  const caseRows = useMemo(() => chunkCasesIntoRows(cases, columns), [cases, columns])
+  const rowVirtualizer = useVirtualizer({
+    count: caseRows.length,
+    getScrollElement: () => scrollRef.current,
+    estimateSize: () => CASE_ROW_ESTIMATE_SIZE,
+    overscan: 5,
+  })
+
+  useEffect(() => {
+    rowVirtualizer.measure()
+    rowVirtualizer.scrollToOffset(0)
+  }, [rowVirtualizer, resetKey, columns])
+
+  return (
+    <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-3 custom-scrollbar sm:p-4">
+      {cases.length === 0 ? (
+        <div className="flex min-h-[120px] items-center justify-center border-2 border-dashed border-slate-300 bg-slate-50 px-4 text-center text-sm font-bold text-slate-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400">
+          没有找到匹配案例
+        </div>
+      ) : (
+        <div
+          className="relative"
+          style={{
+            height: rowVirtualizer.getTotalSize(),
+          }}
+        >
+          {rowVirtualizer.getVirtualItems().map((virtualRow) => {
+            const row = caseRows[virtualRow.index] ?? []
+            return (
+              <div
+                key={virtualRow.key}
+                data-index={virtualRow.index}
+                ref={rowVirtualizer.measureElement}
+                className="absolute left-0 top-0 w-full pb-2"
+                style={{
+                  transform: `translateY(${virtualRow.start}px)`,
+                }}
+              >
+                <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+                  {row.map((caseItem) => (
+                    <CaseCard
+                      key={caseItem.id}
+                      caseItem={caseItem}
+                      copied={copiedCaseId === caseItem.id}
+                      onCopy={onCopy}
+                      onOpen={onOpen}
+                      onUse={onUse}
+                    />
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      )}
+    </div>
+  )
 }
 
 function FilterGroup({ label, children }: { label: string; children: ReactNode }) {
