@@ -162,13 +162,12 @@ export function PhotoIcon(props: SVGProps<SVGSVGElement>) {
   )
 }
 
-export function ImageStackIcon(props: SVGProps<SVGSVGElement>) {
+export function PromptBookIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" {...props}>
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9V7a2 2 0 012-2h9a2 2 0 012 2v9a2 2 0 01-2 2h-2" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 11a2 2 0 012-2h9a2 2 0 012 2v7a2 2 0 01-2 2H6a2 2 0 01-2-2v-7z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l2.2-2.2a1.5 1.5 0 012.1 0L11 16.5l1.2-1.2a1.5 1.5 0 012.1 0L17 18" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 12h.01" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5.5A2.5 2.5 0 017.5 3H19v17H7.5A2.5 2.5 0 015 17.5v-12z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 17.5A2.5 2.5 0 017.5 15H19" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6M9 10h4" />
     </svg>
   )
 }
