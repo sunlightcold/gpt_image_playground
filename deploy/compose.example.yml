@@ -1,0 +1,18 @@
+services:
+  gpt-image-playground:
+    image: ${IMAGE:-ghcr.io/your-github-user/gpt_image_playground:latest}
+    container_name: gpt-image-playground
+    restart: unless-stopped
+    ports:
+      - "${APP_HOST:-127.0.0.1}:${APP_PORT:-8080}:80"
+    environment:
+      DEFAULT_API_URL: ${DEFAULT_API_URL:-}
+      API_PROXY_URL: ${API_PROXY_URL:-https://api.proxy2it.com/v1}
+      ENABLE_API_PROXY: ${ENABLE_API_PROXY:-true}
+      LOCK_API_PROXY: ${LOCK_API_PROXY:-true}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O- http://127.0.0.1/ >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

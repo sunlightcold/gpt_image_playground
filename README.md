@@ -262,6 +262,25 @@ services:
     restart: unless-stopped
 ```
 
+仓库同时提供了更适合服务器部署的示例文件：
+
+```bash
+cp deploy/compose.env.example .env
+# 修改 .env 中的 IMAGE、API_PROXY_URL 等配置
+docker compose --env-file .env -f deploy/compose.example.yml pull
+docker compose --env-file .env -f deploy/compose.example.yml up -d
+```
+
+如果使用自己的 Fork，可通过 GitHub Actions 里的 **Build and Publish Docker Image** 工作流发布镜像到 GitHub Container Registry：
+
+```text
+ghcr.io/<你的 GitHub 用户或组织>/gpt_image_playground:latest
+```
+
+然后把 `.env` 里的 `IMAGE` 改成该镜像地址即可。
+
+> 💡 **服务器部署与 Cloudflare 解耦**：Cloudflare Worker 只用于 `image.proxy2it.com` 这类 Worker 部署。Docker 部署使用容器内 Nginx 提供静态页面和 `/api-proxy/` 同源代理，不依赖 Cloudflare Worker。Nginx 代理默认设置 `proxy_read_timeout 600s`，更适合处理耗时较长的同步图片生成请求；如果服务器外层还有 Nginx、CDN 或负载均衡，也需要把外层超时同步调大，或让长请求不经过 Cloudflare 橙云代理。
+
 **更新说明：**
 
 使用 `latest` 标签时，重新拉取镜像并重启即可更新（如 `docker compose pull && docker compose up -d`）。若需固定版本可使用官方提供的版本号标签（如 `0.2.x`）。
