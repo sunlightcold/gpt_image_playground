@@ -191,9 +191,10 @@ $env:VITE_DEFAULT_API_URL="https://api.openai.com/v1"; npm run deploy:cf
 
 - `DEFAULT_API_URL`：设置页面上默认显示的 API 地址（如 `https://api.openai.com/v1`）。也支持填写 `.json` 配置 URL 或带 `settings` 参数的分享 URL 来导入自定义服务商配置（详见下方说明）。
 - `API_PROXY_URL`：配置内置代理实际转发到的完整 API 基础地址（仅开启代理时有效）。代理不会自动补 `/v1`，OpenAI 兼容接口通常必须填写到版本前缀，如 `https://api.openai.com/v1`。
-- `ENABLE_API_PROXY`：设为 `true` 开启容器内置 Nginx 同源代理，用于解决浏览器跨域（CORS）限制。开启后，前端 **API 代理** 开关默认开启，浏览器会请求同源的 `/api-proxy/{接口相对路径}`，再由 Nginx 拼接到 `API_PROXY_URL` 后转发；用户仍可在设置中手动关闭。
+- `ENABLE_API_PROXY`：设为 `true` 开启容器内置同源代理，用于解决浏览器跨域（CORS）限制。开启后，前端 **API 代理** 开关默认开启，浏览器会请求同源的 `/api-proxy/{接口相对路径}`，再由容器内 Node 代理拼接到 `API_PROXY_URL` 后转发；用户仍可在设置中手动关闭。
 - `LOCK_API_PROXY`：设为 `true` 时，在 `ENABLE_API_PROXY=true` 的前提下将前端 **API 代理** 开关强制锁定为开启，用户无法关闭。
-- `API_PROXY_RESOLVER`：容器内 Nginx 动态解析上游域名使用的 DNS 服务器（默认 `1.1.1.1 8.8.8.8`）。代理配置会关闭 IPv6 解析，避免 Docker/服务器没有 IPv6 出口时解析到 AAAA 记录导致 `502 Network unreachable`。
+- `API_PROXY_HEARTBEAT_MS`：容器内 Node 代理向浏览器发送心跳的间隔（默认 `15000` 毫秒）。用于同步图片接口长时间无最终响应时维持浏览器连接。
+- `API_PROXY_READ_TIMEOUT` / `API_PROXY_SEND_TIMEOUT`：Nginx 转发到容器内 Node 代理时的读写超时（默认 `600s`）。
 - `HOST` / `PORT`：指定容器内 Nginx 监听的地址和端口（默认 `0.0.0.0:80`）。
 
 > ⚠️ **安全警告**：开启 API 代理后，任何人都能将你的服务器作为代理来请求目标 API。建议仅在有访问控制（如 IP 白名单）或本地网络中开启。
@@ -280,7 +281,7 @@ ghcr.io/<你的 GitHub 用户或组织>/gpt_image_playground:latest
 
 然后把 `.env` 里的 `IMAGE` 改成该镜像地址即可。
 
-> 💡 **服务器部署与 Cloudflare 解耦**：Cloudflare Worker 只用于 `image.proxy2it.com` 这类 Worker 部署。Docker 部署使用容器内 Nginx 提供静态页面和 `/api-proxy/` 同源代理，不依赖 Cloudflare Worker。Nginx 代理默认设置 `proxy_read_timeout 600s`，更适合处理耗时较长的同步图片生成请求；如果服务器外层还有 Nginx、CDN 或负载均衡，也需要把外层超时同步调大，或让长请求不经过 Cloudflare 橙云代理。
+> 💡 **服务器部署与 Cloudflare 解耦**：Cloudflare Worker 只用于 `image.proxy2it.com` 这类 Worker 部署。Docker 部署使用容器内 Nginx 提供静态页面，并使用容器内 Node 代理处理 `/api-proxy/` 同源请求，不依赖 Cloudflare Worker。Node 代理会先向浏览器返回带心跳的事件流，再等待上游同步图片接口的最终响应，适合处理 60 秒以上无响应字节的图片生成请求；如果服务器外层还有 Nginx、CDN 或负载均衡，也需要让外层支持长连接，或让长请求不经过 Cloudflare 橙云代理。
 
 **更新说明：**
 
