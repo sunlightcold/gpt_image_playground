@@ -207,7 +207,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 488,
     "title": "屋顶球场日落人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case488.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case488.jpg",
     "imageAlt": "屋顶球场日落人像",
     "sourceLabel": "@HaniaAi12",
     "sourceUrl": "https://x.com/HaniaAi12/status/2061313477696954522",
@@ -227,7 +227,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 487,
     "title": "法式药妆商业分镜封面",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case487.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case487.jpg",
     "imageAlt": "法式药妆商业分镜封面",
     "sourceLabel": "@AIwithSynthia",
     "sourceUrl": "https://x.com/AIwithSynthia/status/2061300623530942922",
@@ -250,7 +250,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 486,
     "title": "RCB 冠军混合媒介海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case486.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case486.jpg",
     "imageAlt": "RCB 冠军混合媒介海报",
     "sourceLabel": "@AIwithkhan",
     "sourceUrl": "https://x.com/AIwithkhan/status/2061305471492096301",
@@ -273,7 +273,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 485,
     "title": "时尚目录电商拼贴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case485.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case485.jpg",
     "imageAlt": "时尚目录电商拼贴",
     "sourceLabel": "@Mind_Boticni",
     "sourceUrl": "https://x.com/Mind_Boticni/status/2061310969192870028",
@@ -296,7 +296,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 484,
     "title": "霓虹涂鸦黑白人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case484.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case484.jpg",
     "imageAlt": "霓虹涂鸦黑白人像",
     "sourceLabel": "@harboriis",
     "sourceUrl": "https://x.com/harboriis/status/2060208419811074350",
@@ -317,7 +317,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 483,
     "title": "都市飞鸟街头肖像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case483.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case483.jpg",
     "imageAlt": "都市飞鸟街头肖像",
     "sourceLabel": "@HaniaAi12",
     "sourceUrl": "https://x.com/HaniaAi12/status/2060216757797978245",
@@ -338,7 +338,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 482,
     "title": "自我凝视超现实 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case482.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case482.jpg",
     "imageAlt": "自我凝视超现实 Campaign",
     "sourceLabel": "@Shorelyn_",
     "sourceUrl": "https://x.com/Shorelyn_/status/2060207260685791267",
@@ -361,7 +361,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 481,
     "title": "韩系春日 scrapbook 海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case481.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case481.jpg",
     "imageAlt": "韩系春日 scrapbook 海报",
     "sourceLabel": "@Taaruk_",
     "sourceUrl": "https://x.com/Taaruk_/status/2060214163591614900",
@@ -383,7 +383,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 480,
     "title": "粉丝速写本角色页",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case480.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case480.jpg",
     "imageAlt": "粉丝速写本角色页",
     "sourceLabel": "@Ciri_ai",
     "sourceUrl": "https://x.com/Ciri_ai/status/2060211436232786357",
@@ -402,7 +402,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 479,
     "title": "杂志纸艺拼贴重绘",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case479.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case479.jpg",
     "imageAlt": "杂志纸艺拼贴重绘",
     "sourceLabel": "@oggii_0",
     "sourceUrl": "https://x.com/oggii_0/status/2060212097083146644",
@@ -425,7 +425,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 478,
     "title": "夹层式品牌编辑海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case478.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case478.jpg",
     "imageAlt": "夹层式品牌编辑海报",
     "sourceLabel": "@iamaiistudio",
     "sourceUrl": "https://x.com/iamaiistudio/status/2060000278657839398",
@@ -448,7 +448,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 477,
     "title": "Instagram 餐桌俯拍创意",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case477.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case477.jpg",
     "imageAlt": "Instagram 餐桌俯拍创意",
     "sourceLabel": "@iamaiistudio",
     "sourceUrl": "https://x.com/iamaiistudio/status/2060210845225980366",
@@ -471,7 +471,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 476,
     "title": "早安拿铁微缩女孩",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case476.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case476.jpg",
     "imageAlt": "早安拿铁微缩女孩",
     "sourceLabel": "@Zyrellix",
     "sourceUrl": "https://x.com/Zyrellix/status/2059443447602561444",
@@ -492,7 +492,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 475,
     "title": "企鹅造型包装结构板",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case475.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case475.jpg",
     "imageAlt": "企鹅造型包装结构板",
     "sourceLabel": "@iamaiistudio",
     "sourceUrl": "https://x.com/iamaiistudio/status/2059305097897914664",
@@ -514,7 +514,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 474,
     "title": "四城极简旅行海报系列",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case474.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case474.jpg",
     "imageAlt": "四城极简旅行海报系列",
     "sourceLabel": "@Taaruk_",
     "sourceUrl": "https://x.com/Taaruk_/status/2059188921096085888",
@@ -536,7 +536,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 473,
     "title": "ROGUE VIPER 游戏概念设定板",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case473.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case473.jpg",
     "imageAlt": "ROGUE VIPER 游戏概念设定板",
     "sourceLabel": "@KimAkiyama81",
     "sourceUrl": "https://x.com/KimAkiyama81/status/2059394334378566063",
@@ -559,7 +559,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 472,
     "title": "上海地铁站台晨光",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case472.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case472.jpg",
     "imageAlt": "上海地铁站台晨光",
     "sourceLabel": "@ToroJushiAi",
     "sourceUrl": "https://x.com/ToroJushiAi/status/2059452471127240959",
@@ -581,7 +581,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 471,
     "title": "花簪和服动漫肖像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case471.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case471.jpg",
     "imageAlt": "花簪和服动漫肖像",
     "sourceLabel": "@Mind_Boticni",
     "sourceUrl": "https://x.com/Mind_Boticni/status/2059133066694779343",
@@ -602,7 +602,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 470,
     "title": "本地生活小店异形展架",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case470.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case470.jpg",
     "imageAlt": "本地生活小店异形展架",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2059248197910827364",
@@ -625,7 +625,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 469,
     "title": "导览式科普绘本",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case469.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case469.jpg",
     "imageAlt": "导览式科普绘本",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2058773446167773521",
@@ -648,7 +648,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 468,
     "title": "霓虹涂鸦展会自拍",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case468.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case468.jpg",
     "imageAlt": "霓虹涂鸦展会自拍",
     "sourceLabel": "@drmrzhong",
     "sourceUrl": "https://x.com/drmrzhong/status/2058774378960257437",
@@ -669,7 +669,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 467,
     "title": "泳装杂志九宫格广告页",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case467.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case467.jpg",
     "imageAlt": "泳装杂志九宫格广告页",
     "sourceLabel": "@Adam38363368936",
     "sourceUrl": "https://x.com/Adam38363368936/status/2058859338211656051",
@@ -688,7 +688,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 466,
     "title": "鱼市追猫 CCD 街拍",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case466.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case466.jpg",
     "imageAlt": "鱼市追猫 CCD 街拍",
     "sourceLabel": "@mehvishs25",
     "sourceUrl": "https://x.com/mehvishs25/status/2058375167550845263",
@@ -711,7 +711,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 465,
     "title": "逆光美背女性情绪写真",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case465.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case465.jpg",
     "imageAlt": "逆光美背女性情绪写真",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2058131948904599860",
@@ -734,7 +734,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 464,
     "title": "高雄水彩拼贴旅行海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case464.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case464.jpg",
     "imageAlt": "高雄水彩拼贴旅行海报",
     "sourceLabel": "@SimplyAnnisa",
     "sourceUrl": "https://x.com/SimplyAnnisa/status/2058372965641662876",
@@ -757,7 +757,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 463,
     "title": "黑色吊带袜单款图鉴展示",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case463.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case463.jpg",
     "imageAlt": "黑色吊带袜单款图鉴展示",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2058175014168396245",
@@ -779,7 +779,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 462,
     "title": "复古日系迷你橡皮商品包装",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case462.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case462.jpg",
     "imageAlt": "复古日系迷你橡皮商品包装",
     "sourceLabel": "@ZetoGroovin",
     "sourceUrl": "https://x.com/ZetoGroovin/status/2058408514247410003",
@@ -800,7 +800,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 461,
     "title": "家庭旅行纸雕拼贴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case461.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case461.jpg",
     "imageAlt": "家庭旅行纸雕拼贴",
     "sourceLabel": "@Taaruk_",
     "sourceUrl": "https://x.com/Taaruk_/status/2058400056722731079",
@@ -823,7 +823,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 460,
     "title": "棋盘低角度奢华男装 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case460.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case460.jpg",
     "imageAlt": "棋盘低角度奢华男装 Campaign",
     "sourceLabel": "@harboriis",
     "sourceUrl": "https://x.com/harboriis/status/2058414859658956888",
@@ -846,7 +846,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 459,
     "title": "品牌奶茶 KV 概念海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case459.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case459.jpg",
     "imageAlt": "品牌奶茶 KV 概念海报",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2057739678485495885",
@@ -869,7 +869,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 458,
     "title": "巴黎秋季时装插画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case458.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case458.jpg",
     "imageAlt": "巴黎秋季时装插画",
     "sourceLabel": "@heyfatema",
     "sourceUrl": "https://x.com/heyfatema/status/2057745100365787170",
@@ -892,7 +892,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 457,
     "title": "运动轨迹舞者光绘海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case457.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case457.jpg",
     "imageAlt": "运动轨迹舞者光绘海报",
     "sourceLabel": "@Gdgtify",
     "sourceUrl": "https://x.com/Gdgtify/status/2057741253127594118",
@@ -914,7 +914,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 456,
     "title": "历史事件 2x2 可视化地图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case456.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case456.jpg",
     "imageAlt": "历史事件 2x2 可视化地图",
     "sourceLabel": "@Gdgtify",
     "sourceUrl": "https://x.com/Gdgtify/status/2057277698607599692",
@@ -937,7 +937,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 455,
     "title": "巨型舒适洞洞鞋 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case455.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case455.jpg",
     "imageAlt": "巨型舒适洞洞鞋 Campaign",
     "sourceLabel": "@iamaiistudio",
     "sourceUrl": "https://x.com/iamaiistudio/status/2057281549851377866",
@@ -960,7 +960,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 454,
     "title": "旅行美食薯片广告海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case454.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case454.jpg",
     "imageAlt": "旅行美食薯片广告海报",
     "sourceLabel": "@Naiknelofar788",
     "sourceUrl": "https://x.com/Naiknelofar788/status/2057282710469767241",
@@ -982,7 +982,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 453,
     "title": "企业级商用画册视觉系统",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case453.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case453.jpg",
     "imageAlt": "企业级商用画册视觉系统",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2056974720893939950",
@@ -1004,7 +1004,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 452,
     "title": "极简童话手绘儿童插画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case452.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case452.jpg",
     "imageAlt": "极简童话手绘儿童插画",
     "sourceLabel": "@MissDelulu9",
     "sourceUrl": "https://x.com/MissDelulu9/status/2057073936295399551",
@@ -1027,7 +1027,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 451,
     "title": "韩国海滩日落时尚人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case451.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case451.jpg",
     "imageAlt": "韩国海滩日落时尚人像",
     "sourceLabel": "@MrGafish",
     "sourceUrl": "https://x.com/MrGafish/status/2057107670226870577",
@@ -1046,7 +1046,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 450,
     "title": "烛光侧室写实摄影",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case450.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case450.jpg",
     "imageAlt": "烛光侧室写实摄影",
     "sourceLabel": "@ToroJushiAi",
     "sourceUrl": "https://x.com/ToroJushiAi/status/2056926887344042382",
@@ -1068,7 +1068,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 449,
     "title": "奢华机械腕表技术图鉴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case449.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case449.jpg",
     "imageAlt": "奢华机械腕表技术图鉴",
     "sourceLabel": "@Gdgtify",
     "sourceUrl": "https://x.com/Gdgtify/status/2056928396991488312",
@@ -1091,7 +1091,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 448,
     "title": "1942 空战街机电影城",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case448.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case448.jpg",
     "imageAlt": "1942 空战街机电影城",
     "sourceLabel": "@Xaroon_x",
     "sourceUrl": "https://x.com/Xaroon_x/status/2056940561148363010",
@@ -1113,7 +1113,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 447,
     "title": "现代地铁工程信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case447.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case447.jpg",
     "imageAlt": "现代地铁工程信息图",
     "sourceLabel": "@j_smeaton99",
     "sourceUrl": "https://x.com/j_smeaton99/status/2056950969083343077",
@@ -1136,7 +1136,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 446,
     "title": "低多边形纸艺男士肖像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case446.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case446.jpg",
     "imageAlt": "低多边形纸艺男士肖像",
     "sourceLabel": "@iamsofiaijaz",
     "sourceUrl": "https://x.com/iamsofiaijaz/status/2056953102755115162",
@@ -1158,7 +1158,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 445,
     "title": "旅游照水墨明信片",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case445.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case445.jpg",
     "imageAlt": "旅游照水墨明信片",
     "sourceLabel": "@zhgqthomas",
     "sourceUrl": "https://x.com/zhgqthomas/status/2056633723366568387",
@@ -1180,7 +1180,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 444,
     "title": "迪斯科镜面 3D App 图标",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case444.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case444.jpg",
     "imageAlt": "迪斯科镜面 3D App 图标",
     "sourceLabel": "@vista8",
     "sourceUrl": "https://x.com/vista8/status/2056308962778296715",
@@ -1202,7 +1202,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 443,
     "title": "塔可爆炸拆解信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case443.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case443.jpg",
     "imageAlt": "塔可爆炸拆解信息图",
     "sourceLabel": "@Strength04_X",
     "sourceUrl": "https://x.com/Strength04_X/status/2056018963084226866",
@@ -1225,7 +1225,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 442,
     "title": "舒适发廊插画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case442.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case442.jpg",
     "imageAlt": "舒适发廊插画",
     "sourceLabel": "@Sairah_0",
     "sourceUrl": "https://x.com/Sairah_0/status/2056293543753503126",
@@ -1247,7 +1247,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 441,
     "title": "WILDCAMP 巨型帐篷广告海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case441.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case441.jpg",
     "imageAlt": "WILDCAMP 巨型帐篷广告海报",
     "sourceLabel": "@Strength04_X",
     "sourceUrl": "https://x.com/Strength04_X/status/2056258909334306897",
@@ -1270,7 +1270,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 440,
     "title": "手机拍摄 FaceTime 工作屏幕",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case440.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case440.jpg",
     "imageAlt": "手机拍摄 FaceTime 工作屏幕",
     "sourceLabel": "@kaanakz",
     "sourceUrl": "https://x.com/kaanakz/status/2056290465503171000",
@@ -1292,7 +1292,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 439,
     "title": "赛博黑客角色设定表",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case439.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case439.jpg",
     "imageAlt": "赛博黑客角色设定表",
     "sourceLabel": "@Kashberg_0",
     "sourceUrl": "https://x.com/Kashberg_0/status/2055865126335762902",
@@ -1315,7 +1315,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 438,
     "title": "珠宝微缩城市广告海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case438.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case438.jpg",
     "imageAlt": "珠宝微缩城市广告海报",
     "sourceLabel": "@Umar__786Ai",
     "sourceUrl": "https://x.com/Umar__786Ai/status/2055664244138349055",
@@ -1338,7 +1338,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 437,
     "title": "面部美学分析报告",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case437.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case437.jpg",
     "imageAlt": "面部美学分析报告",
     "sourceLabel": "@saniaspeaks_",
     "sourceUrl": "https://x.com/saniaspeaks_/status/2055857787637522908",
@@ -1361,7 +1361,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 436,
     "title": "数码相机屏幕怀旧人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case436.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case436.jpg",
     "imageAlt": "数码相机屏幕怀旧人像",
     "sourceLabel": "@Ciri_ai",
     "sourceUrl": "https://x.com/Ciri_ai/status/2055876982630686956",
@@ -1383,7 +1383,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 435,
     "title": "层叠纸雕情侣插画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case435.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case435.jpg",
     "imageAlt": "层叠纸雕情侣插画",
     "sourceLabel": "@Just_sharon7",
     "sourceUrl": "https://x.com/Just_sharon7/status/2055368240885641323",
@@ -1406,7 +1406,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 434,
     "title": "东京街头胶片人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case434.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case434.jpg",
     "imageAlt": "东京街头胶片人像",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2055491616392052887",
@@ -1429,7 +1429,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 433,
     "title": "韩国城市水彩旅行插画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case433.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case433.jpg",
     "imageAlt": "韩国城市水彩旅行插画",
     "sourceLabel": "@Taaruk_",
     "sourceUrl": "https://x.com/Taaruk_/status/2055492435862773978",
@@ -1452,7 +1452,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 432,
     "title": "大堡礁复古旅行海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case432.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case432.jpg",
     "imageAlt": "大堡礁复古旅行海报",
     "sourceLabel": "@jzaib4269",
     "sourceUrl": "https://x.com/jzaib4269/status/2055487295734620522",
@@ -1474,7 +1474,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 431,
     "title": "城市文字旅行海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case431.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case431.jpg",
     "imageAlt": "城市文字旅行海报",
     "sourceLabel": "@iamaiistudio",
     "sourceUrl": "https://x.com/iamaiistudio/status/2054563354899857757",
@@ -1497,7 +1497,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 430,
     "title": "铅笔素描时尚编辑插画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case430.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case430.jpg",
     "imageAlt": "铅笔素描时尚编辑插画",
     "sourceLabel": "@harboriis",
     "sourceUrl": "https://x.com/harboriis/status/2054573031343931418",
@@ -1518,7 +1518,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 429,
     "title": "韩国便利店粉色 Hoodie 人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case429.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case429.jpg",
     "imageAlt": "韩国便利店粉色 Hoodie 人像",
     "sourceLabel": "@john_my07",
     "sourceUrl": "https://x.com/john_my07/status/2054573350199111928",
@@ -1540,7 +1540,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 428,
     "title": "F1 直播转播围场截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case428.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case428.jpg",
     "imageAlt": "F1 直播转播围场截图",
     "sourceLabel": "@bigwonbots",
     "sourceUrl": "https://x.com/bigwonbots/status/2054573714012787059",
@@ -1563,7 +1563,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 427,
     "title": "9-frame 时尚人像拼贴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case427.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case427.jpg",
     "imageAlt": "9-frame 时尚人像拼贴",
     "sourceLabel": "@saniaspeaks_",
     "sourceUrl": "https://x.com/saniaspeaks_/status/2054046866497573214",
@@ -1585,7 +1585,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 426,
     "title": "日韩咖啡馆情侣写真",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case426.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case426.jpg",
     "imageAlt": "日韩咖啡馆情侣写真",
     "sourceLabel": "@sha_zdiii",
     "sourceUrl": "https://x.com/sha_zdiii/status/2054047328420634927",
@@ -1608,7 +1608,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 425,
     "title": "黑白时尚人像拼贴海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case425.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case425.jpg",
     "imageAlt": "黑白时尚人像拼贴海报",
     "sourceLabel": "@XSydneyFan",
     "sourceUrl": "https://x.com/XSydneyFan/status/2054054476429009086",
@@ -1631,7 +1631,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 424,
     "title": "FMCG 棒棒糖霓虹广告",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case424.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case424.jpg",
     "imageAlt": "FMCG 棒棒糖霓虹广告",
     "sourceLabel": "@Diplomeme",
     "sourceUrl": "https://x.com/Diplomeme/status/2054061713583219149",
@@ -1654,7 +1654,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 423,
     "title": "日系手绘涂鸦半身插画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case423.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case423.jpg",
     "imageAlt": "日系手绘涂鸦半身插画",
     "sourceLabel": "@heyfatema",
     "sourceUrl": "https://x.com/heyfatema/status/2053703602246668607",
@@ -1676,7 +1676,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 422,
     "title": "冬季生存惊悚 Storyboard",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case422.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case422.jpg",
     "imageAlt": "冬季生存惊悚 Storyboard",
     "sourceLabel": "@zulkarnaimx",
     "sourceUrl": "https://x.com/zulkarnaimx/status/2053723774680535538",
@@ -1699,7 +1699,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 421,
     "title": "iPhone 屏幕遮脸创意人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case421.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case421.jpg",
     "imageAlt": "iPhone 屏幕遮脸创意人像",
     "sourceLabel": "@Ciri_ai",
     "sourceUrl": "https://x.com/Ciri_ai/status/2053535379618423118",
@@ -1721,7 +1721,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 420,
     "title": "红跑道低角度夏日人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case420.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case420.jpg",
     "imageAlt": "红跑道低角度夏日人像",
     "sourceLabel": "@Shinning1010",
     "sourceUrl": "https://x.com/Shinning1010/status/2053521749967352285",
@@ -1744,7 +1744,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 419,
     "title": "可颂烘焙流程 Storyboard",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case419.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case419.jpg",
     "imageAlt": "可颂烘焙流程 Storyboard",
     "sourceLabel": "@TechieBySA",
     "sourceUrl": "https://x.com/TechieBySA/status/2053523784481554759",
@@ -1767,7 +1767,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 418,
     "title": "中世纪城市旅行海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case418.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case418.jpg",
     "imageAlt": "中世纪城市旅行海报",
     "sourceLabel": "@Goodmanprotocol",
     "sourceUrl": "https://x.com/Goodmanprotocol/status/2053523890744545437",
@@ -1788,7 +1788,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 417,
     "title": "复古印尼猫薄荷广告",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case417.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case417.jpg",
     "imageAlt": "复古印尼猫薄荷广告",
     "sourceLabel": "@NyaiiBubu",
     "sourceUrl": "https://x.com/NyaiiBubu/status/2053075349424992532",
@@ -1810,7 +1810,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 416,
     "title": "Earth Signs 角色 Scrapbook",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case416.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case416.jpg",
     "imageAlt": "Earth Signs 角色 Scrapbook",
     "sourceLabel": "@ZaraIrahh",
     "sourceUrl": "https://x.com/ZaraIrahh/status/2053075976469512686",
@@ -1833,7 +1833,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 415,
     "title": "东方神话人物志百科海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case415.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case415.jpg",
     "imageAlt": "东方神话人物志百科海报",
     "sourceLabel": "@TanLuAI",
     "sourceUrl": "https://x.com/TanLuAI/status/2053073436122243364",
@@ -1856,7 +1856,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 414,
     "title": "室内晨间写实摄影",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case414.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case414.jpg",
     "imageAlt": "室内晨间写实摄影",
     "sourceLabel": "@ToroJushiAi",
     "sourceUrl": "https://x.com/ToroJushiAi/status/2053078195482632421",
@@ -1878,7 +1878,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 413,
     "title": "当代舞现场 Storyboard",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case413.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case413.jpg",
     "imageAlt": "当代舞现场 Storyboard",
     "sourceLabel": "@ogbenniasamuel2",
     "sourceUrl": "https://x.com/ogbenniasamuel2/status/2053088572031250799",
@@ -1901,7 +1901,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 412,
     "title": "彩色按钮时尚 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case412.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case412.jpg",
     "imageAlt": "彩色按钮时尚 Campaign",
     "sourceLabel": "@Mind_Boticni",
     "sourceUrl": "https://x.com/Mind_Boticni/status/2053082199436759258",
@@ -1924,7 +1924,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 411,
     "title": "极简建筑地标海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case411.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case411.jpg",
     "imageAlt": "极简建筑地标海报",
     "sourceLabel": "@iamaiistudio",
     "sourceUrl": "https://x.com/iamaiistudio/status/2053084576520573269",
@@ -1946,7 +1946,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 410,
     "title": "夸张动漫风主体重绘",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case410.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case410.jpg",
     "imageAlt": "夸张动漫风主体重绘",
     "sourceLabel": "@Zyrellix",
     "sourceUrl": "https://x.com/Zyrellix/status/2052766810500649197",
@@ -1967,7 +1967,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 409,
     "title": "拙劣 MS Paint 风重绘",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case409.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case409.jpg",
     "imageAlt": "拙劣 MS Paint 风重绘",
     "sourceLabel": "@Ciri_ai",
     "sourceUrl": "https://x.com/Ciri_ai/status/2052969749878059362",
@@ -1987,7 +1987,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 408,
     "title": "Cozy Academia 学习手记",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case408.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case408.jpg",
     "imageAlt": "Cozy Academia 学习手记",
     "sourceLabel": "@Sairah_0",
     "sourceUrl": "https://x.com/Sairah_0/status/2052969695406325875",
@@ -2009,7 +2009,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 407,
     "title": "Neuro-AI 混合系统信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case407.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case407.jpg",
     "imageAlt": "Neuro-AI 混合系统信息图",
     "sourceLabel": "@YaZoraiz",
     "sourceUrl": "https://x.com/YaZoraiz/status/2052968427514708371",
@@ -2032,7 +2032,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 406,
     "title": "巨型游戏手柄街头 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case406.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case406.jpg",
     "imageAlt": "巨型游戏手柄街头 Campaign",
     "sourceLabel": "@AIwithkhan",
     "sourceUrl": "https://x.com/AIwithkhan/status/2052973449107349725",
@@ -2055,7 +2055,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 405,
     "title": "可爱纸艺风照片重绘",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case405.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case405.jpg",
     "imageAlt": "可爱纸艺风照片重绘",
     "sourceLabel": "@oggii_0",
     "sourceUrl": "https://x.com/oggii_0/status/2052609040539328759",
@@ -2075,7 +2075,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 404,
     "title": "豪华社媒破屏商业广告",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case404.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case404.jpg",
     "imageAlt": "豪华社媒破屏商业广告",
     "sourceLabel": "@you1873118",
     "sourceUrl": "https://x.com/you1873118/status/2052624395932455061",
@@ -2097,7 +2097,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 403,
     "title": "小红书数字破屏 3D 女孩",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case403.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case403.jpg",
     "imageAlt": "小红书数字破屏 3D 女孩",
     "sourceLabel": "@MrGafish",
     "sourceUrl": "https://x.com/MrGafish/status/2052632520563528051",
@@ -2117,7 +2117,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 402,
     "title": "3D 小红书个人资料卡",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case402.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case402.jpg",
     "imageAlt": "3D 小红书个人资料卡",
     "sourceLabel": "@MrGafish",
     "sourceUrl": "https://x.com/MrGafish/status/2052323461268467860",
@@ -2137,7 +2137,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 401,
     "title": "Lost in 国家旅行海报拼贴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case401.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case401.jpg",
     "imageAlt": "Lost in 国家旅行海报拼贴",
     "sourceLabel": "@SadiaMalik182",
     "sourceUrl": "https://x.com/SadiaMalik182",
@@ -2160,7 +2160,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 400,
     "title": "多风格签名选择海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case400.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case400.png",
     "imageAlt": "多风格签名选择海报",
     "sourceLabel": "GitHub prompt",
     "sourceUrl": "https://github.com/zaizhi-1112/ai-image-extension-playbook/blob/main/signature-image-prompts-gpt-image-2.md",
@@ -2181,7 +2181,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 399,
     "title": "唱片公司楼梯间写真人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case399.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case399.jpg",
     "imageAlt": "唱片公司楼梯间写真人像",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2052217544388546827",
@@ -2204,7 +2204,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 398,
     "title": "8 套日常穿搭编辑拼贴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case398.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case398.jpg",
     "imageAlt": "8 套日常穿搭编辑拼贴",
     "sourceLabel": "@aiwithaly",
     "sourceUrl": "https://x.com/aiwithaly/status/2052218645951205463",
@@ -2224,7 +2224,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 397,
     "title": "街舞角色设定参考图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case397.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case397.jpg",
     "imageAlt": "街舞角色设定参考图",
     "sourceLabel": "@ChangningL29508",
     "sourceUrl": "https://x.com/ChangningL29508/status/2052229452080591276",
@@ -2244,7 +2244,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 396,
     "title": "龙类物种复古百科海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case396.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case396.jpg",
     "imageAlt": "龙类物种复古百科海报",
     "sourceLabel": "@sha_zdiii",
     "sourceUrl": "https://x.com/sha_zdiii/status/2052237839119835280",
@@ -2267,7 +2267,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 395,
     "title": "骑士法师大战石像魔像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case395.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case395.jpg",
     "imageAlt": "骑士法师大战石像魔像",
     "sourceLabel": "@RamonVi25791296",
     "sourceUrl": "https://x.com/RamonVi25791296/status/2051568239142973832",
@@ -2289,7 +2289,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 394,
     "title": "中世纪村庄双精灵冒险者",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case394.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case394.jpg",
     "imageAlt": "中世纪村庄双精灵冒险者",
     "sourceLabel": "@RamonVi25791296",
     "sourceUrl": "https://x.com/RamonVi25791296/status/2051568239142973832",
@@ -2312,7 +2312,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 393,
     "title": "Y2K 金色时刻人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case393.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case393.jpg",
     "imageAlt": "Y2K 金色时刻人像",
     "sourceLabel": "@SiliconBarbie_",
     "sourceUrl": "https://x.com/SiliconBarbie_/status/2051475105403040014",
@@ -2333,7 +2333,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 392,
     "title": "头发里的微型城市",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case392.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case392.jpg",
     "imageAlt": "头发里的微型城市",
     "sourceLabel": "@krafterlab",
     "sourceUrl": "https://x.com/krafterlab/status/2051399740986740986",
@@ -2356,7 +2356,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 391,
     "title": "四国文化锚点服装设计宫格",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case391.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case391.jpg",
     "imageAlt": "四国文化锚点服装设计宫格",
     "sourceLabel": "@Gdgtify",
     "sourceUrl": "https://x.com/Gdgtify/status/2051428657571279137",
@@ -2376,7 +2376,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 390,
     "title": "羊毛毡国家微缩世界",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case390.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case390.jpg",
     "imageAlt": "羊毛毡国家微缩世界",
     "sourceLabel": "@volkan_iras",
     "sourceUrl": "https://x.com/volkan_iras/status/2051403524966141980",
@@ -2399,7 +2399,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 389,
     "title": "Transparent Labs Hydrate 健身补剂 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case389.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case389.jpg",
     "imageAlt": "Transparent Labs Hydrate 健身补剂 Campaign",
     "sourceLabel": "@amynys",
     "sourceUrl": "https://x.com/amynys/status/2051409591137972606",
@@ -2422,7 +2422,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 388,
     "title": "1980s Claude 复古杂志广告",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case388.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case388.jpg",
     "imageAlt": "1980s Claude 复古杂志广告",
     "sourceLabel": "@Shinning1010",
     "sourceUrl": "https://x.com/Shinning1010/status/2051410804805599436",
@@ -2445,7 +2445,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 387,
     "title": "Netflix 首页主视觉 UI",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case387.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case387.jpg",
     "imageAlt": "Netflix 首页主视觉 UI",
     "sourceLabel": "@aimikoda",
     "sourceUrl": "https://x.com/aimikoda/status/2051420440451801240",
@@ -2466,7 +2466,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 386,
     "title": "品牌包络产品广告",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case386.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case386.jpg",
     "imageAlt": "品牌包络产品广告",
     "sourceLabel": "@SRKDAN",
     "sourceUrl": "https://x.com/SRKDAN/status/2051482047248560393",
@@ -2489,7 +2489,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 385,
     "title": "青岛啤酒灵感女装系列",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case385.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case385.jpg",
     "imageAlt": "青岛啤酒灵感女装系列",
     "sourceLabel": "@Popcraft_ai",
     "sourceUrl": "https://x.com/Popcraft_ai/status/2051142270381170754",
@@ -2509,7 +2509,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 384,
     "title": "十国传统服饰时尚拼贴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case384.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case384.jpg",
     "imageAlt": "十国传统服饰时尚拼贴",
     "sourceLabel": "@amynys",
     "sourceUrl": "https://x.com/amynys/status/2051287229532639677",
@@ -2531,7 +2531,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 383,
     "title": "AI 日常生活 iPhone 抓拍",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case383.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case383.jpg",
     "imageAlt": "AI 日常生活 iPhone 抓拍",
     "sourceLabel": "@Ciri_ai",
     "sourceUrl": "https://x.com/Ciri_ai/status/2051292618248904809",
@@ -2550,7 +2550,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 382,
     "title": "春日花田三联竖版写真拼贴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case382.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case382.jpg",
     "imageAlt": "春日花田三联竖版写真拼贴",
     "sourceLabel": "@frametheory058",
     "sourceUrl": "https://x.com/frametheory058/status/2051294907214844249",
@@ -2572,7 +2572,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 381,
     "title": "90 年代公寓场景参考板",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case381.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case381.jpg",
     "imageAlt": "90 年代公寓场景参考板",
     "sourceLabel": "@Iancu_ai",
     "sourceUrl": "https://x.com/Iancu_ai/status/2051287273581203888",
@@ -2595,7 +2595,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 380,
     "title": "冠状病毒尺度缩放科学信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case380.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case380.jpg",
     "imageAlt": "冠状病毒尺度缩放科学信息图",
     "sourceLabel": "@Gdgtify",
     "sourceUrl": "https://x.com/Gdgtify/status/2051288232613351571",
@@ -2617,7 +2617,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 379,
     "title": "品牌人格漫画信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case379.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case379.jpg",
     "imageAlt": "品牌人格漫画信息图",
     "sourceLabel": "@CallumGrey",
     "sourceUrl": "https://x.com/CallumGrey/status/2051293342139584922",
@@ -2640,7 +2640,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 378,
     "title": "高端 3D 收藏玩具头像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case378.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case378.jpg",
     "imageAlt": "高端 3D 收藏玩具头像",
     "sourceLabel": "@Genematicai",
     "sourceUrl": "https://x.com/Genematicai/status/2050654848216109429",
@@ -2662,7 +2662,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 377,
     "title": "樱花咖啡户外人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case377.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case377.jpg",
     "imageAlt": "樱花咖啡户外人像",
     "sourceLabel": "@xRahultripathi",
     "sourceUrl": "https://x.com/xRahultripathi/status/2050677614168391716",
@@ -2685,7 +2685,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 376,
     "title": "泼洒抹茶街头手机照片",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case376.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case376.jpg",
     "imageAlt": "泼洒抹茶街头手机照片",
     "sourceLabel": "@Shinning1010",
     "sourceUrl": "https://x.com/Shinning1010/status/2050693240253214894",
@@ -2708,7 +2708,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 375,
     "title": "古希腊三哲时间轴城市图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case375.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case375.jpg",
     "imageAlt": "古希腊三哲时间轴城市图",
     "sourceLabel": "@ToroJushiAi",
     "sourceUrl": "https://x.com/ToroJushiAi/status/2050713034503409874",
@@ -2728,7 +2728,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 374,
     "title": "彩色潦草小狗线条风格重绘",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case374.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case374.jpg",
     "imageAlt": "彩色潦草小狗线条风格重绘",
     "sourceLabel": "@berryxia",
     "sourceUrl": "https://x.com/berryxia/status/2050226420681757102",
@@ -2747,7 +2747,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 373,
     "title": "高端肉类海鲜品牌英雄图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case373.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case373.jpg",
     "imageAlt": "高端肉类海鲜品牌英雄图",
     "sourceLabel": "@xpg0970",
     "sourceUrl": "https://x.com/xpg0970/status/2050108279385419965",
@@ -2767,7 +2767,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 372,
     "title": "可爱角色设定表",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case372.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case372.jpg",
     "imageAlt": "可爱角色设定表",
     "sourceLabel": "@xRahultripathi",
     "sourceUrl": "https://x.com/xRahultripathi/status/2050152865566708134",
@@ -2790,7 +2790,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 371,
     "title": "Scrapbook 真人图与迷你分身",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case371.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case371.jpg",
     "imageAlt": "Scrapbook 真人图与迷你分身",
     "sourceLabel": "@Kashberg_0",
     "sourceUrl": "https://x.com/Kashberg_0/status/2050272100884340783",
@@ -2813,7 +2813,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 370,
     "title": "Crumple Chair 概念沙发研发板",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case370.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case370.jpg",
     "imageAlt": "Crumple Chair 概念沙发研发板",
     "sourceLabel": "@ShamsAmin56",
     "sourceUrl": "https://x.com/ShamsAmin56/status/2050281206139461780",
@@ -2836,7 +2836,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 369,
     "title": "明洞旅游区域地图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case369.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case369.jpg",
     "imageAlt": "明洞旅游区域地图",
     "sourceLabel": "@so_ainsight",
     "sourceUrl": "https://x.com/so_ainsight/status/2050354639036654048",
@@ -2855,7 +2855,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 368,
     "title": "印度餐厅菜单改造宣传图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case368.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case368.jpg",
     "imageAlt": "印度餐厅菜单改造宣传图",
     "sourceLabel": "@Johnson998877",
     "sourceUrl": "https://x.com/Johnson998877/status/2050354965110268123",
@@ -2874,7 +2874,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 367,
     "title": "VELORA 奢华香水广告海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case367.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case367.jpg",
     "imageAlt": "VELORA 奢华香水广告海报",
     "sourceLabel": "@akkiwani703",
     "sourceUrl": "https://x.com/akkiwani703/status/2049778680969437564",
@@ -2897,7 +2897,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 366,
     "title": "咖啡馆写实照片与 2D 涂鸦叠加",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case366.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case366.jpg",
     "imageAlt": "咖啡馆写实照片与 2D 涂鸦叠加",
     "sourceLabel": "@Jawad_Rahman_",
     "sourceUrl": "https://x.com/Jawad_Rahman_/status/2049796647237066971",
@@ -2919,7 +2919,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 365,
     "title": "科学家收藏级玩具发布板",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case365.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case365.jpg",
     "imageAlt": "科学家收藏级玩具发布板",
     "sourceLabel": "@Gdgtify",
     "sourceUrl": "https://x.com/Gdgtify/status/2049766203392921897",
@@ -2942,7 +2942,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 364,
     "title": "奢华个人色彩档案信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case364.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case364.jpg",
     "imageAlt": "奢华个人色彩档案信息图",
     "sourceLabel": "@meng_dagg695",
     "sourceUrl": "https://x.com/meng_dagg695/status/2049822844918575586",
@@ -2965,7 +2965,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 363,
     "title": "磁场铁粉 Logo 物理成像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case363.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case363.jpg",
     "imageAlt": "磁场铁粉 Logo 物理成像",
     "sourceLabel": "@Naiknelofar788",
     "sourceUrl": "https://x.com/Naiknelofar788/status/2049835482331357460",
@@ -2988,7 +2988,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 362,
     "title": "抹茶品牌触点系统视觉板",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case362.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case362.jpg",
     "imageAlt": "抹茶品牌触点系统视觉板",
     "sourceLabel": "@Preda2005",
     "sourceUrl": "https://x.com/Preda2005/status/2049846981271699685",
@@ -3011,7 +3011,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 361,
     "title": "手机爆炸拆解图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case361.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case361.jpg",
     "imageAlt": "手机爆炸拆解图",
     "sourceLabel": "@Ankit_patel211",
     "sourceUrl": "https://x.com/Ankit_patel211/status/2048834306379075759",
@@ -3030,7 +3030,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 360,
     "title": "长发造型分析信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case360.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case360.jpg",
     "imageAlt": "长发造型分析信息图",
     "sourceLabel": "@Gemalpha_88",
     "sourceUrl": "https://x.com/Gemalpha_88/status/2048918707343401034",
@@ -3053,7 +3053,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 359,
     "title": "水墨双重曝光人物海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case359.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case359.jpg",
     "imageAlt": "水墨双重曝光人物海报",
     "sourceLabel": "@Goodmanprotocol",
     "sourceUrl": "https://x.com/Goodmanprotocol/status/2049002279051895243",
@@ -3076,7 +3076,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 358,
     "title": "草莓能量饮料商业广告",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case358.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case358.jpg",
     "imageAlt": "草莓能量饮料商业广告",
     "sourceLabel": "@SPEEDAI07",
     "sourceUrl": "https://x.com/SPEEDAI07/status/2049043627163435040",
@@ -3099,7 +3099,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 357,
     "title": "鱼眼镜面复古咖啡馆人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case357.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case357.jpg",
     "imageAlt": "鱼眼镜面复古咖啡馆人像",
     "sourceLabel": "@harboriis",
     "sourceUrl": "https://x.com/harboriis/status/2049044698900361241",
@@ -3118,7 +3118,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 356,
     "title": "过度思考超现实街头 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case356.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case356.jpg",
     "imageAlt": "过度思考超现实街头 Campaign",
     "sourceLabel": "@AIwithAliya",
     "sourceUrl": "https://x.com/AIwithAliya/status/2049044716642316758",
@@ -3141,7 +3141,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 355,
     "title": "概念字体海报 Prompt",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case355.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case355.jpg",
     "imageAlt": "概念字体海报 Prompt",
     "sourceLabel": "@dotey",
     "sourceUrl": "https://x.com/dotey/status/2048793351290327381",
@@ -3164,7 +3164,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 354,
     "title": "Logo 与品牌身份系统提示词合集",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case354.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case354.jpg",
     "imageAlt": "Logo 与品牌身份系统提示词合集",
     "sourceLabel": "@wanerfu",
     "sourceUrl": "https://x.com/wanerfu/status/2048659924822184026",
@@ -3185,7 +3185,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 353,
     "title": "品牌口红推荐报告信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case353.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case353.jpg",
     "imageAlt": "品牌口红推荐报告信息图",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2048667226195317219",
@@ -3208,7 +3208,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 352,
     "title": "西楚霸王国风暗黑海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case352.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case352.jpg",
     "imageAlt": "西楚霸王国风暗黑海报",
     "sourceLabel": "@stellimbris",
     "sourceUrl": "https://x.com/stellimbris/status/2048633434961072617",
@@ -3227,7 +3227,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 351,
     "title": "健身品牌力量 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case351.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case351.jpg",
     "imageAlt": "健身品牌力量 Campaign",
     "sourceLabel": "@AIwithSynthia",
     "sourceUrl": "https://x.com/AIwithSynthia/status/2048601383545577614",
@@ -3248,7 +3248,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 350,
     "title": "足球球员数据涂鸦海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case350.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case350.jpg",
     "imageAlt": "足球球员数据涂鸦海报",
     "sourceLabel": "@ryanpp27",
     "sourceUrl": "https://x.com/ryanpp27/status/2048602248524214542",
@@ -3271,7 +3271,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 349,
     "title": "运动时尚三联 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case349.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case349.jpg",
     "imageAlt": "运动时尚三联 Campaign",
     "sourceLabel": "@AIwithkhan",
     "sourceUrl": "https://x.com/AIwithkhan/status/2048606301039820821",
@@ -3294,7 +3294,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 348,
     "title": "胡须风格分析海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case348.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case348.jpg",
     "imageAlt": "胡须风格分析海报",
     "sourceLabel": "@RizwanAly07",
     "sourceUrl": "https://x.com/RizwanAly07/status/2048610196302250019",
@@ -3316,7 +3316,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 347,
     "title": "4×4 动作分解参考表",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case347.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case347.jpg",
     "imageAlt": "4×4 动作分解参考表",
     "sourceLabel": "@oggii_0",
     "sourceUrl": "https://x.com/oggii_0/status/2048614158699217302",
@@ -3339,7 +3339,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 346,
     "title": "立体刺绣小鸟花枝",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case346.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case346.jpg",
     "imageAlt": "立体刺绣小鸟花枝",
     "sourceLabel": "@dotey",
     "sourceUrl": "https://x.com/dotey/status/2048529821706195442",
@@ -3358,7 +3358,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 345,
     "title": "法新浪潮撕纸电影海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case345.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case345.jpg",
     "imageAlt": "法新浪潮撕纸电影海报",
     "sourceLabel": "@bananaprompts",
     "sourceUrl": "https://x.com/bananaprompts/status/2048541390900994476",
@@ -3381,7 +3381,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 344,
     "title": "NOIR 街头服饰 Campaign",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case344.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case344.jpg",
     "imageAlt": "NOIR 街头服饰 Campaign",
     "sourceLabel": "@Daniel_adsss",
     "sourceUrl": "https://x.com/Daniel_adsss/status/2048542581638701446",
@@ -3404,7 +3404,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 343,
     "title": "高定时尚杂志封面",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case343.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case343.jpg",
     "imageAlt": "高定时尚杂志封面",
     "sourceLabel": "@SPEEDAI07",
     "sourceUrl": "https://x.com/SPEEDAI07/status/2048573343066992919",
@@ -3427,7 +3427,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 342,
     "title": "四季包装 Campaign 宫格",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case342.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case342.jpg",
     "imageAlt": "四季包装 Campaign 宫格",
     "sourceLabel": "@SRKDAN",
     "sourceUrl": "https://x.com/SRKDAN/status/2048582939504431195",
@@ -3449,7 +3449,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 341,
     "title": "AP Calculus 学习表信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case341.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case341.jpg",
     "imageAlt": "AP Calculus 学习表信息图",
     "sourceLabel": "@hqmank",
     "sourceUrl": "https://x.com/hqmank/status/2048587150544028084",
@@ -3472,7 +3472,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 340,
     "title": "彼岸花丛中的红妆女子",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case340.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case340.png",
     "imageAlt": "彼岸花丛中的红妆女子",
     "sourceLabel": "@xiaofenggan",
     "sourceUrl": "https://x.com/xiaofenggan",
@@ -3491,7 +3491,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 339,
     "title": "Apple 风格自然科普海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case339.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case339.jpg",
     "imageAlt": "Apple风格自然科普海报",
     "sourceLabel": "@berryxia",
     "sourceUrl": "https://x.com/berryxia/status/2048251413147644100",
@@ -3512,7 +3512,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 338,
     "title": "《赤壁怀古》长卷图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case338.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case338.png",
     "imageAlt": "赤壁怀古长卷图",
     "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
     "sourceUrl": "",
@@ -3531,7 +3531,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 337,
     "title": "《短歌行》诗词意境图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case337.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case337.png",
     "imageAlt": "短歌行诗词意境图",
     "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
     "sourceUrl": "",
@@ -3550,7 +3550,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 336,
     "title": "个人网页视觉设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case336.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case336.png",
     "imageAlt": "个人网页视觉设计",
     "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
     "sourceUrl": "",
@@ -3569,7 +3569,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 335,
     "title": "朋友圈截图生成",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case335.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case335.png",
     "imageAlt": "朋友圈截图生成",
     "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
     "sourceUrl": "",
@@ -3589,7 +3589,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 334,
     "title": "RAG 技术详解图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case334.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case334.png",
     "imageAlt": "RAG 技术详解图",
     "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
     "sourceUrl": "",
@@ -3608,7 +3608,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 333,
     "title": "AI 眼镜爆炸拆解图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case333.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case333.png",
     "imageAlt": "AI 眼镜爆炸拆解图",
     "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
     "sourceUrl": "",
@@ -3627,7 +3627,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 332,
     "title": "茶π产品宣传海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case332.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case332.png",
     "imageAlt": "茶π产品宣传海报",
     "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
     "sourceUrl": "",
@@ -3646,7 +3646,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 331,
     "title": "西安手绘水彩城市地图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case331.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case331.png",
     "imageAlt": "西安手绘水彩城市地图",
     "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
     "sourceUrl": "",
@@ -3665,7 +3665,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 330,
     "title": "月下美女直播画面",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case330.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case330.png",
     "imageAlt": "月下美女直播画面",
     "sourceLabel": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
     "sourceUrl": "",
@@ -3684,7 +3684,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 329,
     "title": "烬甲猎鹰者与燃翼神禽",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case329.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case329.jpg",
     "imageAlt": "烬甲猎鹰者与燃翼神禽",
     "sourceLabel": "@iamsofiaijaz",
     "sourceUrl": "https://x.com/iamsofiaijaz/status/2008896649901535342",
@@ -3705,7 +3705,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 328,
     "title": "俯拍巨女城景自拍",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case328.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case328.jpg",
     "imageAlt": "俯拍巨女城景自拍",
     "sourceLabel": "@saniaspeaks_",
     "sourceUrl": "https://x.com/saniaspeaks_/status/2009834337043394622",
@@ -3728,7 +3728,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 327,
     "title": "沉香玫瑰悬浮幻景",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case327.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case327.jpg",
     "imageAlt": "沉香玫瑰悬浮幻景",
     "sourceLabel": "@meng_dagg695",
     "sourceUrl": "https://x.com/meng_dagg695/status/2011334627290726746",
@@ -3751,7 +3751,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 326,
     "title": "红蓝撞色高跟诱惑",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case326.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case326.jpg",
     "imageAlt": "红蓝撞色高跟诱惑",
     "sourceLabel": "@meng_dagg695",
     "sourceUrl": "https://x.com/meng_dagg695/status/2012437899955097836",
@@ -3774,7 +3774,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 325,
     "title": "皮克斯风阳光少年",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case325.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case325.jpg",
     "imageAlt": "皮克斯风阳光少年",
     "sourceLabel": "@iamsofiaijaz",
     "sourceUrl": "https://x.com/iamsofiaijaz/status/2013473309485343120",
@@ -3796,7 +3796,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 324,
     "title": "复古巴士上的红风衣女郎",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case324.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case324.jpg",
     "imageAlt": "复古巴士上的红风衣女郎",
     "sourceLabel": "@iamsofiaijaz",
     "sourceUrl": "https://x.com/iamsofiaijaz/status/2015337737860403283",
@@ -3818,7 +3818,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 323,
     "title": "应用界面样机图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case323.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case323.jpg",
     "imageAlt": "超真实3D INS广告大片",
     "sourceLabel": "@Mystveil7",
     "sourceUrl": "https://x.com/Mystveil7/status/2015776042989039997",
@@ -3841,7 +3841,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 322,
     "title": "街头炫瓶男模",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case322.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case322.jpg",
     "imageAlt": "街头炫瓶男模",
     "sourceLabel": "@ecommartinez",
     "sourceUrl": "https://x.com/ecommartinez/status/2017311074551533921",
@@ -3862,7 +3862,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 321,
     "title": "都市落日时尚大片",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case321.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case321.jpg",
     "imageAlt": "都市落日时尚大片",
     "sourceLabel": "OpenNana",
     "sourceUrl": "https://opennana.com/awesome-prompt-gallery/urban-sunset-fashion-silhouette",
@@ -3884,7 +3884,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 320,
     "title": "冰火双雄背靠背史诗电影海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case320.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case320.jpg",
     "imageAlt": "冰火双雄背靠背史诗电影海报",
     "sourceLabel": "@Naiknelofar788",
     "sourceUrl": "https://x.com/Naiknelofar788/status/2025972876554510482",
@@ -3907,7 +3907,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 319,
     "title": "鸟群织就的梦幻高定时装秀",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case319.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case319.jpg",
     "imageAlt": "鸟群织就的梦幻高定时装秀",
     "sourceLabel": "@MrDasOnX",
     "sourceUrl": "https://x.com/MrDasOnX/status/2026284342549340190",
@@ -3928,7 +3928,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 318,
     "title": "珊瑚色极简影棚时尚商业大片",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case318.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case318.jpg",
     "imageAlt": "珊瑚色极简影棚时尚商业大片",
     "sourceLabel": "@Maercihh",
     "sourceUrl": "https://x.com/Maercihh/status/2026941078885310750",
@@ -3951,7 +3951,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 317,
     "title": "震撼视觉的深红影棚广角美妆大片",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case317.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case317.jpg",
     "imageAlt": "震撼视觉的深红影棚广角美妆大片",
     "sourceLabel": "@Maercihh",
     "sourceUrl": "https://x.com/Maercihh/status/2026941078885310750",
@@ -3974,7 +3974,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 316,
     "title": "冲破次元壁的写实漫画跑者",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case316.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case316.jpg",
     "imageAlt": "冲破次元壁的写实漫画跑者",
     "sourceLabel": "@Fujimoto_hina",
     "sourceUrl": "https://x.com/Fujimoto_hina/status/2027748030825500722",
@@ -3997,7 +3997,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 315,
     "title": "棘龙巨口中的酷飒少女与史前奇观",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case315.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case315.jpg",
     "imageAlt": "棘龙巨口中的酷飒少女与史前奇观",
     "sourceLabel": "@MrDasOnX",
     "sourceUrl": "https://x.com/MrDasOnX/status/2028087254757867560",
@@ -4020,7 +4020,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 314,
     "title": "红蓝光影下的未来都市双重曝光青年",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case314.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case314.jpg",
     "imageAlt": "红蓝光影下的未来都市双重曝光青年",
     "sourceLabel": "@Fujimoto_hina",
     "sourceUrl": "https://x.com/Fujimoto_hina/status/2028045894088630679",
@@ -4043,7 +4043,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 313,
     "title": "电商商品展示设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case313.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case313.jpg",
     "imageAlt": "梦幻蓝紫烟雾环绕的NUBELLA奢华护肤软管",
     "sourceLabel": "@Fujimoto_hina",
     "sourceUrl": "https://x.com/Fujimoto_hina/status/2027903683154088431",
@@ -4065,7 +4065,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 312,
     "title": "鲜艳霓虹光影下的动感苏打水飞溅商业海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case312.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case312.jpg",
     "imageAlt": "鲜艳霓虹光影下的动感苏打水飞溅商业海报",
     "sourceLabel": "@Fujimoto_hina",
     "sourceUrl": "https://x.com/Fujimoto_hina/status/2028388808320819277",
@@ -4087,7 +4087,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 311,
     "title": "晨曦薰衣草田梦幻少女三联画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case311.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case311.jpg",
     "imageAlt": "晨曦薰衣草田梦幻少女三联画",
     "sourceLabel": "@Naiknelofar788",
     "sourceUrl": "https://x.com/Naiknelofar788/status/2028417667846341062",
@@ -4106,7 +4106,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 310,
     "title": "零食品牌技术分解图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case310.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case310.jpg",
     "imageAlt": "零食品牌技术分解图",
     "sourceLabel": "@TechieBySA",
     "sourceUrl": "https://x.com/TechieBySA/status/2031795709243019280",
@@ -4129,7 +4129,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 309,
     "title": "创意树叶拼贴构成的角色画像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case309.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case309.jpg",
     "imageAlt": "创意树叶拼贴构成的角色画像",
     "sourceLabel": "@meng_dagg695",
     "sourceUrl": "https://x.com/meng_dagg695/status/2032019839070716170",
@@ -4150,7 +4150,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 308,
     "title": "抖音直播截图画面",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case308.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case308.jpg",
     "imageAlt": "抖音直播截图画面",
     "sourceLabel": "@_FORAB",
     "sourceUrl": "https://x.com/_FORAB/status/2044744023261519920",
@@ -4169,7 +4169,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 307,
     "title": "红绸舞动千年商都广州",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case307.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case307.jpg",
     "imageAlt": "红绸舞动千年商都广州",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045332620352119274",
@@ -4192,7 +4192,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 306,
     "title": "官方角色设定资料卡",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case306.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case306.jpg",
     "imageAlt": "官方角色设定资料卡",
     "sourceLabel": "@MANISH1027512",
     "sourceUrl": "https://x.com/MANISH1027512/status/2045013913901867334",
@@ -4215,7 +4215,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 305,
     "title": "深夜便利店里的性感霓虹少女",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case305.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case305.jpg",
     "imageAlt": "深夜便利店里的性感霓虹少女",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2045167461147042202",
@@ -4238,7 +4238,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 304,
     "title": "荧光蓝穷奇新中式山水画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case304.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case304.jpg",
     "imageAlt": "荧光蓝穷奇新中式山水画",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045506567735558336",
@@ -4261,7 +4261,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 303,
     "title": "人教版三年级语文课本内页",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case303.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case303.jpg",
     "imageAlt": "人教版三年级语文课本内页",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2044824800909054181",
@@ -4280,7 +4280,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 302,
     "title": "九位大师的机械键盘设计图鉴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case302.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case302.jpg",
     "imageAlt": "九位大师的机械键盘设计图鉴",
     "sourceLabel": "@TanShilong",
     "sourceUrl": "https://x.com/TanShilong/status/2045148649869692982",
@@ -4299,7 +4299,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 301,
     "title": "终结者机器人淘宝详情页",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case301.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case301.jpg",
     "imageAlt": "终结者机器人淘宝详情页",
     "sourceLabel": "@rionaifantasy",
     "sourceUrl": "https://x.com/rionaifantasy/status/2045356799751303194",
@@ -4320,7 +4320,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 300,
     "title": "黑板上的出师表全文",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case300.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case300.jpg",
     "imageAlt": "黑板上的出师表全文",
     "sourceLabel": "@rionaifantasy",
     "sourceUrl": "https://x.com/rionaifantasy/status/2045356799751303194",
@@ -4339,7 +4339,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 299,
     "title": "极简留白涂鸦手绘草图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case299.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case299.jpg",
     "imageAlt": "极简留白涂鸦手绘草图",
     "sourceLabel": "@VoxcatAI",
     "sourceUrl": "https://x.com/VoxcatAI/status/2045131503001342302",
@@ -4362,7 +4362,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 298,
     "title": "梦幻波士顿春季城市海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case298.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case298.jpg",
     "imageAlt": "梦幻波士顿春季城市海报",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2045358053831172358",
@@ -4385,7 +4385,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 297,
     "title": "手写食谱变身杂志级跨页",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case297.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case297.jpg",
     "imageAlt": "手写食谱变身杂志级跨页",
     "sourceLabel": "@maxescu",
     "sourceUrl": "https://x.com/maxescu/status/2045203839910056014",
@@ -4404,7 +4404,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 296,
     "title": "博物馆级中文拆解信息图鉴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case296.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case296.jpg",
     "imageAlt": "博物馆级中文拆解信息图鉴",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2045504669401653414",
@@ -4427,7 +4427,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 295,
     "title": "复古传统老黄历二零二六年四月十八",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case295.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case295.jpg",
     "imageAlt": "复古传统老黄历二零二六年四月十八",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2044824800909054181",
@@ -4446,7 +4446,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 294,
     "title": "精美潮汕菜馆菜单图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case294.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case294.jpg",
     "imageAlt": "精美潮汕菜馆菜单图",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2044824800909054181",
@@ -4465,7 +4465,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 293,
     "title": "聚焦人工智能的校园日报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case293.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case293.jpg",
     "imageAlt": "聚焦人工智能的校园日报",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2044824800909054181",
@@ -4484,7 +4484,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 292,
     "title": "明朝登基宝玉的推文页面",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case292.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case292.jpg",
     "imageAlt": "明朝登基宝玉的推文页面",
     "sourceLabel": "@tuzi_ai",
     "sourceUrl": "https://x.com/tuzi_ai/status/2045193918736736365",
@@ -4504,7 +4504,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 291,
     "title": "极致奢华的弹珠店梦幻宣传单",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case291.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case291.jpg",
     "imageAlt": "极致奢华的弹珠店梦幻宣传单",
     "sourceLabel": "OpenNana",
     "sourceUrl": "https://opennana.com/awesome-prompt-gallery/luxurious-pachinko-flyer",
@@ -4524,7 +4524,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 290,
     "title": "古风诗人镭射典藏卡牌",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case290.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case290.jpg",
     "imageAlt": "古风诗人镭射典藏卡牌",
     "sourceLabel": "@TanShilong",
     "sourceUrl": "https://x.com/TanShilong/status/2045435090923356415",
@@ -4547,7 +4547,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 289,
     "title": "直播界面设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case289.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case289.jpg",
     "imageAlt": "特朗普金正恩抖音直播打PK",
     "sourceLabel": "@rionaifantasy",
     "sourceUrl": "https://x.com/rionaifantasy/status/2045356799751303194",
@@ -4566,7 +4566,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 288,
     "title": "抖音美女直播间界面设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case288.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case288.jpg",
     "imageAlt": "抖音美女直播间界面设计",
     "sourceLabel": "@msjiaozhu",
     "sourceUrl": "https://x.com/msjiaozhu/status/2045470160576999812",
@@ -4585,7 +4585,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 287,
     "title": "不知火舞的小红书主页",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case287.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case287.jpg",
     "imageAlt": "不知火舞的小红书主页",
     "sourceLabel": "@rionaifantasy",
     "sourceUrl": "https://x.com/rionaifantasy/status/2045356799751303194",
@@ -4604,7 +4604,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 286,
     "title": "珠江新城剪纸璀璨夜景",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case286.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case286.jpg",
     "imageAlt": "珠江新城剪纸璀璨夜景",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045527750606487877",
@@ -4626,7 +4626,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 285,
     "title": "真实动漫画面快照",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case285.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case285.jpg",
     "imageAlt": "真实动漫画面快照",
     "sourceLabel": "@Thereallo1026",
     "sourceUrl": "https://x.com/Thereallo1026/status/2044241997163311569",
@@ -4645,7 +4645,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 284,
     "title": "温馨卧室里的少女自拍",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case284.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case284.jpg",
     "imageAlt": "温馨卧室里的少女自拍",
     "sourceLabel": "@Shinning1010",
     "sourceUrl": "https://x.com/Shinning1010/status/2045002808903020962",
@@ -4664,7 +4664,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 283,
     "title": "小恶魔莉莉香超任游戏海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case283.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case283.jpg",
     "imageAlt": "小恶魔莉莉香超任游戏海报",
     "sourceLabel": "@lilimliliychan",
     "sourceUrl": "https://x.com/lilimliliychan/status/2045114760937804187",
@@ -4683,7 +4683,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 282,
     "title": "温柔治愈系二次元手机截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case282.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case282.jpg",
     "imageAlt": "温柔治愈系二次元手机截图",
     "sourceLabel": "@Zoulinshen",
     "sourceUrl": "https://x.com/Zoulinshen/status/2045082518089810073",
@@ -4706,7 +4706,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 281,
     "title": "赛博朋克科幻曼荼罗",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case281.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case281.jpg",
     "imageAlt": "赛博朋克科幻曼荼罗",
     "sourceLabel": "@4WEB1",
     "sourceUrl": "https://x.com/4WEB1/status/2045390207072256179",
@@ -4726,7 +4726,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 280,
     "title": "封面排版设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case280.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case280.jpg",
     "imageAlt": "涂鸦速写风AI建造者大师",
     "sourceLabel": "OpenNana",
     "sourceUrl": "https://opennana.com/awesome-prompt-gallery/graffiti-sketch-ai-builder-master",
@@ -4749,7 +4749,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 279,
     "title": "裂痕里的水墨东方山水画卷",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case279.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case279.jpg",
     "imageAlt": "裂痕里的水墨东方山水画卷",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045368305079447853",
@@ -4772,7 +4772,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 278,
     "title": "阿马尔菲海岸复古旅行海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case278.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case278.jpg",
     "imageAlt": "阿马尔菲海岸复古旅行海报",
     "sourceLabel": "@WolfRiccardo",
     "sourceUrl": "https://x.com/WolfRiccardo/status/2044562722491121718",
@@ -4794,7 +4794,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 277,
     "title": "奢华魅力黑人女性海滨摄影",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case277.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case277.jpg",
     "imageAlt": "奢华魅力黑人女性海滨摄影",
     "sourceLabel": "@patrickassale",
     "sourceUrl": "https://x.com/patrickassale/status/2044581766309060765",
@@ -4814,7 +4814,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 276,
     "title": "红绸幻化壮阔国潮羊城",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case276.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case276.jpg",
     "imageAlt": "红绸幻化壮阔国潮羊城",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045332620352119274",
@@ -4837,7 +4837,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 275,
     "title": "一张采用分层蒙太奇构图的电影海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case275.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case275.jpg",
     "imageAlt": "一张采用分层蒙太奇构图的电影海报",
     "sourceLabel": "@old_pgmrs_will",
     "sourceUrl": "https://x.com/old_pgmrs_will/status/2045440101359198302",
@@ -4860,7 +4860,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 274,
     "title": "成都吃货暴走手绘美食地图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case274.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case274.jpg",
     "imageAlt": "成都吃货暴走手绘美食地图",
     "sourceLabel": "@Panda20230902",
     "sourceUrl": "https://x.com/Panda20230902/status/2045396918965285111",
@@ -4882,7 +4882,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 273,
     "title": "橙红渐变中的孤独剪影",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case273.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case273.jpg",
     "imageAlt": "橙红渐变中的孤独剪影",
     "sourceLabel": "@iam_miharbi",
     "sourceUrl": "https://x.com/iam_miharbi/status/2045151354679665101",
@@ -4903,7 +4903,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 272,
     "title": "日式温泉旅馆人像",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case272.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case272.jpg",
     "imageAlt": "日式温泉旅馆人像",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2045092449803284923",
@@ -4926,7 +4926,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 271,
     "title": "人物角色设定图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case271.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case271.jpg",
     "imageAlt": "GPT图像生成惊艳角色立绘",
     "sourceLabel": "@tsubaki_ew",
     "sourceUrl": "https://x.com/tsubaki_ew/status/2045259289993048284",
@@ -4945,7 +4945,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 270,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case270.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case270.jpg",
     "imageAlt": "官方角色设定资料图鉴",
     "sourceLabel": "\\[OpenNana]\\(]\\(<https://x.com/Toshi_nyaruo_AI/status/2045025277538107420>)",
     "sourceUrl": "",
@@ -4968,7 +4968,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 269,
     "title": "拒绝盲目催婚的暖心视频号截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case269.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case269.jpg",
     "imageAlt": "拒绝盲目催婚的暖心视频号截图",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2045373105041007013",
@@ -4987,7 +4987,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 268,
     "title": "威化岛回军前夕李成桂动态",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case268.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case268.jpg",
     "imageAlt": "威化岛回军前夕李成桂动态",
     "sourceLabel": "@SKA_Neotype",
     "sourceUrl": "https://x.com/SKA_Neotype/status/2044637900978217334",
@@ -5007,7 +5007,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 267,
     "title": "宋朝文人的赛博朋友圈",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case267.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case267.jpg",
     "imageAlt": "宋朝文人的赛博朋友圈",
     "sourceLabel": "@Panda20230902",
     "sourceUrl": "https://x.com/Panda20230902/status/2045385588065313057",
@@ -5030,7 +5030,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 266,
     "title": "桌面上的黑色圆珠笔手写笔记",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case266.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case266.jpg",
     "imageAlt": "桌面上的黑色圆珠笔手写笔记",
     "sourceLabel": "@patrickassale",
     "sourceUrl": "https://x.com/patrickassale/status/2044569086013718958",
@@ -5049,7 +5049,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 265,
     "title": "日式潮流广告四联画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case265.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case265.jpg",
     "imageAlt": "日式潮流广告四联画",
     "sourceLabel": "@midori_tatsuta",
     "sourceUrl": "https://x.com/midori_tatsuta/status/2045253072289767815",
@@ -5068,7 +5068,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 264,
     "title": "美妆产品广告图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case264.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case264.jpg",
     "imageAlt": "Z世代Y2K平价美妆广告图",
     "sourceLabel": "@midori_tatsuta",
     "sourceUrl": "https://x.com/midori_tatsuta/status/2045378877363798279",
@@ -5087,7 +5087,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 263,
     "title": "唯美二次元角色介绍网页",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case263.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case263.jpg",
     "imageAlt": "唯美二次元角色介绍网页",
     "sourceLabel": "@09lyco",
     "sourceUrl": "https://x.com/09lyco/status/2045281845391323175",
@@ -5107,7 +5107,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 262,
     "title": "苹果园远观库克发布新机",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case262.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case262.jpg",
     "imageAlt": "苹果园远观库克发布新机",
     "sourceLabel": "@austinit",
     "sourceUrl": "https://x.com/patrickassale/status/2044687244368441742",
@@ -5126,7 +5126,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 261,
     "title": "智能视频生成器暗黑界面设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case261.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case261.jpg",
     "imageAlt": "智能视频生成器暗黑界面设计",
     "sourceLabel": "@austinit",
     "sourceUrl": "https://x.com/austinit/status/2044968740782272596",
@@ -5146,7 +5146,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 260,
     "title": "社媒界面截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case260.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case260.jpg",
     "imageAlt": "抖音AI低价引流爆款截图",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2045373105041007013",
@@ -5166,7 +5166,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 259,
     "title": "精致女孩背后的网贷真相",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case259.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case259.jpg",
     "imageAlt": "精致女孩背后的网贷真相",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2045373105041007013",
@@ -5185,7 +5185,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 258,
     "title": "快手直播离婚预告手机截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case258.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case258.jpg",
     "imageAlt": "快手直播离婚预告手机截图",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2045373105041007013",
@@ -5204,7 +5204,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 257,
     "title": "抖音汉服美女直播带货截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case257.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case257.jpg",
     "imageAlt": "抖音汉服美女直播带货截图",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2044796366950703316",
@@ -5224,7 +5224,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 256,
     "title": "抖音直播间的绝美女主播",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case256.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case256.jpg",
     "imageAlt": "抖音直播间的绝美女主播",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2044796366950703316",
@@ -5243,7 +5243,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 255,
     "title": "瑜伽裤女主播展示身材曲线",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case255.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case255.jpg",
     "imageAlt": "瑜伽裤女主播展示身材曲线",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2044796366950703316",
@@ -5262,7 +5262,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 254,
     "title": "奔赴山海胶片感海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case254.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case254.jpg",
     "imageAlt": "奔赴山海胶片感海报",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5282,7 +5282,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 253,
     "title": "2026谷雨节气唯美海报设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case253.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case253.jpg",
     "imageAlt": "2026谷雨节气唯美海报设计",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5301,7 +5301,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 252,
     "title": "五一劳动节手举牌创意设计集",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case252.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case252.jpg",
     "imageAlt": "五一劳动节手举牌创意设计集",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5320,7 +5320,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 251,
     "title": "言叶之庭春雨绿意单日历",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case251.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case251.jpg",
     "imageAlt": "言叶之庭春雨绿意单日历",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5339,7 +5339,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 250,
     "title": "小王子与星舰的浪漫联名",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case250.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case250.jpg",
     "imageAlt": "小王子与星舰的浪漫联名",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5358,7 +5358,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 249,
     "title": "美女举牌感谢大哥打赏大火箭",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case249.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case249.jpg",
     "imageAlt": "美女举牌感谢大哥打赏大火箭",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2044796366950703316",
@@ -5377,7 +5377,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 248,
     "title": "景德镇青花瓷全景解说图谱",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case248.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case248.jpg",
     "imageAlt": "景德镇青花瓷全景解说图谱",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2045764695827562686",
@@ -5396,7 +5396,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 247,
     "title": "运动健身图标字体设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case247.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case247.jpg",
     "imageAlt": "运动健身图标字体设计",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5415,7 +5415,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 246,
     "title": "黑白线稿勾勒的上海风情",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case246.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case246.jpg",
     "imageAlt": "黑白线稿勾勒的上海风情",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5434,7 +5434,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 245,
     "title": "马斯克专属篆刻印章设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case245.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case245.jpg",
     "imageAlt": "马斯克专属篆刻印章设计",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5453,7 +5453,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 244,
     "title": "杜蕾斯茶颜悦色联名海报设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case244.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case244.jpg",
     "imageAlt": "杜蕾斯茶颜悦色联名海报设计",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5475,7 +5475,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 243,
     "title": "定制专属风格界面设计系统",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case243.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case243.jpg",
     "imageAlt": "定制专属风格界面设计系统",
     "sourceLabel": "@stark_nico99",
     "sourceUrl": "https://x.com/stark_nico99/status/2045836554451706125",
@@ -5494,7 +5494,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 242,
     "title": "绝美国风工笔画书签设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case242.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case242.jpg",
     "imageAlt": "绝美国风工笔画书签设计",
     "sourceLabel": "@akokoi1",
     "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
@@ -5513,7 +5513,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 241,
     "title": "关键人物关系图谱",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case241.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case241.jpg",
     "imageAlt": "关键人物关系图谱",
     "sourceLabel": "@yihui_indie",
     "sourceUrl": "https://x.com/yihui_indie/status/2045179926270361890",
@@ -5533,7 +5533,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 240,
     "title": "胶片闪光灯下的球场少女",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case240.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case240.jpg",
     "imageAlt": "胶片闪光灯下的球场少女",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2045052982728016131",
@@ -5556,7 +5556,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 239,
     "title": "刘亦菲抖音直播畅聊中",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case239.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case239.jpg",
     "imageAlt": "刘亦菲抖音直播畅聊中",
     "sourceLabel": "@alanblogsooo",
     "sourceUrl": "https://x.com/alanblogsooo/status/2044784762594918516",
@@ -5575,7 +5575,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 238,
     "title": "星云巨鲤与小人的奇幻对话",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case238.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case238.jpg",
     "imageAlt": "星云巨鲤与小人的奇幻对话",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045875219307655337",
@@ -5595,7 +5595,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 237,
     "title": "夏日柑橘苏打高转化广告图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case237.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case237.jpg",
     "imageAlt": "夏日柑橘苏打高转化广告图",
     "sourceLabel": "@old_pgmrs_will",
     "sourceUrl": "https://x.com/old_pgmrs_will/status/2045852114673635507",
@@ -5617,7 +5617,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 236,
     "title": "粤超联赛国潮风邀请函海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case236.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case236.jpg",
     "imageAlt": "粤超联赛国潮风邀请函海报",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045772039521542202",
@@ -5640,7 +5640,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 235,
     "title": "治愈系助眠指南九宫格",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case235.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case235.jpg",
     "imageAlt": "治愈系助眠指南九宫格",
     "sourceLabel": "@austinit",
     "sourceUrl": "https://x.com/austinit/status/2046037688969769346",
@@ -5663,7 +5663,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 234,
     "title": "朱元璋登基后的推特主页",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case234.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case234.jpg",
     "imageAlt": "朱元璋登基后的推特主页",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045021302315249738",
@@ -5683,7 +5683,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 233,
     "title": "蒙娜丽莎畅饮可乐的趣味油画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case233.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case233.jpg",
     "imageAlt": "蒙娜丽莎畅饮可乐的趣味油画",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045058142858555733",
@@ -5703,7 +5703,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 232,
     "title": "兰亭集序书法帖意境图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case232.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case232.jpg",
     "imageAlt": "兰亭集序书法帖意境图",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045137549149286858",
@@ -5722,7 +5722,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 231,
     "title": "疾风起狂草艺术字体设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case231.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case231.jpg",
     "imageAlt": "疾风起狂草艺术字体设计",
     "sourceLabel": "OpenNana",
     "sourceUrl": "https://opennana.com/awesome-prompt-gallery/rising-wind-calligraphy-art",
@@ -5742,7 +5742,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 230,
     "title": "极简国潮鎏金广州塔海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case230.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case230.jpg",
     "imageAlt": "极简国潮鎏金广州塔海报",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045744531686166878",
@@ -5765,7 +5765,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 229,
     "title": "琉璃透明画眉鸟飞舞羊城墨卷",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case229.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case229.jpg",
     "imageAlt": "琉璃透明画眉鸟飞舞羊城墨卷",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045873940883808523",
@@ -5788,7 +5788,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 228,
     "title": "完美匹配的海报广告图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case228.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case228.jpg",
     "imageAlt": "完美匹配的海报广告图",
     "sourceLabel": "@Kashiko_AIart",
     "sourceUrl": "https://x.com/Kashiko_AIart/status/2045787856292151322",
@@ -5807,7 +5807,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 227,
     "title": "哔哩哔哩户晨风直播截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case227.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case227.jpg",
     "imageAlt": "哔哩哔哩户晨风直播截图",
     "sourceLabel": "@austinit",
     "sourceUrl": "https://x.com/austinit/status/2044994519649997183",
@@ -5826,7 +5826,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 226,
     "title": "古风明朝帝王群像长卷",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case226.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case226.jpg",
     "imageAlt": "古风明朝帝王群像长卷",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2045071977279635962",
@@ -5847,7 +5847,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 225,
     "title": "大师级真迹复刻",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case225.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case225.jpg",
     "imageAlt": "大师级真迹复刻",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046201836525302032",
@@ -5866,7 +5866,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 224,
     "title": "机甲少女立于废弃海城",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case224.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case224.jpg",
     "imageAlt": "机甲少女立于废弃海城",
     "sourceLabel": "@old_pgmrs_will",
     "sourceUrl": "https://x.com/old_pgmrs_will/status/2046144801071079612",
@@ -5889,7 +5889,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 223,
     "title": "春日禅意水墨群山海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case223.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case223.jpg",
     "imageAlt": "春日禅意水墨群山海报",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2046215276249993720",
@@ -5912,7 +5912,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 222,
     "title": "精致模块化科普百科图鉴",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case222.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case222.jpg",
     "imageAlt": "精致模块化科普百科图鉴",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046231542817497392",
@@ -5935,7 +5935,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 221,
     "title": "窗边日系胶片女孩",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case221.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case221.jpg",
     "imageAlt": "窗边日系胶片女孩",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2046115431144902732",
@@ -5956,7 +5956,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 220,
     "title": "鎏金广州塔的东方奇幻海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case220.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case220.jpg",
     "imageAlt": "鎏金广州塔的东方奇幻海报",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2046243132774494607",
@@ -5979,7 +5979,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 219,
     "title": "韩系偶像九宫格写真集",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case219.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case219.jpg",
     "imageAlt": "韩系偶像九宫格写真集",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2046151898621993364",
@@ -6001,7 +6001,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 218,
     "title": "绘制科学百科知识图谱",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case218.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case218.jpg",
     "imageAlt": "绘制科学百科知识图谱",
     "sourceLabel": "@GeekCatX",
     "sourceUrl": "https://x.com/GeekCatX",
@@ -6024,7 +6024,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 217,
     "title": "昏暗室内纯真少女的意外回眸",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case217.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case217.jpg",
     "imageAlt": "昏暗室内纯真少女的意外回眸",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2046190539213885806",
@@ -6046,7 +6046,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 216,
     "title": "雅致图案四款时尚单品设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case216.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case216.png",
     "imageAlt": "雅致图案四款时尚单品设计",
     "sourceLabel": "@aiehon_aya",
     "sourceUrl": "https://x.com/aiehon_aya/status/2046348182301683954",
@@ -6065,7 +6065,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 215,
     "title": "西方艺术演进像素博物馆",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case215.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case215.jpg",
     "imageAlt": "西方艺术演进像素博物馆",
     "sourceLabel": "@GeekCatX",
     "sourceUrl": "https://x.com/GeekCatX/status/2046172416716759171",
@@ -6088,7 +6088,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 214,
     "title": "绘制金瓶梅知识图谱",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case214.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case214.jpg",
     "imageAlt": "绘制金瓶梅知识图谱",
     "sourceLabel": "@xiaoxiaodong01",
     "sourceUrl": "https://x.com/xiaoxiaodong01/status/2046252164717416641",
@@ -6111,7 +6111,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 213,
     "title": "金瓶梅古风开放世界游戏截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case213.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case213.jpg",
     "imageAlt": "金瓶梅古风开放世界游戏截图",
     "sourceLabel": "@op7418",
     "sourceUrl": "https://x.com/op7418/status/2046520509651886451",
@@ -6132,7 +6132,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 212,
     "title": "专业设计师打造角色写真集",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case212.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case212.jpg",
     "imageAlt": "专业设计师打造角色写真集",
     "sourceLabel": "@Kashiko_AIart",
     "sourceUrl": "https://x.com/Kashiko_AIart/status/2046492817804099794",
@@ -6154,7 +6154,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 211,
     "title": "天坛古建拆解全图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case211.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case211.jpg",
     "imageAlt": "天坛古建拆解全图",
     "sourceLabel": "@TanShilong",
     "sourceUrl": "https://x.com/TanShilong/status/2046524996013662380",
@@ -6173,7 +6173,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 210,
     "title": "萌系大模型训练图解",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case210.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case210.jpg",
     "imageAlt": "萌系大模型训练图解",
     "sourceLabel": "@op7418",
     "sourceUrl": "https://x.com/op7418/status/2046502136973001143",
@@ -6192,7 +6192,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 209,
     "title": "神话三国枪战世界",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case209.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case209.jpg",
     "imageAlt": "神话三国枪战世界",
     "sourceLabel": "@op7418",
     "sourceUrl": "https://x.com/op7418/status/2046519666047426967",
@@ -6211,7 +6211,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 208,
     "title": "樱花树下害羞双马尾少女",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case208.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case208.jpg",
     "imageAlt": "樱花树下害羞双马尾少女",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2046593124646928397",
@@ -6233,7 +6233,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 207,
     "title": "黑神话潘金莲绝美游戏封面",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case207.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case207.jpg",
     "imageAlt": "黑神话潘金莲绝美游戏封面",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai/status/2046576160952443082",
@@ -6253,7 +6253,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 206,
     "title": "国风工笔八仙长卷插画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case206.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case206.jpg",
     "imageAlt": "国风工笔八仙长卷插画",
     "sourceLabel": "@GeekCatX",
     "sourceUrl": "https://x.com/GeekCatX/status/2046559605074076112",
@@ -6276,7 +6276,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 205,
     "title": "皇宫深处的御用快递驿站",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case205.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case205.jpg",
     "imageAlt": "皇宫深处的御用快递驿站",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2046596222505361866",
@@ -6295,7 +6295,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 204,
     "title": "智能动画分镜生成器",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case204.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case204.jpg",
     "imageAlt": "智能动画分镜生成器",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2046596222505361866",
@@ -6314,7 +6314,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 203,
     "title": "杠精视角的独特文案创意",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case203.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case203.jpg",
     "imageAlt": "杠精视角的独特文案创意",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2046596222505361866",
@@ -6333,7 +6333,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 202,
     "title": "宅男必看绝美二次元少女",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case202.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case202.jpg",
     "imageAlt": "宅男必看绝美二次元少女",
     "sourceLabel": "@joshesye",
     "sourceUrl": "https://x.com/joshesye/status/2046596222505361866",
@@ -6352,7 +6352,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 201,
     "title": "三甲医院真实门诊处方笺",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case201.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case201.jpg",
     "imageAlt": "三甲医院真实门诊处方笺",
     "sourceLabel": "@msjiaozhu",
     "sourceUrl": "https://x.com/msjiaozhu/status/2046546317766500834",
@@ -6372,7 +6372,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 200,
     "title": "热度爆表的美女内衣直播间",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case200.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case200.jpg",
     "imageAlt": "热度爆表的美女内衣直播间",
     "sourceLabel": "@xiaohu",
     "sourceUrl": "https://x.com/xiaohu/status/2046536551681954207",
@@ -6391,7 +6391,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 199,
     "title": "超写实海滩高角度手机自拍",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case199.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case199.jpg",
     "imageAlt": "超写实海滩高角度手机自拍",
     "sourceLabel": "@IamEmily2050",
     "sourceUrl": "https://x.com/IamEmily2050/status/2046602266627465534",
@@ -6414,7 +6414,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 198,
     "title": "苍白陶瓷娃娃沙滩仰视",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case198.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case198.jpg",
     "imageAlt": "苍白陶瓷娃娃沙滩仰视",
     "sourceLabel": "@IamEmily2050",
     "sourceUrl": "https://x.com/IamEmily2050/status/2046584217656570035",
@@ -6435,7 +6435,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 197,
     "title": "英雄联盟特朗普中路对决哈梅内伊",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case197.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case197.jpg",
     "imageAlt": "英雄联盟特朗普中路对决哈梅内伊",
     "sourceLabel": "@underwoodxie96",
     "sourceUrl": "https://x.com/underwoodxie96/status/2046529342415790275",
@@ -6454,7 +6454,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 196,
     "title": "试卷上的涂鸦巨龙",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case196.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case196.jpg",
     "imageAlt": "试卷上的涂鸦巨龙",
     "sourceLabel": "@GeekCatX",
     "sourceUrl": "https://x.com/GeekCatX/status/2046539797578330152",
@@ -6474,7 +6474,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 195,
     "title": "超写实与水墨的梦幻融合",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case195.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case195.jpg",
     "imageAlt": "超写实与水墨的梦幻融合",
     "sourceLabel": "@johnAGI168",
     "sourceUrl": "https://x.com/johnAGI168/status/2046596103919767857",
@@ -6497,7 +6497,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 194,
     "title": "健身蛋白粉电商详情页",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case194.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case194.jpg",
     "imageAlt": "健身蛋白粉电商详情页",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046544209117634735",
@@ -6516,7 +6516,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 193,
     "title": "千手观音化身打工人",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case193.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case193.jpg",
     "imageAlt": "千手观音化身打工人",
     "sourceLabel": "@johnAGI168",
     "sourceUrl": "https://x.com/johnAGI168/status/2046565555025367392",
@@ -6537,7 +6537,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 192,
     "title": "电商商品展示图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case192.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case192.jpg",
     "imageAlt": "未来科技感AI智能眼镜详情页",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046544209117634735",
@@ -6557,7 +6557,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 191,
     "title": "史诗级科幻电影海报设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case191.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case191.jpg",
     "imageAlt": "史诗级科幻电影海报设计",
     "sourceLabel": "@underwoodxie96",
     "sourceUrl": "https://x.com/underwoodxie96/status/2046514205529088501",
@@ -6576,7 +6576,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 190,
     "title": "全自动咖啡机产品展示",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case190.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case190.jpg",
     "imageAlt": "全自动咖啡机产品展示",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046544209117634735",
@@ -6596,7 +6596,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 189,
     "title": "清新夏日女装连衣裙电商展示",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case189.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case189.jpg",
     "imageAlt": "清新夏日女装连衣裙电商展示",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046544209117634735",
@@ -6615,7 +6615,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 188,
     "title": "暗黑极简头像网站视觉设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case188.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case188.jpg",
     "imageAlt": "暗黑极简头像网站视觉设计",
     "sourceLabel": "@xiaoxiaodong01",
     "sourceUrl": "https://x.com/xiaoxiaodong01/status/2046556758521573546",
@@ -6636,7 +6636,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 187,
     "title": "韩系极简氛围感少女写真",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case187.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case187.jpg",
     "imageAlt": "韩系极简氛围感少女写真",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2046434670724907395",
@@ -6659,7 +6659,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 186,
     "title": "品牌视觉识别图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case186.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case186.jpg",
     "imageAlt": "奇幻RPG百件像素风道具图鉴",
     "sourceLabel": "@ProperPrompter",
     "sourceUrl": "https://x.com/ProperPrompter/status/2046534215311970694",
@@ -6680,7 +6680,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 185,
     "title": "武则天发微博自拍太魔性了",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case185.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case185.jpg",
     "imageAlt": "武则天发微博自拍太魔性了",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046585220393324553",
@@ -6699,7 +6699,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 184,
     "title": "杜甫朋友圈吐槽茅屋被掀翻",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case184.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case184.jpg",
     "imageAlt": "杜甫朋友圈吐槽茅屋被掀翻",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046585220393324553",
@@ -6719,7 +6719,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 183,
     "title": "一张中文健身信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case183.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case183.jpg",
     "imageAlt": "一张中文健身信息图",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046560406760505727",
@@ -6738,7 +6738,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 182,
     "title": "千禧年日系校园喜剧场景",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case182.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case182.jpg",
     "imageAlt": "千禧年日系校园喜剧场景",
     "sourceLabel": "@UminekoStudio",
     "sourceUrl": "https://x.com/UminekoStudio/status/2046488248256806981",
@@ -6758,7 +6758,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 181,
     "title": "潮流视角重塑精致商品广告",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case181.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case181.jpg",
     "imageAlt": "潮流视角重塑精致商品广告",
     "sourceLabel": "@genel_ai",
     "sourceUrl": "https://x.com/genel_ai/status/2046498264774791514",
@@ -6779,7 +6779,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 180,
     "title": "荒诞超现实女装大叔海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case180.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case180.jpg",
     "imageAlt": "荒诞超现实女装大叔海报",
     "sourceLabel": "@aiehon_aya",
     "sourceUrl": "https://x.com/aiehon_aya/status/2046499177916682600",
@@ -6800,7 +6800,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 179,
     "title": "蒸汽朋克射手座解剖图谱",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case179.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case179.jpg",
     "imageAlt": "蒸汽朋克射手座解剖图谱",
     "sourceLabel": "@GeekCatX",
     "sourceUrl": "https://x.com/GeekCatX/status/2046574334572212694",
@@ -6823,7 +6823,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 178,
     "title": "亚马逊详情图设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case178.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case178.jpg",
     "imageAlt": "亚马逊详情图设计",
     "sourceLabel": "@xin_pai88825",
     "sourceUrl": "https://x.com/xin_pai88825/status/2046576100592201946",
@@ -6842,7 +6842,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 177,
     "title": "吉利银河暗黑中控界面",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case177.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case177.jpg",
     "imageAlt": "吉利银河暗黑中控界面",
     "sourceLabel": "@xin_pai88825",
     "sourceUrl": "https://x.com/xin_pai88825/status/2046576100592201946",
@@ -6861,7 +6861,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 176,
     "title": "苏轼被贬首日朋友圈曝光",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case176.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case176.jpg",
     "imageAlt": "苏轼被贬首日朋友圈曝光",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046585220393324553",
@@ -6880,7 +6880,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 175,
     "title": "封面排版设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case175.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case175.jpg",
     "imageAlt": "高端AI演示平台封面设计",
     "sourceLabel": "@cellier_",
     "sourceUrl": "https://x.com/cellier_/status/2046615173411262959",
@@ -6903,7 +6903,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 174,
     "title": "唐朝贵妇遛粉色马甲异形工笔画",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case174.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case174.jpg",
     "imageAlt": "唐朝贵妇遛粉色马甲异形工笔画",
     "sourceLabel": "@johnAGI168",
     "sourceUrl": "https://x.com/johnAGI168/status/2046565555025367392",
@@ -6925,7 +6925,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 173,
     "title": "银河繁星点缀的冰蓝襦裙",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case173.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case173.jpg",
     "imageAlt": "银河繁星点缀的冰蓝襦裙",
     "sourceLabel": "@fdtreesky",
     "sourceUrl": "https://x.com/fdtreesky/status/2046508731090018331",
@@ -6947,7 +6947,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 172,
     "title": "赛博科幻桃太郎主视觉图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case172.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case172.jpg",
     "imageAlt": "赛博科幻桃太郎主视觉图",
     "sourceLabel": "@SSSS_CRYPTOMAN",
     "sourceUrl": "https://x.com/SSSS_CRYPTOMAN/status/2046575354555617761",
@@ -6968,7 +6968,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 171,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case171.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case171.jpg",
     "imageAlt": "百件A字头物品矩阵图",
     "sourceLabel": "@umesh_ai",
     "sourceUrl": "https://x.com/umesh_ai/status/2046510988367945983",
@@ -6987,7 +6987,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 168,
     "title": "手写中西药方图片",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case168.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case168.jpg",
     "imageAlt": "手写中西药方图片",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046514998965371144",
@@ -7006,7 +7006,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 167,
     "title": "大唐玄武门之变的朋友圈",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case167.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case167.jpg",
     "imageAlt": "大唐玄武门之变的朋友圈",
     "sourceLabel": "@Tz_2022",
     "sourceUrl": "https://x.com/Tz_2022/status/2046523491940225366",
@@ -7026,7 +7026,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 166,
     "title": "十二黄金圣斗士卡牌合集",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case166.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case166.jpg",
     "imageAlt": "十二黄金圣斗士卡牌合集",
     "sourceLabel": "@songguoxiansen",
     "sourceUrl": "https://x.com/songguoxiansen/status/2046476566537080849",
@@ -7045,7 +7045,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 165,
     "title": "清冷佳人夜市烧烤三刀流",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case165.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case165.jpg",
     "imageAlt": "清冷佳人夜市烧烤三刀流",
     "sourceLabel": "@BubbleBrain",
     "sourceUrl": "https://x.com/BubbleBrain/status/2046564674112831920",
@@ -7066,7 +7066,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 164,
     "title": "特朗普太空直播间破千万",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case164.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case164.jpg",
     "imageAlt": "特朗普太空直播间破千万",
     "sourceLabel": "@songguoxiansen",
     "sourceUrl": "https://x.com/songguoxiansen/status/2046478609238626569",
@@ -7086,7 +7086,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 163,
     "title": "诗仙李白月下直播起舞",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case163.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case163.jpg",
     "imageAlt": "诗仙李白月下直播起舞",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus/status/2046585220393324553",
@@ -7105,7 +7105,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 162,
     "title": "人物角色设定图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case162.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case162.jpg",
     "imageAlt": "voice",
     "sourceLabel": "@nicdunz",
     "sourceUrl": "https://x.com/nicdunz",
@@ -7124,7 +7124,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 161,
     "title": "应用界面样机图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case161.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case161.jpg",
     "imageAlt": "type",
     "sourceLabel": "@DanDaniDaniel01",
     "sourceUrl": "https://x.com/DanDaniDaniel01",
@@ -7146,7 +7146,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 160,
     "title": "品牌吉祥物设定图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case160.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case160.jpg",
     "imageAlt": "device",
     "sourceLabel": "@TanShilong",
     "sourceUrl": "https://x.com/TanShilong",
@@ -7166,7 +7166,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 159,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case159.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case159.jpg",
     "imageAlt": "type",
     "sourceLabel": "@onlyhuman028",
     "sourceUrl": "https://x.com/onlyhuman028",
@@ -7189,7 +7189,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 158,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case158.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case158.jpg",
     "imageAlt": "type",
     "sourceLabel": "@coconut_256",
     "sourceUrl": "https://x.com/coconut_256",
@@ -7212,7 +7212,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 157,
     "title": "电商商品展示设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case157.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case157.jpg",
     "imageAlt": "type",
     "sourceLabel": "@AmberPromptai",
     "sourceUrl": "https://x.com/AmberPromptai",
@@ -7235,7 +7235,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 156,
     "title": "应用界面样机图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case156.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case156.jpg",
     "imageAlt": "type",
     "sourceLabel": "@linxiaobei888",
     "sourceUrl": "https://x.com/linxiaobei888",
@@ -7258,7 +7258,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 155,
     "title": "人物角色设定图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case155.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case155.jpg",
     "imageAlt": "items",
     "sourceLabel": "@wtry1102",
     "sourceUrl": "https://x.com/wtry1102",
@@ -7277,7 +7277,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 154,
     "title": "写实摄影风格创作",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case154.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case154.jpg",
     "imageAlt": "car model and color",
     "sourceLabel": "@AlwaveNazca",
     "sourceUrl": "https://x.com/AlwaveNazca",
@@ -7298,7 +7298,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 153,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case153.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case153.jpg",
     "imageAlt": "main headline",
     "sourceLabel": "@xzjken",
     "sourceUrl": "https://x.com/xzjken",
@@ -7320,7 +7320,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 152,
     "title": "直播界面设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case152.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case152.jpg",
     "imageAlt": "type",
     "sourceLabel": "@coder_left",
     "sourceUrl": "https://x.com/coder_left",
@@ -7343,7 +7343,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 151,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case151.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case151.jpg",
     "imageAlt": "type",
     "sourceLabel": "@kitune_fire45",
     "sourceUrl": "https://x.com/kitune_fire45",
@@ -7365,7 +7365,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 150,
     "title": "品牌徽标设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case150.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case150.jpg",
     "imageAlt": "product name",
     "sourceLabel": "@highball_cho",
     "sourceUrl": "https://x.com/highball_cho",
@@ -7388,7 +7388,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 149,
     "title": "直播界面设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case149.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case149.jpg",
     "imageAlt": "type",
     "sourceLabel": "@JCutcut47692",
     "sourceUrl": "https://x.com/JCutcut47692",
@@ -7411,7 +7411,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 148,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case148.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case148.jpg",
     "imageAlt": "platform",
     "sourceLabel": "@alanlovelq",
     "sourceUrl": "https://x.com/alanlovelq",
@@ -7432,7 +7432,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 147,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case147.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case147.jpg",
     "imageAlt": "platform",
     "sourceLabel": "@alanlovelq",
     "sourceUrl": "https://x.com/alanlovelq",
@@ -7453,7 +7453,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 146,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case146.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case146.jpg",
     "imageAlt": "platform",
     "sourceLabel": "@alanlovelq",
     "sourceUrl": "https://x.com/alanlovelq",
@@ -7474,7 +7474,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 145,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case145.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case145.jpg",
     "imageAlt": "platform",
     "sourceLabel": "@alanlovelq",
     "sourceUrl": "https://x.com/alanlovelq",
@@ -7495,7 +7495,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 144,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case144.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case144.jpg",
     "imageAlt": "brand name",
     "sourceLabel": "@panchaaan_2",
     "sourceUrl": "https://x.com/panchaaan_2",
@@ -7517,7 +7517,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 143,
     "title": "品牌徽标设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case143.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case143.jpg",
     "imageAlt": "{argument name=",
     "sourceLabel": "@Gc_qube",
     "sourceUrl": "https://x.com/Gc_qube",
@@ -7540,7 +7540,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 142,
     "title": "写实摄影风格创作",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case142.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case142.jpg",
     "imageAlt": "type",
     "sourceLabel": "@anemone_sd",
     "sourceUrl": "https://x.com/anemone_sd",
@@ -7563,7 +7563,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 141,
     "title": "电商商品展示设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case141.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case141.jpg",
     "imageAlt": "type",
     "sourceLabel": "@takadtmnu",
     "sourceUrl": "https://x.com/takadtmnu",
@@ -7585,7 +7585,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 140,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case140.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case140.jpg",
     "imageAlt": "type",
     "sourceLabel": "@AutoIntelliMode",
     "sourceUrl": "https://x.com/AutoIntelliMode",
@@ -7607,7 +7607,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 139,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case139.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case139.jpg",
     "imageAlt": "type",
     "sourceLabel": "@nakazakifam",
     "sourceUrl": "https://x.com/nakazakifam",
@@ -7628,7 +7628,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 138,
     "title": "封面排版设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case138.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case138.jpg",
     "imageAlt": "type",
     "sourceLabel": "@aiehon_aya",
     "sourceUrl": "https://x.com/aiehon_aya",
@@ -7650,7 +7650,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 137,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case137.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case137.jpg",
     "imageAlt": "type",
     "sourceLabel": "@ryuya__31",
     "sourceUrl": "https://x.com/ryuya__31",
@@ -7672,7 +7672,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 136,
     "title": "品牌视觉识别图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case136.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case136.jpg",
     "imageAlt": "type",
     "sourceLabel": "@ryuya__31",
     "sourceUrl": "https://x.com/ryuya__31",
@@ -7694,7 +7694,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 135,
     "title": "应用界面样机图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case135.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case135.jpg",
     "imageAlt": "type",
     "sourceLabel": "@ryuya__31",
     "sourceUrl": "https://x.com/ryuya__31",
@@ -7717,7 +7717,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 134,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case134.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case134.jpg",
     "imageAlt": "type",
     "sourceLabel": "@ryuya__31",
     "sourceUrl": "https://x.com/ryuya__31",
@@ -7739,7 +7739,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 133,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case133.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case133.jpg",
     "imageAlt": "type",
     "sourceLabel": "@yyyole",
     "sourceUrl": "https://x.com/yyyole",
@@ -7762,7 +7762,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 132,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case132.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case132.jpg",
     "imageAlt": "type",
     "sourceLabel": "@Colin_Leeee",
     "sourceUrl": "https://x.com/Colin_Leeee",
@@ -7785,7 +7785,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 131,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case131.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case131.jpg",
     "imageAlt": "type",
     "sourceLabel": "@IndieDevHailey",
     "sourceUrl": "https://x.com/IndieDevHailey",
@@ -7808,7 +7808,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 130,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case130.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case130.jpg",
     "imageAlt": "type",
     "sourceLabel": "@chi_vc_",
     "sourceUrl": "https://x.com/chi_vc_",
@@ -7831,7 +7831,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 129,
     "title": "绘画艺术风格图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case129.png",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case129.png",
     "imageAlt": "character appearance",
     "sourceLabel": "@TlanoVRC",
     "sourceUrl": "https://x.com/TlanoVRC",
@@ -7853,7 +7853,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 128,
     "title": "建筑空间场景渲染",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case128.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case128.jpg",
     "imageAlt": "type",
     "sourceLabel": "@masapark95",
     "sourceUrl": "https://x.com/masapark95",
@@ -7875,7 +7875,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 127,
     "title": "建筑空间场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case127.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case127.jpg",
     "imageAlt": "type",
     "sourceLabel": "@studiomasakaki",
     "sourceUrl": "https://x.com/studiomasakaki",
@@ -7897,7 +7897,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 126,
     "title": "插画艺术风格创作",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case126.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case126.jpg",
     "imageAlt": "man's hair color",
     "sourceLabel": "@taira_renta",
     "sourceUrl": "https://x.com/taira_renta",
@@ -7920,7 +7920,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 125,
     "title": "电商商品展示设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case125.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case125.jpg",
     "imageAlt": "type",
     "sourceLabel": "@Gc_qube",
     "sourceUrl": "https://x.com/Gc_qube",
@@ -7942,7 +7942,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 124,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case124.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case124.jpg",
     "imageAlt": "main character outfit",
     "sourceLabel": "@koshian_to",
     "sourceUrl": "https://x.com/koshian_to",
@@ -7965,7 +7965,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 123,
     "title": "插画艺术创作图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case123.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case123.jpg",
     "imageAlt": "type",
     "sourceLabel": "@Luvune",
     "sourceUrl": "https://x.com/Luvune",
@@ -7987,7 +7987,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 122,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case122.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case122.jpg",
     "imageAlt": "type",
     "sourceLabel": "@pcneko_lab",
     "sourceUrl": "https://x.com/pcneko_lab",
@@ -8009,7 +8009,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 121,
     "title": "建筑空间场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case121.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case121.jpg",
     "imageAlt": "type",
     "sourceLabel": "@loilokoji",
     "sourceUrl": "https://x.com/loilokoji",
@@ -8031,7 +8031,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 120,
     "title": "建筑空间场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case120.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case120.jpg",
     "imageAlt": "hair color",
     "sourceLabel": "@UNIBRACITY",
     "sourceUrl": "https://x.com/UNIBRACITY",
@@ -8053,7 +8053,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 119,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case119.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case119.jpg",
     "imageAlt": "type",
     "sourceLabel": "@old_pgmrs_will",
     "sourceUrl": "https://x.com/old_pgmrs_will",
@@ -8076,7 +8076,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 118,
     "title": "漫画分镜叙事设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case118.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case118.jpg",
     "imageAlt": "A high-contrast, black-an...",
     "sourceLabel": "@nicdunz",
     "sourceUrl": "https://x.com/nicdunz",
@@ -8098,7 +8098,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 117,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case117.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case117.jpg",
     "imageAlt": "patient character",
     "sourceLabel": "@nicdunz",
     "sourceUrl": "https://x.com/nicdunz",
@@ -8121,7 +8121,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 116,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case116.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case116.jpg",
     "imageAlt": "type",
     "sourceLabel": "@gamemangaanime",
     "sourceUrl": "https://x.com/gamemangaanime",
@@ -8143,7 +8143,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 115,
     "title": "品牌视觉识别图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case115.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case115.jpg",
     "imageAlt": "type",
     "sourceLabel": "@onofumi_AI",
     "sourceUrl": "https://x.com/onofumi_AI",
@@ -8166,7 +8166,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 114,
     "title": "插画艺术创作图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case114.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case114.jpg",
     "imageAlt": "type",
     "sourceLabel": "@kaikaitheaiguy",
     "sourceUrl": "https://x.com/kaikaitheaiguy",
@@ -8189,7 +8189,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 113,
     "title": "动漫插画创作图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case113.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case113.jpg",
     "imageAlt": "hair color",
     "sourceLabel": "@REd8358",
     "sourceUrl": "https://x.com/REd8358",
@@ -8211,7 +8211,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 112,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case112.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case112.jpg",
     "imageAlt": "Generate a 12-grid card i...",
     "sourceLabel": "@songguoxiansen",
     "sourceUrl": "https://x.com/songguoxiansen",
@@ -8230,7 +8230,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 111,
     "title": "视频封面界面图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case111.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case111.jpg",
     "imageAlt": "overall mood",
     "sourceLabel": "@mirochill",
     "sourceUrl": "https://x.com/mirochill",
@@ -8253,7 +8253,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 110,
     "title": "视频封面界面图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case110.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case110.jpg",
     "imageAlt": "topic",
     "sourceLabel": "@TlanoAI",
     "sourceUrl": "https://x.com/TlanoAI",
@@ -8273,7 +8273,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 109,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case109.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case109.jpg",
     "imageAlt": "subject",
     "sourceLabel": "@underwoodxie96",
     "sourceUrl": "https://x.com/underwoodxie96",
@@ -8292,7 +8292,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 108,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case108.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case108.jpg",
     "imageAlt": "subject",
     "sourceLabel": "@underwoodxie96",
     "sourceUrl": "https://x.com/underwoodxie96",
@@ -8311,7 +8311,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 107,
     "title": "应用界面样机图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case107.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case107.jpg",
     "imageAlt": "type",
     "sourceLabel": "@tehno_maniak",
     "sourceUrl": "https://x.com/tehno_maniak",
@@ -8334,7 +8334,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 106,
     "title": "应用界面样机图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case106.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case106.jpg",
     "imageAlt": "type",
     "sourceLabel": "@abdiisan",
     "sourceUrl": "https://x.com/abdiisan",
@@ -8357,7 +8357,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 105,
     "title": "动漫插画创作图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case105.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case105.jpg",
     "imageAlt": "hair color",
     "sourceLabel": "@Yuupapa_free",
     "sourceUrl": "https://x.com/Yuupapa_free",
@@ -8379,7 +8379,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 104,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case104.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case104.jpg",
     "imageAlt": "type",
     "sourceLabel": "@marouane53",
     "sourceUrl": "https://x.com/marouane53",
@@ -8399,7 +8399,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 103,
     "title": "视频封面界面图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case103.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case103.jpg",
     "imageAlt": "pianist",
     "sourceLabel": "@bowowwoaaa2",
     "sourceUrl": "https://x.com/bowowwoaaa2",
@@ -8419,7 +8419,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 102,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case102.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case102.jpg",
     "imageAlt": "performance description",
     "sourceLabel": "@maxescu",
     "sourceUrl": "https://x.com/maxescu",
@@ -8438,7 +8438,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 101,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case101.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case101.jpg",
     "imageAlt": "type",
     "sourceLabel": "@naga_zyashin",
     "sourceUrl": "https://x.com/naga_zyashin",
@@ -8459,7 +8459,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 100,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case100.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case100.jpg",
     "imageAlt": "type",
     "sourceLabel": "@naga_zyashin",
     "sourceUrl": "https://x.com/naga_zyashin",
@@ -8482,7 +8482,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 99,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case99.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case99.jpg",
     "imageAlt": "type",
     "sourceLabel": "@naga_zyashin",
     "sourceUrl": "https://x.com/naga_zyashin",
@@ -8504,7 +8504,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 98,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case98.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case98.jpg",
     "imageAlt": "type",
     "sourceLabel": "@wtry1102",
     "sourceUrl": "https://x.com/wtry1102",
@@ -8525,7 +8525,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 97,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case97.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case97.jpg",
     "imageAlt": "thumbnail type",
     "sourceLabel": "@kawai_design",
     "sourceUrl": "https://x.com/kawai_design",
@@ -8545,7 +8545,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 96,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case96.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case96.jpg",
     "imageAlt": "type",
     "sourceLabel": "@sayaka_aiart",
     "sourceUrl": "https://x.com/sayaka_aiart",
@@ -8567,7 +8567,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 95,
     "title": "品牌视觉识别图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case95.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case95.jpg",
     "imageAlt": "type",
     "sourceLabel": "@sayaka_aiart",
     "sourceUrl": "https://x.com/sayaka_aiart",
@@ -8589,7 +8589,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 94,
     "title": "绘画艺术风格图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case94.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case94.jpg",
     "imageAlt": "type",
     "sourceLabel": "@sayaka_aiart",
     "sourceUrl": "https://x.com/sayaka_aiart",
@@ -8610,7 +8610,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 93,
     "title": "插画艺术风格创作",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case93.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case93.jpg",
     "imageAlt": "type",
     "sourceLabel": "@sayaka_aiart",
     "sourceUrl": "https://x.com/sayaka_aiart",
@@ -8631,7 +8631,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 92,
     "title": "视频封面界面图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case92.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case92.jpg",
     "imageAlt": "hair color",
     "sourceLabel": "@Yuupapa_free",
     "sourceUrl": "https://x.com/Yuupapa_free",
@@ -8652,7 +8652,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 91,
     "title": "游戏界面截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case91.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case91.jpg",
     "imageAlt": "{argument name=",
     "sourceLabel": "@wolfaidev",
     "sourceUrl": "https://x.com/wolfaidev",
@@ -8675,7 +8675,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 90,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case90.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case90.jpg",
     "imageAlt": "theme",
     "sourceLabel": "@A9Quant",
     "sourceUrl": "https://x.com/A9Quant",
@@ -8698,7 +8698,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 89,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case89.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case89.jpg",
     "imageAlt": "theme",
     "sourceLabel": "@A9Quant",
     "sourceUrl": "https://x.com/A9Quant",
@@ -8721,7 +8721,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 88,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case88.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case88.jpg",
     "imageAlt": "theme",
     "sourceLabel": "@A9Quant",
     "sourceUrl": "https://x.com/A9Quant",
@@ -8744,7 +8744,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 87,
     "title": "关系图谱信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case87.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case87.jpg",
     "imageAlt": "theme",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus",
@@ -8767,7 +8767,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 86,
     "title": "关系图谱信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case86.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case86.jpg",
     "imageAlt": "theme",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus",
@@ -8790,7 +8790,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 85,
     "title": "关系图谱信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case85.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case85.jpg",
     "imageAlt": "theme",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus",
@@ -8813,7 +8813,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 84,
     "title": "关系图谱信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case84.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case84.jpg",
     "imageAlt": "theme",
     "sourceLabel": "@MrLarus",
     "sourceUrl": "https://x.com/MrLarus",
@@ -8836,7 +8836,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 83,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case83.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case83.jpg",
     "imageAlt": "type",
     "sourceLabel": "@NumeroBTC",
     "sourceUrl": "https://x.com/NumeroBTC",
@@ -8859,7 +8859,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 82,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case82.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case82.jpg",
     "imageAlt": "type",
     "sourceLabel": "@HumanOS_v2",
     "sourceUrl": "https://x.com/HumanOS_v2",
@@ -8881,7 +8881,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 81,
     "title": "写实摄影风格图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case81.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case81.jpg",
     "imageAlt": "type",
     "sourceLabel": "@HumanOS_v2",
     "sourceUrl": "https://x.com/HumanOS_v2",
@@ -8903,7 +8903,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 80,
     "title": "图像生成案例图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case80.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case80.jpg",
     "imageAlt": "图像生成案例图",
     "sourceLabel": "@WOZ1Tx2JZ3kCeBj",
     "sourceUrl": "https://x.com/WOZ1Tx2JZ3kCeBj",
@@ -8926,7 +8926,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 79,
     "title": "图像生成案例图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case79.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case79.jpg",
     "imageAlt": "图像生成案例图",
     "sourceLabel": "@WOZ1Tx2JZ3kCeBj",
     "sourceUrl": "https://x.com/WOZ1Tx2JZ3kCeBj",
@@ -8949,7 +8949,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 78,
     "title": "图像生成案例图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case78.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case78.jpg",
     "imageAlt": "图像生成案例图",
     "sourceLabel": "@WOZ1Tx2JZ3kCeBj",
     "sourceUrl": "https://x.com/WOZ1Tx2JZ3kCeBj",
@@ -8972,7 +8972,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 77,
     "title": "关系图谱信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case77.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case77.jpg",
     "imageAlt": "Popular Science Encyclopedia Image",
     "sourceLabel": "@alanlovelq",
     "sourceUrl": "https://x.com/alanlovelq",
@@ -8995,7 +8995,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 76,
     "title": "关系图谱信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case76.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case76.jpg",
     "imageAlt": "Popular Science Encyclopedia Image",
     "sourceLabel": "@alanlovelq",
     "sourceUrl": "https://x.com/alanlovelq",
@@ -9018,7 +9018,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 75,
     "title": "关系图谱信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case75.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case75.jpg",
     "imageAlt": "Popular Science Encyclopedia Image",
     "sourceLabel": "@alanlovelq",
     "sourceUrl": "https://x.com/alanlovelq",
@@ -9041,7 +9041,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 74,
     "title": "关系图谱信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case74.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case74.jpg",
     "imageAlt": "Popular Science Encyclopedia Image",
     "sourceLabel": "@alanlovelq",
     "sourceUrl": "https://x.com/alanlovelq",
@@ -9064,7 +9064,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 73,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case73.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case73.jpg",
     "imageAlt": "type",
     "sourceLabel": "@hx831126",
     "sourceUrl": "https://x.com/hx831126",
@@ -9087,7 +9087,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 72,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case72.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case72.jpg",
     "imageAlt": "type",
     "sourceLabel": "@hx831126",
     "sourceUrl": "https://x.com/hx831126",
@@ -9110,7 +9110,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 71,
     "title": "关系图谱信息图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case71.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case71.jpg",
     "imageAlt": "type",
     "sourceLabel": "@hx831126",
     "sourceUrl": "https://x.com/hx831126",
@@ -9133,7 +9133,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 70,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case70.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case70.jpg",
     "imageAlt": "type",
     "sourceLabel": "@hx831126",
     "sourceUrl": "https://x.com/hx831126",
@@ -9156,7 +9156,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 69,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case69.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case69.jpg",
     "imageAlt": "type",
     "sourceLabel": "@hx831126",
     "sourceUrl": "https://x.com/hx831126",
@@ -9179,7 +9179,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 68,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case68.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case68.jpg",
     "imageAlt": "type",
     "sourceLabel": "@hx831126",
     "sourceUrl": "https://x.com/hx831126",
@@ -9202,7 +9202,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 67,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case67.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case67.jpg",
     "imageAlt": "type",
     "sourceLabel": "@hx831126",
     "sourceUrl": "https://x.com/hx831126",
@@ -9224,7 +9224,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 66,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case66.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case66.jpg",
     "imageAlt": "type",
     "sourceLabel": "@hx831126",
     "sourceUrl": "https://x.com/hx831126",
@@ -9246,7 +9246,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 65,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case65.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case65.jpg",
     "imageAlt": "{argument name=",
     "sourceLabel": "@GeekCatX",
     "sourceUrl": "https://x.com/GeekCatX",
@@ -9269,7 +9269,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 64,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case64.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case64.jpg",
     "imageAlt": "type",
     "sourceLabel": "@j_zou93",
     "sourceUrl": "https://x.com/j_zou93",
@@ -9291,7 +9291,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 63,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case63.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case63.jpg",
     "imageAlt": "type",
     "sourceLabel": "@masapark95",
     "sourceUrl": "https://x.com/masapark95",
@@ -9312,7 +9312,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 62,
     "title": "插画艺术风格创作",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case62.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case62.jpg",
     "imageAlt": "type",
     "sourceLabel": "@masapark95",
     "sourceUrl": "https://x.com/masapark95",
@@ -9334,7 +9334,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 61,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case61.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case61.jpg",
     "imageAlt": "type",
     "sourceLabel": "@masapark95",
     "sourceUrl": "https://x.com/masapark95",
@@ -9356,7 +9356,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 60,
     "title": "漫画分镜叙事设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case60.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case60.jpg",
     "imageAlt": "type",
     "sourceLabel": "@Gc_qube",
     "sourceUrl": "https://x.com/Gc_qube",
@@ -9379,7 +9379,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 59,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case59.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case59.jpg",
     "imageAlt": "type",
     "sourceLabel": "@X64zzotSKCGtYmt",
     "sourceUrl": "https://x.com/X64zzotSKCGtYmt",
@@ -9402,7 +9402,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 58,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case58.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case58.jpg",
     "imageAlt": "city",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai",
@@ -9425,7 +9425,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 57,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case57.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case57.jpg",
     "imageAlt": "type",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai",
@@ -9448,7 +9448,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 56,
     "title": "写实摄影风格创作",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case56.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case56.jpg",
     "imageAlt": "subject aesthetic",
     "sourceLabel": "@danieldmai",
     "sourceUrl": "https://x.com/danieldmai",
@@ -9468,7 +9468,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 55,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case55.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case55.jpg",
     "imageAlt": "dish name",
     "sourceLabel": "@Kurt_Rousey466",
     "sourceUrl": "https://x.com/Kurt_Rousey466",
@@ -9490,7 +9490,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 54,
     "title": "人物角色设定图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case54.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case54.jpg",
     "imageAlt": "type",
     "sourceLabel": "@fukumy_ai",
     "sourceUrl": "https://x.com/fukumy_ai",
@@ -9510,7 +9510,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 53,
     "title": "室内空间渲染图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case53.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case53.jpg",
     "imageAlt": "{argument name=",
     "sourceLabel": "@nicdunz",
     "sourceUrl": "https://x.com/nicdunz",
@@ -9533,7 +9533,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 52,
     "title": "写实摄影风格图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case52.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case52.jpg",
     "imageAlt": "marker color",
     "sourceLabel": "@nicdunz",
     "sourceUrl": "https://x.com/nicdunz",
@@ -9554,7 +9554,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 51,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case51.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case51.jpg",
     "imageAlt": "type",
     "sourceLabel": "@yyyole",
     "sourceUrl": "https://x.com/yyyole",
@@ -9576,7 +9576,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 50,
     "title": "建筑空间场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case50.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case50.jpg",
     "imageAlt": "atmosphere",
     "sourceLabel": "@nomen_machine",
     "sourceUrl": "https://x.com/nomen_machine",
@@ -9597,7 +9597,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 49,
     "title": "直播界面设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case49.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case49.jpg",
     "imageAlt": "celebrity",
     "sourceLabel": "@kylegeeks",
     "sourceUrl": "https://x.com/kylegeeks",
@@ -9616,7 +9616,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 48,
     "title": "直播界面设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case48.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case48.jpg",
     "imageAlt": "celebrity",
     "sourceLabel": "@kylegeeks",
     "sourceUrl": "https://x.com/kylegeeks",
@@ -9635,7 +9635,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 47,
     "title": "建筑空间场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case47.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case47.jpg",
     "imageAlt": "type",
     "sourceLabel": "@makaneko_AI",
     "sourceUrl": "https://x.com/makaneko_AI",
@@ -9657,7 +9657,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 46,
     "title": "建筑空间场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case46.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case46.jpg",
     "imageAlt": "hair color",
     "sourceLabel": "@lakeside529",
     "sourceUrl": "https://x.com/lakeside529",
@@ -9679,7 +9679,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 45,
     "title": "人像写实摄影图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case45.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case45.jpg",
     "imageAlt": "subject description",
     "sourceLabel": "@AoYe999",
     "sourceUrl": "https://x.com/AoYe999",
@@ -9701,7 +9701,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 44,
     "title": "古风历史题材图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case44.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case44.jpg",
     "imageAlt": "dynasty",
     "sourceLabel": "@liyue_ai",
     "sourceUrl": "https://x.com/liyue_ai",
@@ -9722,7 +9722,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 43,
     "title": "插画艺术创作图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case43.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case43.jpg",
     "imageAlt": "type",
     "sourceLabel": "@stark_nico99",
     "sourceUrl": "https://x.com/stark_nico99",
@@ -9743,7 +9743,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 42,
     "title": "写实摄影风格图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case42.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case42.jpg",
     "imageAlt": "subject",
     "sourceLabel": "@blanplan",
     "sourceUrl": "https://x.com/blanplan",
@@ -9766,7 +9766,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 41,
     "title": "插画艺术风格创作",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case41.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case41.jpg",
     "imageAlt": "type",
     "sourceLabel": "@wtry1102",
     "sourceUrl": "https://x.com/wtry1102",
@@ -9789,7 +9789,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 40,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case40.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case40.jpg",
     "imageAlt": "quantity",
     "sourceLabel": "@midori_tatsuta",
     "sourceUrl": "https://x.com/midori_tatsuta",
@@ -9810,7 +9810,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 39,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case39.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case39.jpg",
     "imageAlt": "quantity",
     "sourceLabel": "@midori_tatsuta",
     "sourceUrl": "https://x.com/midori_tatsuta",
@@ -9831,7 +9831,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 38,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case38.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case38.jpg",
     "imageAlt": "quantity",
     "sourceLabel": "@midori_tatsuta",
     "sourceUrl": "https://x.com/midori_tatsuta",
@@ -9852,7 +9852,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 37,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case37.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case37.jpg",
     "imageAlt": "quantity",
     "sourceLabel": "@midori_tatsuta",
     "sourceUrl": "https://x.com/midori_tatsuta",
@@ -9873,7 +9873,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 36,
     "title": "品牌徽标设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case36.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case36.jpg",
     "imageAlt": "ball color",
     "sourceLabel": "@mirochill",
     "sourceUrl": "https://x.com/mirochill",
@@ -9895,7 +9895,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 35,
     "title": "人像写实摄影图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case35.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case35.jpg",
     "imageAlt": "photography style",
     "sourceLabel": "@kazmaendo",
     "sourceUrl": "https://x.com/kazmaendo",
@@ -9916,7 +9916,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 34,
     "title": "插画艺术创作图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case34.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case34.jpg",
     "imageAlt": "type",
     "sourceLabel": "@Ryan_Suo",
     "sourceUrl": "https://x.com/Ryan_Suo",
@@ -9938,7 +9938,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 33,
     "title": "电商商品展示设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case33.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case33.jpg",
     "imageAlt": "subject",
     "sourceLabel": "@yurunekofree",
     "sourceUrl": "https://x.com/yurunekofree",
@@ -9960,7 +9960,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 32,
     "title": "插画艺术创作图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case32.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case32.jpg",
     "imageAlt": "type",
     "sourceLabel": "@austinit",
     "sourceUrl": "https://x.com/austinit",
@@ -9983,7 +9983,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 31,
     "title": "人像写实摄影图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case31.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case31.jpg",
     "imageAlt": "hair color",
     "sourceLabel": "@jun_kongo",
     "sourceUrl": "https://x.com/jun_kongo",
@@ -10004,7 +10004,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 30,
     "title": "写实摄影风格图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case30.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case30.jpg",
     "imageAlt": "subject",
     "sourceLabel": "@opc_8838",
     "sourceUrl": "https://x.com/opc_8838",
@@ -10027,7 +10027,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 29,
     "title": "电影感叙事场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case29.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case29.jpg",
     "imageAlt": "style",
     "sourceLabel": "@danieldmai",
     "sourceUrl": "https://x.com/danieldmai",
@@ -10048,7 +10048,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 28,
     "title": "写实摄影风格创作",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case28.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case28.jpg",
     "imageAlt": "type",
     "sourceLabel": "@frankfu1688",
     "sourceUrl": "https://x.com/frankfu1688",
@@ -10071,7 +10071,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 27,
     "title": "人物角色设定图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case27.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case27.jpg",
     "imageAlt": "type",
     "sourceLabel": "@anemone_sd",
     "sourceUrl": "https://x.com/anemone_sd",
@@ -10092,7 +10092,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 26,
     "title": "建筑空间场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case26.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case26.jpg",
     "imageAlt": "subject description",
     "sourceLabel": "@ecooai",
     "sourceUrl": "https://x.com/ecooai",
@@ -10113,7 +10113,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 25,
     "title": "综合应用场景图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case25.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case25.jpg",
     "imageAlt": "reference",
     "sourceLabel": "@nicdunz",
     "sourceUrl": "https://x.com/nicdunz",
@@ -10132,7 +10132,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 24,
     "title": "漫画分镜叙事设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case24.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case24.jpg",
     "imageAlt": "character",
     "sourceLabel": "@wewe50770964683",
     "sourceUrl": "https://x.com/wewe50770964683",
@@ -10151,7 +10151,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 23,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case23.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case23.jpg",
     "imageAlt": "type",
     "sourceLabel": "@GeekCatX",
     "sourceUrl": "https://x.com/GeekCatX",
@@ -10173,7 +10173,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 22,
     "title": "插画艺术风格创作",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case22.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case22.jpg",
     "imageAlt": "action type",
     "sourceLabel": "@Tanemomi_Ver2",
     "sourceUrl": "https://x.com/Tanemomi_Ver2",
@@ -10195,7 +10195,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 21,
     "title": "直播界面设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case21.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case21.jpg",
     "imageAlt": "type",
     "sourceLabel": "@sjbbxhz",
     "sourceUrl": "https://x.com/sjbbxhz",
@@ -10218,7 +10218,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 20,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case20.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case20.jpg",
     "imageAlt": "format",
     "sourceLabel": "@yammamon",
     "sourceUrl": "https://x.com/yammamon",
@@ -10238,7 +10238,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 19,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case19.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case19.jpg",
     "imageAlt": "format",
     "sourceLabel": "@yammamon",
     "sourceUrl": "https://x.com/yammamon",
@@ -10258,7 +10258,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 18,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case18.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case18.jpg",
     "imageAlt": "type",
     "sourceLabel": "@mm_zzm44854",
     "sourceUrl": "https://x.com/mm_zzm44854",
@@ -10281,7 +10281,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 17,
     "title": "界面交互设计图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case17.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case17.jpg",
     "imageAlt": "type",
     "sourceLabel": "@wory37303852",
     "sourceUrl": "https://x.com/wory37303852",
@@ -10303,7 +10303,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 16,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case16.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case16.jpg",
     "imageAlt": "生成高完成度史诗感艺术海报，双重曝光构图，米白色背...",
     "sourceLabel": "小红书号2692926140",
     "sourceUrl": "",
@@ -10322,7 +10322,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 15,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case15.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case15.jpg",
     "imageAlt": "生成一张海报图片，图片人物是一个19岁的中国少女，...",
     "sourceLabel": "小红书号1005414639",
     "sourceUrl": "",
@@ -10342,7 +10342,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 14,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case14.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case14.jpg",
     "imageAlt": "视觉设计规格描述：画幅比 9:16（竖版手机信息图...",
     "sourceLabel": "小红书号Roy_Jay",
     "sourceUrl": "",
@@ -10361,7 +10361,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 13,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case13.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case13.jpg",
     "imageAlt": "A realistic photo of a Ch...",
     "sourceLabel": "小红书号94156710894",
     "sourceUrl": "",
@@ -10383,7 +10383,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 11,
     "title": "一张手绘风格的城市美食地图，以台州为主题",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case11.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case11.jpg",
     "imageAlt": "一张手绘风格的城市美食地图，以台州为主题。画面以鸟...",
     "sourceLabel": "小红书号510244722",
     "sourceUrl": "",
@@ -10402,7 +10402,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 10,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case10.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case10.jpg",
     "imageAlt": "生成八十年代宣传画，标语“热烈庆祝GPT-Imag...",
     "sourceLabel": "小红书号2202716350",
     "sourceUrl": "",
@@ -10422,7 +10422,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 9,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case9.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case9.jpg",
     "imageAlt": "2026中国城市系列宣传海报，主题为【北京】。现代...",
     "sourceLabel": "小红书号z890738050",
     "sourceUrl": "",
@@ -10442,7 +10442,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 8,
     "title": "科普百科图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case8.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case8.jpg",
     "imageAlt": "科普百科图",
     "sourceLabel": "小红书号1055699679",
     "sourceUrl": "",
@@ -10465,7 +10465,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 7,
     "title": "应用界面样机图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case7.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case7.jpg",
     "imageAlt": "生成一张竖版手机截图风格的图片，整体比例接近 9:...",
     "sourceLabel": "小红书号944846927",
     "sourceUrl": "",
@@ -10488,7 +10488,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 6,
     "title": "插画艺术创作图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case6.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case6.jpg",
     "imageAlt": "参考图是角色人设图，为参考图的少女绘制一副日系唯美...",
     "sourceLabel": "小红书号yi_xiao_jiu",
     "sourceUrl": "",
@@ -10508,7 +10508,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 5,
     "title": "主题海报版式设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case5.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case5.jpg",
     "imageAlt": "根据【XXX主题】自动生成一张收藏版史诗叙事海报：...",
     "sourceLabel": "小红书号6455654397",
     "sourceUrl": "",
@@ -10529,7 +10529,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 4,
     "title": "老干妈风味",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case4.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case4.jpg",
     "imageAlt": "老干妈风味",
     "sourceLabel": "小红书号989137706",
     "sourceUrl": "",
@@ -10548,7 +10548,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 3,
     "title": "足球主题电影海报",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case3.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case3.jpg",
     "imageAlt": "足球主题电影海报",
     "sourceLabel": "未提供",
     "sourceUrl": "",
@@ -10569,7 +10569,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 2,
     "title": "社媒界面截图",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case2.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case2.jpg",
     "imageAlt": "Ailln AI",
     "sourceLabel": "小红书号4264014889",
     "sourceUrl": "",
@@ -10590,7 +10590,7 @@ export const GPT_IMAGE_2_CASES: GptImage2Case[] = [
   {
     "id": 1,
     "title": "信息图可视化设计",
-    "image": "https://raw.githubusercontent.com/freestylefly/awesome-gpt-image-2/10631618972cca3c1aead9d2530216f0a17c8994/data/images/case1.jpg",
+    "image": "https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case1.jpg",
     "imageAlt": "城市生命系统图谱 / Urban Metabolism Atlas",
     "sourceLabel": "小红书号insight_express",
     "sourceUrl": "",

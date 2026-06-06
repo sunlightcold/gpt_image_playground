@@ -16,9 +16,8 @@ describe('prompt case filters', () => {
     expect(GPT_IMAGE_2_CASES[0].id).toBe(488)
   })
 
-  it('normalizes upstream image and GitHub URLs to a fixed source commit', () => {
-    expect(GPT_IMAGE_2_CASES[0].image).toContain(GPT_IMAGE_2_CASE_SOURCE.commit)
-    expect(GPT_IMAGE_2_CASES[0].image).toContain('/data/images/case488.jpg')
+  it('uses current repository images while keeping upstream source links fixed', () => {
+    expect(GPT_IMAGE_2_CASES[0].image).toContain('raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case488.jpg')
     expect(GPT_IMAGE_2_CASES[0].githubUrl).toContain(`/blob/${GPT_IMAGE_2_CASE_SOURCE.commit}/`)
   })
 
