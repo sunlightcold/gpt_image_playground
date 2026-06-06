@@ -8,6 +8,7 @@ services:
     environment:
       DEFAULT_API_URL: ${DEFAULT_API_URL:-}
       API_PROXY_URL: ${API_PROXY_URL:-https://api.proxy2it.com/v1}
+      API_PROXY_RESOLVER: ${API_PROXY_RESOLVER:-1.1.1.1 8.8.8.8}
       ENABLE_API_PROXY: ${ENABLE_API_PROXY:-true}
       LOCK_API_PROXY: ${LOCK_API_PROXY:-true}
     healthcheck:

@@ -10,7 +10,17 @@ if [ "${DEFAULT_API_URL+x}" != "x" ]; then
     DEFAULT_API_URL=${API_URL:-https://api.proxy2it.com/v1}
 fi
 API_PROXY_URL=${API_PROXY_URL:-${API_URL:-https://api.proxy2it.com/v1}}
+API_PROXY_RESOLVER=${API_PROXY_RESOLVER:-1.1.1.1 8.8.8.8}
+
+API_PROXY_URL_NORMALIZED=$(printf '%s' "$API_PROXY_URL" | sed 's/[?#].*$//; s#/*$##')
+API_PROXY_ORIGIN=$(printf '%s' "$API_PROXY_URL_NORMALIZED" | sed -E 's#^([a-zA-Z][a-zA-Z0-9+.-]*://[^/]+).*$#\1#')
+API_PROXY_HOST=$(printf '%s' "$API_PROXY_ORIGIN" | sed -E 's#^[a-zA-Z][a-zA-Z0-9+.-]*://([^/]+)$#\1#')
+API_PROXY_PATH=$(printf '%s' "$API_PROXY_URL_NORMALIZED" | sed -E 's#^[a-zA-Z][a-zA-Z0-9+.-]*://[^/]+##')
 
 export DEFAULT_API_URL
 export API_PROXY_URL
+export API_PROXY_RESOLVER
+export API_PROXY_ORIGIN
+export API_PROXY_HOST
+export API_PROXY_PATH
 export DOCKER_LEGACY_API_URL_USED
