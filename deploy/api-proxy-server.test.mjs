@@ -17,6 +17,12 @@ async function closeServer(server) {
 
 async function main() {
   const upstream = http.createServer((request, response) => {
+    if (request.url?.startsWith('/cases.json')) {
+      response.writeHead(200, { 'Content-Type': 'application/json', ETag: '"cases-test"' })
+      response.end(JSON.stringify({ source: { commit: 'test' }, cases: [{ id: 1 }] }))
+      return
+    }
+
     if (request.url !== '/v1/images/generations') {
       response.writeHead(404)
       response.end()
@@ -42,6 +48,7 @@ async function main() {
       API_PROXY_HEARTBEAT_MS: '50',
       API_PROXY_URL: `http://127.0.0.1:${upstreamPort}/v1`,
       LOCK_API_PROXY: 'true',
+      PROMPT_CASE_DATASET_URL: `http://127.0.0.1:${upstreamPort}/cases.json`,
     },
     stdio: ['ignore', 'pipe', 'pipe'],
   })
@@ -77,6 +84,15 @@ async function main() {
     assert.match(body, /event: body/)
     assert.match(body, /event: response-end/)
     assert.match(body, /\\"b64_json\\":\\"ok\\"/)
+
+    const casesResponse = await fetch(`http://127.0.0.1:${proxyPort}/prompt-cases`)
+    assert.equal(casesResponse.status, 200)
+    assert.equal(casesResponse.headers.get('content-type'), 'application/json; charset=utf-8')
+    assert.equal(casesResponse.headers.get('x-prompt-cases-source'), 'remote')
+    assert.deepEqual(await casesResponse.json(), {
+      source: { commit: 'test' },
+      cases: [{ id: 1 }],
+    })
   } finally {
     child.kill('SIGTERM')
     await closeServer(upstream)

@@ -1,13 +1,25 @@
 const API_PROXY_PREFIX = '/api-proxy'
+const PROMPT_CASES_PATH = '/prompt-cases'
 const API_PROXY_BASE_URL_HEADER = 'x-api-base-url'
 const API_PROXY_TRANSPORT_HEADER = 'x-api-proxy-transport'
 const API_PROXY_TRANSPORT_EVENT_STREAM = 'event-stream'
 const API_PROXY_HEARTBEAT_MS = 15_000
+const PROMPT_CASE_DATASET_URL = 'https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/public/data/gpt-image-2/cases.json'
+const PROMPT_CASE_CACHE_TTL_SECONDS = 600
+const USER_AGENT = 'gpt-image-playground-prompt-cases'
 
 interface Env {
   ASSETS: {
     fetch(request: Request): Promise<Response>
   }
+}
+
+interface WorkerExecutionContext {
+  waitUntil(promise: Promise<unknown>): void
+}
+
+type WorkerCacheStorage = CacheStorage & {
+  default?: Cache
 }
 
 const HOP_BY_HOP_HEADERS = [
@@ -23,6 +35,114 @@ const HOP_BY_HOP_HEADERS = [
 
 function isApiProxyPath(pathname: string): boolean {
   return pathname === API_PROXY_PREFIX || pathname.startsWith(`${API_PROXY_PREFIX}/`)
+}
+
+function isPromptCasesPath(pathname: string): boolean {
+  return pathname === PROMPT_CASES_PATH
+}
+
+function withDatasetRefreshParam(url: string): string {
+  const separator = url.includes('?') ? '&' : '?'
+  const bucket = Math.floor(Date.now() / (PROMPT_CASE_CACHE_TTL_SECONDS * 1000))
+  return `${url}${separator}refresh=${bucket}`
+}
+
+function createPromptCaseHeaders(source: string, etag = ''): Headers {
+  const headers = new Headers()
+  headers.set('Content-Type', 'application/json; charset=utf-8')
+  headers.set('Cache-Control', 'public, max-age=300, stale-while-revalidate=86400')
+  headers.set('Access-Control-Allow-Origin', '*')
+  headers.set('Vary', 'Origin')
+  headers.set('X-Prompt-Cases-Source', source)
+  if (etag) headers.set('ETag', etag)
+  return headers
+}
+
+async function handlePromptCases(request: Request, env: Env, ctx?: WorkerExecutionContext): Promise<Response> {
+  if (request.method === 'OPTIONS') {
+    return new Response(null, {
+      status: 204,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
+        'Access-Control-Allow-Headers': 'accept, content-type',
+        'Access-Control-Max-Age': '86400',
+      },
+    })
+  }
+
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    return jsonError(request, 405, 'Prompt case dataset only supports GET or HEAD')
+  }
+
+  const cache = (caches as WorkerCacheStorage).default
+  if (!cache) {
+    return fetchPromptCaseDataset(request, env, true)
+  }
+  const cacheRequest = new Request(withDatasetRefreshParam(PROMPT_CASE_DATASET_URL), {
+    headers: { Accept: 'application/json' },
+  })
+  const cached = await cache.match(cacheRequest)
+  if (cached) {
+    return request.method === 'HEAD'
+      ? new Response(null, { status: cached.status, statusText: cached.statusText, headers: cached.headers })
+      : cached
+  }
+
+  try {
+    const upstream = await fetch(cacheRequest, {
+      headers: {
+        Accept: 'application/json',
+        'User-Agent': USER_AGENT,
+      },
+    })
+    if (!upstream.ok) throw new Error(`Prompt case dataset request failed: ${upstream.status} ${upstream.statusText}`)
+
+    const body = await upstream.text()
+    const response = new Response(request.method === 'HEAD' ? null : body, {
+      status: 200,
+      headers: createPromptCaseHeaders('remote', upstream.headers.get('etag') ?? ''),
+    })
+    const cacheResponse = new Response(body, {
+      status: 200,
+      headers: createPromptCaseHeaders('remote', upstream.headers.get('etag') ?? ''),
+    })
+    const cacheWrite = cache.put(cacheRequest, cacheResponse).catch(() => undefined)
+    if (ctx) {
+      ctx.waitUntil(cacheWrite)
+    } else {
+      await cacheWrite
+    }
+    return response
+  } catch {
+    return fetchPromptCaseDataset(request, env, false)
+  }
+}
+
+async function fetchPromptCaseDataset(request: Request, env: Env, useRemote: boolean): Promise<Response> {
+  if (useRemote) {
+    const upstream = await fetch(withDatasetRefreshParam(PROMPT_CASE_DATASET_URL), {
+      headers: {
+        Accept: 'application/json',
+        'User-Agent': USER_AGENT,
+      },
+    })
+    if (upstream.ok) {
+      return new Response(request.method === 'HEAD' ? null : await upstream.text(), {
+        status: 200,
+        headers: createPromptCaseHeaders('remote', upstream.headers.get('etag') ?? ''),
+      })
+    }
+  }
+
+  const assetFallback = await env.ASSETS.fetch(new Request(new URL('/data/gpt-image-2/cases.json', request.url).toString()))
+  if (assetFallback.ok) {
+    return new Response(request.method === 'HEAD' ? null : assetFallback.body, {
+      status: 200,
+      headers: createPromptCaseHeaders('fallback'),
+    })
+  }
+  return jsonError(request, 502, 'Prompt case dataset request failed')
 }
 
 function corsHeaders(request: Request): Headers {
@@ -218,8 +338,9 @@ async function handleApiProxy(request: Request): Promise<Response> {
 }
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx: WorkerExecutionContext): Promise<Response> {
     const url = new URL(request.url)
+    if (isPromptCasesPath(url.pathname)) return handlePromptCases(request, env, ctx)
     if (isApiProxyPath(url.pathname)) return handleApiProxy(request)
     return env.ASSETS.fetch(request)
   },

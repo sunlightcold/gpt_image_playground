@@ -38,12 +38,12 @@ jobs:
 
       - name: Commit changes
         run: |
-          if [ -z "$(git status --porcelain -- src/data/gptImage2Cases.ts data/gpt-image-2/images)" ]; then
+          if [ -z "$(git status --porcelain -- src/data/gptImage2Cases.ts public/data/gpt-image-2/cases.json data/gpt-image-2/images)" ]; then
             echo "No prompt case changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/gptImage2Cases.ts data/gpt-image-2/images
+          git add src/data/gptImage2Cases.ts public/data/gpt-image-2/cases.json data/gpt-image-2/images
           git commit -m "chore: sync prompt cases"
           git push

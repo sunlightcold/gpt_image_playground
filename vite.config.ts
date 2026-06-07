@@ -13,6 +13,14 @@ const DEFAULT_DYNAMIC_DEV_PROXY_CONFIG: DevProxyConfig = {
   secure: false,
   dynamic: true,
 }
+const PROMPT_CASES_PATH = '/prompt-cases'
+const PROMPT_CASE_DATASET_URL = process.env.PROMPT_CASE_DATASET_URL || 'https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/public/data/gpt-image-2/cases.json'
+const PROMPT_CASE_DATASET_FALLBACK_FILE = process.env.PROMPT_CASE_DATASET_FALLBACK_FILE || './public/data/gpt-image-2/cases.json'
+const PROMPT_CASE_DATASET_CACHE_SECONDS = Number.parseInt(process.env.PROMPT_CASE_DATASET_CACHE_SECONDS || '600', 10)
+const PROMPT_CASE_DATASET_CACHE_MS = Number.isFinite(PROMPT_CASE_DATASET_CACHE_SECONDS) && PROMPT_CASE_DATASET_CACHE_SECONDS > 0
+  ? PROMPT_CASE_DATASET_CACHE_SECONDS * 1000
+  : 600_000
+let promptCaseDatasetCache: { body: string; etag: string; expiresAt: number; sourceUrl: string } | null = null
 
 const HOP_BY_HOP_HEADERS = new Set([
   'connection',
@@ -82,16 +90,82 @@ function writeJsonError(res: import('http').ServerResponse, statusCode: number, 
   res.end(JSON.stringify({ error: { message } }))
 }
 
+function withDatasetRefreshParam(url: string) {
+  const separator = url.includes('?') ? '&' : '?'
+  const bucket = Math.floor(Date.now() / PROMPT_CASE_DATASET_CACHE_MS)
+  return `${url}${separator}refresh=${bucket}`
+}
+
+function writePromptCaseDataset(res: import('http').ServerResponse, body: string, source: string, etag = '') {
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'application/json; charset=utf-8')
+  res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=86400')
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Vary', 'Origin')
+  res.setHeader('X-Prompt-Cases-Source', source)
+  if (etag) res.setHeader('ETag', etag)
+  res.end(body)
+}
+
+async function fetchPromptCaseDataset() {
+  const now = Date.now()
+  if (promptCaseDatasetCache?.sourceUrl === PROMPT_CASE_DATASET_URL && promptCaseDatasetCache.expiresAt > now) {
+    return promptCaseDatasetCache
+  }
+
+  const response = await fetch(withDatasetRefreshParam(PROMPT_CASE_DATASET_URL), {
+    headers: {
+      Accept: 'application/json',
+      'User-Agent': 'gpt-image-playground-prompt-cases',
+    },
+  })
+  if (!response.ok) throw new Error(`Prompt case dataset request failed: ${response.status} ${response.statusText}`)
+  const nextCache = {
+    sourceUrl: PROMPT_CASE_DATASET_URL,
+    body: await response.text(),
+    etag: response.headers.get('etag') || '',
+    expiresAt: now + PROMPT_CASE_DATASET_CACHE_MS,
+  }
+  promptCaseDatasetCache = nextCache
+  return nextCache
+}
+
 function dynamicApiProxyPlugin(proxyConfig: DevProxyConfig | null) {
   return {
     name: 'dynamic-api-proxy',
     configureServer(server: import('vite').ViteDevServer) {
-      if (!proxyConfig?.enabled || !proxyConfig.dynamic) return
       server.middlewares.use(async (req, res, next) => {
         try {
           const reqUrl = req.url ?? ''
           const pathname = new URL(reqUrl, 'http://localhost').pathname
-          if (!isProxyPath(pathname, proxyConfig.prefix)) return next()
+          if (pathname === PROMPT_CASES_PATH) {
+            if (req.method === 'OPTIONS') {
+              res.statusCode = 204
+              res.setHeader('Access-Control-Allow-Origin', '*')
+              res.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS')
+              res.setHeader('Access-Control-Allow-Headers', 'accept, content-type')
+              res.end()
+              return
+            }
+            if (req.method !== 'GET' && req.method !== 'HEAD') {
+              writeJsonError(res, 405, 'Prompt case dataset only supports GET or HEAD')
+              return
+            }
+
+            try {
+              const dataset = await fetchPromptCaseDataset()
+              writePromptCaseDataset(res, req.method === 'HEAD' ? '' : dataset.body, 'remote', dataset.etag)
+            } catch {
+              try {
+                writePromptCaseDataset(res, req.method === 'HEAD' ? '' : readFileSync(PROMPT_CASE_DATASET_FALLBACK_FILE, 'utf-8'), 'fallback')
+              } catch (fallbackError) {
+                writeJsonError(res, 502, fallbackError instanceof Error ? fallbackError.message : 'Prompt case dataset request failed')
+              }
+            }
+            return
+          }
+
+          if (!proxyConfig?.enabled || !proxyConfig.dynamic || !isProxyPath(pathname, proxyConfig.prefix)) return next()
 
           if (req.method === 'OPTIONS') {
             res.statusCode = 204

@@ -166,6 +166,8 @@ Cloudflare Workers 部署默认在构建时启用动态 API 代理标记：
 
 动态代理不限制上游白名单，只要求 API URL 为合法的 `http/https` 地址。若部署为公开站点，建议在 Cloudflare 侧增加 Access、WAF 或限流规则，避免被滥用为开放代理。
 
+Worker 同时提供同源 `/prompt-cases` 数据接口，用于在运行时读取本仓库 GitHub Raw 上的提示词案例 JSON。案例数据由 GitHub Actions 自动同步，Worker 会短暂缓存数据并在失败时回退到随构建打包的内置数据。
+
 **配置默认 API URL**：Cloudflare Workers 的环境变量不会自动改写已经构建好的静态文件。若需预设默认 API 地址，请在构建前设置 `VITE_DEFAULT_API_URL` 后再部署。
 
 ```bash
@@ -195,6 +197,8 @@ $env:VITE_DEFAULT_API_URL="https://api.openai.com/v1"; npm run deploy:cf
 - `LOCK_API_PROXY`：设为 `true` 时，在 `ENABLE_API_PROXY=true` 的前提下将前端 **API 代理** 开关强制锁定为开启，用户无法关闭。
 - `API_PROXY_HEARTBEAT_MS`：容器内 Node 代理向浏览器发送心跳的间隔（默认 `15000` 毫秒）。用于同步图片接口长时间无最终响应时维持浏览器连接。
 - `API_PROXY_READ_TIMEOUT` / `API_PROXY_SEND_TIMEOUT`：Nginx 转发到容器内 Node 代理时的读写超时（默认 `600s`）。
+- `PROMPT_CASE_DATASET_URL`：提示词案例数据源 JSON 地址，默认读取本仓库 GitHub Raw 上的 `public/data/gpt-image-2/cases.json`。GitHub Actions 每天同步案例后，已部署服务器会通过同源 `/prompt-cases` 运行时读取最新 JSON，不需要重新拉镜像或重启容器。
+- `PROMPT_CASE_DATASET_CACHE_SECONDS`：容器内提示词案例数据缓存时间（默认 `600` 秒），用于减少对 GitHub Raw 的重复请求。
 - `HOST` / `PORT`：指定容器内 Nginx 监听的地址和端口（默认 `0.0.0.0:80`）。
 
 > ⚠️ **安全警告**：开启 API 代理后，任何人都能将你的服务器作为代理来请求目标 API。建议仅在有访问控制（如 IP 白名单）或本地网络中开启。
@@ -259,6 +263,7 @@ services:
     image: ghcr.io/cooksleep/gpt_image_playground:latest
     environment:
       - DEFAULT_API_URL=https://api.openai.com/v1
+      - PROMPT_CASE_DATASET_URL=https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/public/data/gpt-image-2/cases.json
     ports:
       - "8080:80"
     restart: unless-stopped
@@ -282,6 +287,8 @@ ghcr.io/<你的 GitHub 用户或组织>/gpt_image_playground:latest
 然后把 `.env` 里的 `IMAGE` 改成该镜像地址即可。
 
 > 💡 **服务器部署与 Cloudflare 解耦**：Cloudflare Worker 只用于 `image.proxy2it.com` 这类 Worker 部署。Docker 部署使用容器内 Nginx 提供静态页面，并使用容器内 Node 代理处理 `/api-proxy/` 同源请求，不依赖 Cloudflare Worker。Node 代理会先向浏览器返回带心跳的事件流，再等待上游同步图片接口的最终响应，适合处理 60 秒以上无响应字节的图片生成请求；如果服务器外层还有 Nginx、CDN 或负载均衡，也需要让外层支持长连接，或让长请求不经过 Cloudflare 橙云代理。
+
+> 💡 **提示词案例自动更新**：案例同步不是服务器定时任务。GitHub Actions 每天运行 `sync:prompt-cases`，把最新案例 JSON 与案例图片提交到当前仓库；线上应用打开模板面板时请求同源 `/prompt-cases`，由 Worker 或 Docker 内置 Node 代理读取 `PROMPT_CASE_DATASET_URL`。因此案例数据更新后，服务器上的容器不需要自动更新；只有修改应用代码时才需要重新部署镜像。
 
 **更新说明：**
 

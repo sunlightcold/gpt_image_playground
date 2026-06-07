@@ -8,6 +8,7 @@ import { execFile } from 'node:child_process'
 const ROOT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const DATA_FILE = path.join(ROOT_DIR, 'src/data/gptImage2Cases.ts')
 const IMAGE_DIR = path.join(ROOT_DIR, 'data/gpt-image-2/images')
+const PUBLIC_CASES_FILE = path.join(ROOT_DIR, 'public/data/gpt-image-2/cases.json')
 
 const UPSTREAM_REPO = process.env.PROMPT_CASE_UPSTREAM_REPO || 'freestylefly/awesome-gpt-image-2'
 const UPSTREAM_REF = process.env.PROMPT_CASE_UPSTREAM_REF || 'main'
@@ -146,6 +147,15 @@ async function runGit(gitArgs, options = {}) {
   })
 }
 
+async function removeDirectoryWithRetry(directory) {
+  await rm(directory, {
+    recursive: true,
+    force: true,
+    maxRetries: 5,
+    retryDelay: 250,
+  })
+}
+
 async function resolveUpstreamCommit() {
   if (/^[0-9a-f]{40}$/i.test(UPSTREAM_REF)) return UPSTREAM_REF
   if (GITHUB_TOKEN) {
@@ -191,7 +201,7 @@ async function createUpstreamSnapshot(commit) {
       commit: stdout.trim(),
     }
   } catch (error) {
-    await rm(directory, { recursive: true, force: true })
+    await removeDirectoryWithRetry(directory)
     throw error
   }
 }
@@ -566,18 +576,26 @@ function formatExport(name, type, value) {
   return `export const ${name}: ${type} = ${JSON.stringify(value, null, 2)}`
 }
 
-function generateDataFile({ commit, cases, categories, styles, scenes }) {
+function createCasesPayload({ commit, cases, categories, styles, scenes }) {
   const usedCategories = cases.map((caseItem) => caseItem.category)
   const usedStyles = cases.flatMap((caseItem) => caseItem.styles)
   const usedScenes = cases.flatMap((caseItem) => caseItem.scenes)
 
-  const source = {
-    repository: `https://github.com/${UPSTREAM_REPO}`,
-    commit,
-    license: 'MIT',
-    totalCases: cases.length,
+  return {
+    source: {
+      repository: `https://github.com/${UPSTREAM_REPO}`,
+      commit,
+      license: 'MIT',
+      totalCases: cases.length,
+    },
+    categories: ensureOptions(categories, usedCategories),
+    styles: ensureOptions(styles, usedStyles),
+    scenes: ensureOptions(scenes, usedScenes),
+    cases,
   }
+}
 
+function generateDataFile({ source, categories, styles, scenes, cases }) {
   return `export type GptImage2CaseOption = {
   value: string
   label: string
@@ -601,11 +619,11 @@ export type GptImage2Case = {
 
 ${formatExport('GPT_IMAGE_2_CASE_SOURCE', '{ repository: string; commit: string; license: string; totalCases: number }', source)}
 
-${formatExport('GPT_IMAGE_2_CASE_CATEGORIES', 'GptImage2CaseOption[]', ensureOptions(categories, usedCategories))}
+${formatExport('GPT_IMAGE_2_CASE_CATEGORIES', 'GptImage2CaseOption[]', categories)}
 
-${formatExport('GPT_IMAGE_2_CASE_STYLES', 'GptImage2CaseOption[]', ensureOptions(styles, usedStyles))}
+${formatExport('GPT_IMAGE_2_CASE_STYLES', 'GptImage2CaseOption[]', styles)}
 
-${formatExport('GPT_IMAGE_2_CASE_SCENES', 'GptImage2CaseOption[]', ensureOptions(scenes, usedScenes))}
+${formatExport('GPT_IMAGE_2_CASE_SCENES', 'GptImage2CaseOption[]', scenes)}
 
 ${formatExport('GPT_IMAGE_2_CASES', 'GptImage2Case[]', cases)}
 `
@@ -644,13 +662,15 @@ async function main() {
     }
 
     const mergedCases = mergeCases(upstreamCases, existing.cases)
-    const nextFile = generateDataFile({
+    const payload = createCasesPayload({
       commit,
       cases: mergedCases,
       categories: existing.categories,
       styles: existing.styles,
       scenes: existing.scenes,
     })
+    const nextFile = generateDataFile(payload)
+    const nextPublicFile = `${JSON.stringify(payload, null, 2)}\n`
 
     let downloaded = 0
     let skipped = 0
@@ -666,6 +686,16 @@ async function main() {
     const previousFile = await readFile(DATA_FILE, 'utf8')
     const changed = previousFile !== nextFile
     if (!DRY_RUN && changed) await writeFile(DATA_FILE, nextFile)
+    let publicChanged = true
+    try {
+      publicChanged = await readFile(PUBLIC_CASES_FILE, 'utf8') !== nextPublicFile
+    } catch {
+      publicChanged = true
+    }
+    if (!DRY_RUN && publicChanged) {
+      await mkdir(path.dirname(PUBLIC_CASES_FILE), { recursive: true })
+      await writeFile(PUBLIC_CASES_FILE, nextPublicFile)
+    }
 
     const previousIds = new Set(existing.cases.map((caseItem) => caseItem.id))
     const addedIds = mergedCases.map((caseItem) => caseItem.id).filter((id) => !previousIds.has(id))
@@ -679,8 +709,9 @@ async function main() {
     console.log(`Removed upstream ids: ${removedIds.length ? removedIds.sort((a, b) => a - b).join(', ') : 'none'}`)
     console.log(`Images: ${SKIP_IMAGES ? 'skipped by --no-images' : `${downloaded} downloaded, ${skipped} already present`}`)
     console.log(`Data file: ${changed ? (DRY_RUN ? 'would update' : 'updated') : 'already up to date'}`)
+    console.log(`Public JSON: ${publicChanged ? (DRY_RUN ? 'would update' : 'updated') : 'already up to date'}`)
   } finally {
-    if (snapshotDir) await rm(snapshotDir, { recursive: true, force: true })
+    if (snapshotDir) await removeDirectoryWithRetry(snapshotDir)
   }
 }
 

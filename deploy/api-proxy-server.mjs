@@ -1,13 +1,18 @@
 import http from 'node:http'
 import dns from 'node:dns'
+import { readFile } from 'node:fs/promises'
 
 dns.setDefaultResultOrder('ipv4first')
 
 const API_PROXY_PREFIX = '/api-proxy'
+const PROMPT_CASES_PATH = '/prompt-cases'
 const API_PROXY_BASE_URL_HEADER = 'x-api-base-url'
 const API_PROXY_TRANSPORT_HEADER = 'x-api-proxy-transport'
 const API_PROXY_TRANSPORT_EVENT_STREAM = 'event-stream'
 const DEFAULT_API_PROXY_URL = 'https://cn.proxy2it.com/v1'
+const DEFAULT_PROMPT_CASE_DATASET_URL = 'https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/public/data/gpt-image-2/cases.json'
+const DEFAULT_PROMPT_CASE_DATASET_FALLBACK_FILE = '/usr/share/nginx/html/data/gpt-image-2/cases.json'
+const USER_AGENT = 'gpt-image-playground-prompt-cases'
 
 const HOP_BY_HOP_HEADERS = new Set([
   'connection',
@@ -33,6 +38,8 @@ function getEnvNumber(name, fallback) {
 const host = process.env.API_PROXY_SERVER_HOST || '127.0.0.1'
 const port = getEnvNumber('API_PROXY_SERVER_PORT', 8787)
 const heartbeatMs = getEnvNumber('API_PROXY_HEARTBEAT_MS', 15_000)
+const promptCasesCacheTtlMs = getEnvNumber('PROMPT_CASE_DATASET_CACHE_SECONDS', 600) * 1000
+let promptCasesCache = null
 
 function isEnabled(value) {
   return value === 'true'
@@ -45,6 +52,111 @@ function firstHeaderValue(value) {
 
 function getConfiguredApiProxyUrl() {
   return process.env.API_PROXY_URL || process.env.API_URL || DEFAULT_API_PROXY_URL
+}
+
+function getPromptCaseDatasetUrl() {
+  return process.env.PROMPT_CASE_DATASET_URL || DEFAULT_PROMPT_CASE_DATASET_URL
+}
+
+function getPromptCaseDatasetFallbackFile() {
+  return process.env.PROMPT_CASE_DATASET_FALLBACK_FILE || DEFAULT_PROMPT_CASE_DATASET_FALLBACK_FILE
+}
+
+function withDatasetRefreshParam(url) {
+  const separator = url.includes('?') ? '&' : '?'
+  const bucket = Math.floor(Date.now() / promptCasesCacheTtlMs)
+  return `${url}${separator}refresh=${bucket}`
+}
+
+function createPromptCasesHeaders(source, etag = '') {
+  const headers = [
+    ['Content-Type', 'application/json; charset=utf-8'],
+    ['Cache-Control', 'public, max-age=300, stale-while-revalidate=86400'],
+    ['Access-Control-Allow-Origin', '*'],
+    ['Vary', 'Origin'],
+    ['X-Prompt-Cases-Source', source],
+  ]
+  if (etag) headers.push(['ETag', etag])
+  return headers
+}
+
+function writePromptCasesResponse(request, response, status, body, source, etag = '') {
+  writeHeaders(response, createPromptCasesHeaders(source, etag))
+  response.writeHead(status)
+  if (request.method === 'HEAD') {
+    response.end()
+    return
+  }
+  response.end(body)
+}
+
+async function fetchPromptCaseDataset() {
+  const sourceUrl = getPromptCaseDatasetUrl()
+  const now = Date.now()
+  if (promptCasesCache?.sourceUrl === sourceUrl && promptCasesCache.expiresAt > now) {
+    return promptCasesCache
+  }
+
+  const upstream = await fetch(withDatasetRefreshParam(sourceUrl), {
+    headers: {
+      Accept: 'application/json',
+      'User-Agent': USER_AGENT,
+    },
+  })
+  if (!upstream.ok) {
+    throw new Error(`Prompt case dataset request failed: ${upstream.status} ${upstream.statusText}`)
+  }
+
+  const nextCache = {
+    sourceUrl,
+    body: await upstream.text(),
+    etag: upstream.headers.get('etag') || '',
+    expiresAt: now + promptCasesCacheTtlMs,
+  }
+  promptCasesCache = nextCache
+  return nextCache
+}
+
+async function readPromptCaseDatasetFallback() {
+  const fallbackFile = getPromptCaseDatasetFallbackFile()
+  return {
+    sourceUrl: fallbackFile,
+    body: await readFile(fallbackFile, 'utf8'),
+    etag: '',
+    expiresAt: Date.now() + promptCasesCacheTtlMs,
+  }
+}
+
+async function handlePromptCases(request, response) {
+  if (request.method === 'OPTIONS') {
+    writeHeaders(response, [
+      ['Access-Control-Allow-Origin', '*'],
+      ['Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS'],
+      ['Access-Control-Allow-Headers', 'accept, content-type'],
+      ['Access-Control-Max-Age', '86400'],
+    ])
+    response.writeHead(204)
+    response.end()
+    return
+  }
+
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    sendJsonError(request, response, 405, 'Prompt case dataset only supports GET or HEAD')
+    return
+  }
+
+  try {
+    const dataset = await fetchPromptCaseDataset()
+    writePromptCasesResponse(request, response, 200, dataset.body, 'remote', dataset.etag)
+  } catch (remoteError) {
+    try {
+      const fallback = await readPromptCaseDatasetFallback()
+      promptCasesCache = fallback
+      writePromptCasesResponse(request, response, 200, fallback.body, 'fallback')
+    } catch {
+      sendJsonError(request, response, 502, remoteError instanceof Error ? remoteError.message : 'Prompt case dataset request failed')
+    }
+  }
 }
 
 function getRequestBaseUrl(request) {
@@ -289,6 +401,17 @@ async function handleApiProxy(request, response) {
 
 const server = http.createServer((request, response) => {
   const requestUrl = new URL(request.url || '/', 'http://localhost')
+  if (requestUrl.pathname === PROMPT_CASES_PATH) {
+    handlePromptCases(request, response).catch((error) => {
+      if (!response.headersSent) {
+        sendJsonError(request, response, 500, error instanceof Error ? error.message : 'Prompt case dataset request failed')
+      } else {
+        response.destroy(error instanceof Error ? error : undefined)
+      }
+    })
+    return
+  }
+
   if (!requestUrl.pathname.startsWith(API_PROXY_PREFIX)) {
     sendJsonError(request, response, 404, 'Not Found')
     return

@@ -10,6 +10,7 @@ interface ImportMetaEnv {
   readonly VITE_API_PROXY_DYNAMIC?: string
   readonly VITE_DOCKER_DEPLOYMENT?: string
   readonly VITE_DOCKER_LEGACY_API_URL_USED?: string
+  readonly VITE_PROMPT_CASE_DATASET_URL?: string
 }
 
 interface ImportMeta {

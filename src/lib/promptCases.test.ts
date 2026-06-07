@@ -2,10 +2,12 @@ import { describe, expect, it } from 'vitest'
 import { GPT_IMAGE_2_CASES, GPT_IMAGE_2_CASE_SOURCE } from '../data/gptImage2Cases'
 import {
   ALL_CASE_FILTER_VALUE,
+  BUILTIN_PROMPT_CASE_DATASET,
   filterPromptCases,
   getCaseCategoryLabel,
   getCasePromptPreview,
   getCaseTags,
+  normalizePromptCaseDataset,
 } from './promptCases'
 
 describe('prompt case filters', () => {
@@ -52,5 +54,34 @@ describe('prompt case filters', () => {
     expect(preview).not.toContain('\n')
     expect(getCaseTags(first).length).toBeGreaterThan(0)
     expect(getCaseCategoryLabel('Photography & Realism')).toBe('摄影与写实')
+  })
+
+  it('normalizes remote datasets and uses them for filters', () => {
+    const remoteCase = {
+      ...GPT_IMAGE_2_CASES[0],
+      id: 9001,
+      title: 'Remote runtime case',
+      category: 'runtime-category',
+      styles: ['runtime-style'],
+      scenes: ['runtime-scene'],
+      prompt: 'runtime prompt body',
+    }
+    const dataset = normalizePromptCaseDataset({
+      source: {
+        repository: 'https://example.com/cases',
+        commit: 'runtime-commit',
+        license: 'MIT',
+        totalCases: 1,
+      },
+      categories: [{ value: 'runtime-category', label: '运行时分类' }],
+      styles: [{ value: 'runtime-style', label: '运行时风格' }],
+      scenes: [{ value: 'runtime-scene', label: '运行时场景' }],
+      cases: [remoteCase, { ...remoteCase, id: 'invalid' }],
+    })
+
+    expect(dataset).not.toBeNull()
+    expect(dataset?.cases).toHaveLength(1)
+    expect(filterPromptCases({ query: '运行时分类' }, dataset ?? BUILTIN_PROMPT_CASE_DATASET)).toHaveLength(1)
+    expect(filterPromptCases({ style: 'runtime-style' }, dataset ?? BUILTIN_PROMPT_CASE_DATASET)[0].id).toBe(9001)
   })
 })

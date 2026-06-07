@@ -1,22 +1,18 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { useVirtualizer } from '@tanstack/react-virtual'
-import {
-  GPT_IMAGE_2_CASE_CATEGORIES,
-  GPT_IMAGE_2_CASE_SCENES,
-  GPT_IMAGE_2_CASE_SOURCE,
-  GPT_IMAGE_2_CASE_STYLES,
-  GPT_IMAGE_2_CASES,
-  type GptImage2Case,
-} from '../data/gptImage2Cases'
+import { type GptImage2Case } from '../data/gptImage2Cases'
 import { copyTextToClipboard, getClipboardFailureMessage } from '../lib/clipboard'
 import {
   ALL_CASE_FILTER_VALUE,
+  BUILTIN_PROMPT_CASE_DATASET,
   filterPromptCases,
   getCaseCategoryLabel,
   getCasePromptPreview,
   getCaseTagLabel,
   getCaseTags,
+  loadRemotePromptCaseDataset,
+  type PromptCaseDataset,
 } from '../lib/promptCases'
 import { useCloseOnEscape } from '../hooks/useCloseOnEscape'
 import { useStore } from '../store'
@@ -67,9 +63,32 @@ export default function PromptCasePicker({
   const [scene, setScene] = useState(ALL_CASE_FILTER_VALUE)
   const [copiedCaseId, setCopiedCaseId] = useState<number | null>(null)
   const [detailCase, setDetailCase] = useState<GptImage2Case | null>(null)
+  const [dataset, setDataset] = useState(BUILTIN_PROMPT_CASE_DATASET)
 
-  const cases = useMemo(() => filterPromptCases({ category, style, scene, query }), [category, query, scene, style])
-  const caseListResetKey = `${query}\n${category}\n${style}\n${scene}`
+  useEffect(() => {
+    let cancelled = false
+    loadRemotePromptCaseDataset().then((remoteDataset) => {
+      if (!cancelled && remoteDataset) setDataset(remoteDataset)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  useEffect(() => {
+    if (category !== ALL_CASE_FILTER_VALUE && !dataset.categories.some((option) => option.value === category)) {
+      setCategory(ALL_CASE_FILTER_VALUE)
+    }
+    if (style !== ALL_CASE_FILTER_VALUE && !dataset.styles.some((option) => option.value === style)) {
+      setStyle(ALL_CASE_FILTER_VALUE)
+    }
+    if (scene !== ALL_CASE_FILTER_VALUE && !dataset.scenes.some((option) => option.value === scene)) {
+      setScene(ALL_CASE_FILTER_VALUE)
+    }
+  }, [category, dataset, scene, style])
+
+  const cases = useMemo(() => filterPromptCases({ category, style, scene, query }, dataset), [category, dataset, query, scene, style])
+  const caseListResetKey = `${dataset.source.commit}\n${query}\n${category}\n${style}\n${scene}`
   useCloseOnEscape(true, detailCase ? () => setDetailCase(null) : onClose)
 
   async function copyCasePrompt(caseItem: GptImage2Case) {
@@ -104,10 +123,10 @@ export default function PromptCasePicker({
             <div className="flex flex-wrap items-center gap-2">
               <h3 className="text-sm font-black text-slate-900 dark:text-white">GPT-Image2 案例</h3>
               <span className="rounded-none border border-black bg-[#FFE66D] px-1.5 py-0.5 text-[10px] font-black text-slate-900 dark:border-white dark:bg-yellow-400">
-                {cases.length}/{GPT_IMAGE_2_CASES.length}
+                {cases.length}/{dataset.cases.length}
               </span>
               <a
-                href={GPT_IMAGE_2_CASE_SOURCE.repository}
+                href={dataset.source.repository}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1 text-[11px] font-bold text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white"
@@ -117,7 +136,7 @@ export default function PromptCasePicker({
               </a>
             </div>
             <div className="mt-1 text-[11px] font-bold text-slate-500 dark:text-gray-400">
-              来源：MIT License · {GPT_IMAGE_2_CASE_SOURCE.commit.slice(0, 7)}
+              来源：MIT License · {dataset.source.commit.slice(0, 7)}
             </div>
           </div>
 
@@ -144,7 +163,7 @@ export default function PromptCasePicker({
             </label>
 
             <FilterGroup label="分类">
-              {[ALL_OPTION, ...GPT_IMAGE_2_CASE_CATEGORIES].map((option) => (
+              {[ALL_OPTION, ...dataset.categories].map((option) => (
                 <button
                   key={option.value}
                   type="button"
@@ -157,7 +176,7 @@ export default function PromptCasePicker({
             </FilterGroup>
 
             <FilterGroup label="风格">
-              {[ALL_OPTION, ...GPT_IMAGE_2_CASE_STYLES].map((option) => (
+              {[ALL_OPTION, ...dataset.styles].map((option) => (
                 <button
                   key={option.value}
                   type="button"
@@ -170,7 +189,7 @@ export default function PromptCasePicker({
             </FilterGroup>
 
             <FilterGroup label="场景">
-              {[ALL_OPTION, ...GPT_IMAGE_2_CASE_SCENES].map((option) => (
+              {[ALL_OPTION, ...dataset.scenes].map((option) => (
                 <button
                   key={option.value}
                   type="button"
@@ -186,6 +205,7 @@ export default function PromptCasePicker({
           <VirtualCaseGrid
             cases={cases}
             copiedCaseId={copiedCaseId}
+            dataset={dataset}
             resetKey={caseListResetKey}
             onCopy={copyCasePrompt}
             onOpen={setDetailCase}
@@ -198,6 +218,7 @@ export default function PromptCasePicker({
         <CaseDetailDialog
           caseItem={detailCase}
           copied={copiedCaseId === detailCase.id}
+          dataset={dataset}
           onClose={() => setDetailCase(null)}
           onCopy={copyCasePrompt}
           onUse={onUseCase}
@@ -241,6 +262,7 @@ function chunkCasesIntoRows(cases: GptImage2Case[], columns: number) {
 function VirtualCaseGrid({
   cases,
   copiedCaseId,
+  dataset,
   resetKey,
   onCopy,
   onOpen,
@@ -248,6 +270,7 @@ function VirtualCaseGrid({
 }: {
   cases: GptImage2Case[]
   copiedCaseId: number | null
+  dataset: PromptCaseDataset
   resetKey: string
   onCopy: (caseItem: GptImage2Case) => void
   onOpen: (caseItem: GptImage2Case) => void
@@ -299,6 +322,7 @@ function VirtualCaseGrid({
                       key={caseItem.id}
                       caseItem={caseItem}
                       copied={copiedCaseId === caseItem.id}
+                      dataset={dataset}
                       onCopy={onCopy}
                       onOpen={onOpen}
                       onUse={onUse}
@@ -358,12 +382,14 @@ function FilterGroup({ label, children }: { label: string; children: ReactNode }
 function CaseCard({
   caseItem,
   copied,
+  dataset,
   onCopy,
   onOpen,
   onUse,
 }: {
   caseItem: GptImage2Case
   copied: boolean
+  dataset: PromptCaseDataset
   onCopy: (caseItem: GptImage2Case) => void
   onOpen: (caseItem: GptImage2Case) => void
   onUse: (caseItem: GptImage2Case) => void
@@ -392,7 +418,7 @@ function CaseCard({
 
       <div className="flex min-w-0 flex-col">
         <div className="mb-1 flex min-w-0 items-center justify-between gap-2 text-[10px] font-black text-slate-500 dark:text-gray-400">
-          <span className="min-w-0 truncate">{getCaseCategoryLabel(caseItem.category)}</span>
+          <span className="min-w-0 truncate">{getCaseCategoryLabel(caseItem.category, dataset)}</span>
           {caseItem.sourceUrl ? (
             <a
               href={caseItem.sourceUrl}
@@ -421,7 +447,7 @@ function CaseCard({
               key={`${caseItem.id}-${tag}`}
               className="rounded-none border border-slate-300 bg-white px-1 py-0.5 text-[9px] font-bold leading-tight text-slate-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400"
             >
-              {getCaseTagLabel(tag)}
+              {getCaseTagLabel(tag, dataset)}
             </span>
           ))}
         </div>
@@ -467,6 +493,7 @@ function CaseCard({
 function CaseDetailDialog({
   caseItem,
   copied,
+  dataset,
   onClose,
   onCopy,
   onUse,
@@ -474,6 +501,7 @@ function CaseDetailDialog({
 }: {
   caseItem: GptImage2Case
   copied: boolean
+  dataset: PromptCaseDataset
   onClose: () => void
   onCopy: (caseItem: GptImage2Case) => void
   onUse: (caseItem: GptImage2Case) => void
@@ -503,7 +531,7 @@ function CaseDetailDialog({
                 <span className="border border-black bg-[#FFE66D] px-1.5 py-0.5 text-slate-900 dark:border-white dark:bg-yellow-400 dark:text-black">
                   案例 {caseItem.id}
                 </span>
-                <span>{getCaseCategoryLabel(caseItem.category)}</span>
+                <span>{getCaseCategoryLabel(caseItem.category, dataset)}</span>
                 {caseItem.sourceUrl && (
                   <a href={caseItem.sourceUrl} target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-900 dark:text-cyan-300 dark:hover:text-cyan-100">
                     {caseItem.sourceLabel}
@@ -521,7 +549,7 @@ function CaseDetailDialog({
             <div className="mb-3 flex flex-wrap gap-1">
               {getCaseTags(caseItem, 8).map((tag) => (
                 <span key={`${caseItem.id}-detail-${tag}`} className="rounded-none border border-slate-300 bg-white px-2 py-1 text-[11px] font-bold text-slate-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-400">
-                  {getCaseTagLabel(tag)}
+                  {getCaseTagLabel(tag, dataset)}
                 </span>
               ))}
             </div>

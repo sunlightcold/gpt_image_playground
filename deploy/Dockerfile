@@ -29,6 +29,9 @@ ENV DEFAULT_API_URL=
 ENV API_PROXY_URL=
 ENV ENABLE_API_PROXY=true
 ENV LOCK_API_PROXY=false
+ENV PROMPT_CASE_DATASET_URL=https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/public/data/gpt-image-2/cases.json
+ENV PROMPT_CASE_DATASET_CACHE_SECONDS=600
+ENV PROMPT_CASE_DATASET_FALLBACK_FILE=/usr/share/nginx/html/data/gpt-image-2/cases.json
 
 RUN apk add --no-cache nodejs
 

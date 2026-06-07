@@ -13,6 +13,8 @@ services:
       API_PROXY_SEND_TIMEOUT: ${API_PROXY_SEND_TIMEOUT:-600s}
       ENABLE_API_PROXY: ${ENABLE_API_PROXY:-true}
       LOCK_API_PROXY: ${LOCK_API_PROXY:-true}
+      PROMPT_CASE_DATASET_URL: ${PROMPT_CASE_DATASET_URL:-https://raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/public/data/gpt-image-2/cases.json}
+      PROMPT_CASE_DATASET_CACHE_SECONDS: ${PROMPT_CASE_DATASET_CACHE_SECONDS:-600}
     healthcheck:
       test: ["CMD-SHELL", "wget -q -O- http://127.0.0.1/ >/dev/null || exit 1"]
       interval: 30s
