@@ -24,6 +24,14 @@ describe('prompt case filters', () => {
     expect(GPT_IMAGE_2_CASES[0].githubUrl).toContain(`/blob/${GPT_IMAGE_2_CASE_SOURCE.commit}/`)
   })
 
+  it('keeps every case image mirrored in this repository', () => {
+    const currentRepoImagePattern = /^https:\/\/raw\.githubusercontent\.com\/sunlightcold\/gpt_image_playground\/main\/data\/gpt-image-2\/images\/case\d+\.(jpg|jpeg|png|webp)$/i
+    for (const caseItem of GPT_IMAGE_2_CASES) {
+      expect(caseItem.image).toMatch(currentRepoImagePattern)
+      expect(new URL(caseItem.image).pathname).toContain(`/case${caseItem.id}.`)
+    }
+  })
+
   it('filters cases by category, style, and scene', () => {
     const photoCases = filterPromptCases({ category: 'Photography & Realism' })
     expect(photoCases.length).toBeGreaterThan(0)

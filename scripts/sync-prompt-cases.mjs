@@ -1,4 +1,4 @@
-import { access, copyFile, mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
+import { copyFile, mkdir, mkdtemp, readFile, rm, stat, writeFile } from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -148,12 +148,16 @@ async function runGit(gitArgs, options = {}) {
 }
 
 async function removeDirectoryWithRetry(directory) {
-  await rm(directory, {
-    recursive: true,
-    force: true,
-    maxRetries: 5,
-    retryDelay: 250,
-  })
+  try {
+    await rm(directory, {
+      recursive: true,
+      force: true,
+      maxRetries: 5,
+      retryDelay: 250,
+    })
+  } catch (error) {
+    console.warn(`Unable to remove temporary directory ${directory}: ${error instanceof Error ? error.message : String(error)}`)
+  }
 }
 
 async function resolveUpstreamCommit() {
@@ -512,10 +516,10 @@ async function discoverGalleryDocs(commit, snapshotDir) {
   return ['docs/gallery-part-1.md', 'docs/gallery-part-2.md']
 }
 
-async function fileExists(filePath) {
+async function hasUsableFile(filePath) {
   try {
-    await access(filePath)
-    return true
+    const info = await stat(filePath)
+    return info.isFile() && info.size > 0
   } catch {
     return false
   }
@@ -523,7 +527,7 @@ async function fileExists(filePath) {
 
 async function downloadImage(caseItem, commit, snapshotDir) {
   const target = path.join(ROOT_DIR, caseItem.localImageRelative)
-  if (!FORCE_IMAGES && await fileExists(target)) return 'skipped'
+  if (!FORCE_IMAGES && await hasUsableFile(target)) return 'skipped'
 
   if (!DRY_RUN) {
     await mkdir(path.dirname(target), { recursive: true })
@@ -539,6 +543,28 @@ async function downloadImage(caseItem, commit, snapshotDir) {
     }
   }
   return 'downloaded'
+}
+
+async function assertLocalImagesExist(caseItems) {
+  const missing = []
+  const empty = []
+
+  for (const caseItem of caseItems) {
+    const target = path.join(ROOT_DIR, caseItem.localImageRelative)
+    try {
+      const info = await stat(target)
+      if (!info.isFile() || info.size === 0) empty.push(caseItem.localImageRelative)
+    } catch {
+      missing.push(caseItem.localImageRelative)
+    }
+  }
+
+  if (missing.length > 0 || empty.length > 0) {
+    const parts = []
+    if (missing.length > 0) parts.push(`missing: ${missing.slice(0, 8).join(', ')}${missing.length > 8 ? `, ... +${missing.length - 8}` : ''}`)
+    if (empty.length > 0) parts.push(`empty: ${empty.slice(0, 8).join(', ')}${empty.length > 8 ? `, ... +${empty.length - 8}` : ''}`)
+    throw new Error(`Prompt case images are incomplete (${parts.join('; ')})`)
+  }
 }
 
 function mergeCases(upstreamCases, existingCases) {
@@ -681,6 +707,7 @@ async function main() {
         if (status === 'downloaded') downloaded += 1
         if (status === 'skipped') skipped += 1
       }
+      await assertLocalImagesExist(upstreamCases)
     }
 
     const previousFile = await readFile(DATA_FILE, 'utf8')
