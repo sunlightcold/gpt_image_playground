@@ -1,0 +1,49 @@
+name: Sync Prompt Cases
+
+on:
+  schedule:
+    - cron: '20 20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-prompt-cases
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Sync prompt cases from upstream
+        run: npm run sync:prompt-cases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Test prompt cases
+        run: npm test -- src/lib/promptCases.test.ts
+
+      - name: Build
+        run: npm run build
+
+      - name: Commit changes
+        run: |
+          if [ -z "$(git status --porcelain -- src/data/gptImage2Cases.ts data/gpt-image-2/images)" ]; then
+            echo "No prompt case changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/gptImage2Cases.ts data/gpt-image-2/images
+          git commit -m "chore: sync prompt cases"
+          git push

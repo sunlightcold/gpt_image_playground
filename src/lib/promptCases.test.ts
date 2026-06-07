@@ -10,14 +10,15 @@ import {
 
 describe('prompt case filters', () => {
   it('keeps upstream case entries available locally', () => {
-    expect(GPT_IMAGE_2_CASES).toHaveLength(485)
-    expect(GPT_IMAGE_2_CASE_SOURCE.totalCases).toBe(485)
-    expect(new Set(GPT_IMAGE_2_CASES.map((caseItem) => caseItem.id)).size).toBe(485)
-    expect(GPT_IMAGE_2_CASES[0].id).toBe(488)
+    expect(GPT_IMAGE_2_CASES.length).toBeGreaterThanOrEqual(485)
+    expect(GPT_IMAGE_2_CASE_SOURCE.totalCases).toBe(GPT_IMAGE_2_CASES.length)
+    expect(new Set(GPT_IMAGE_2_CASES.map((caseItem) => caseItem.id)).size).toBe(GPT_IMAGE_2_CASES.length)
+    expect(GPT_IMAGE_2_CASES[0].id).toBe(Math.max(...GPT_IMAGE_2_CASES.map((caseItem) => caseItem.id)))
   })
 
   it('uses current repository images while keeping upstream source links fixed', () => {
-    expect(GPT_IMAGE_2_CASES[0].image).toContain('raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case488.jpg')
+    const first = GPT_IMAGE_2_CASES[0]
+    expect(first.image).toContain(`raw.githubusercontent.com/sunlightcold/gpt_image_playground/main/data/gpt-image-2/images/case${first.id}.`)
     expect(GPT_IMAGE_2_CASES[0].githubUrl).toContain(`/blob/${GPT_IMAGE_2_CASE_SOURCE.commit}/`)
   })
 

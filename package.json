@@ -10,6 +10,8 @@
     "build:cf": "node scripts/build-cloudflare.mjs",
     "deploy:cf": "npm run build:cf && wrangler deploy",
     "preview": "vite preview",
+    "sync:prompt-cases": "node scripts/sync-prompt-cases.mjs",
+    "sync:prompt-cases:check": "node scripts/sync-prompt-cases.mjs --dry-run --no-images",
     "test": "vitest run",
     "test:docker-proxy": "node deploy/api-proxy-server.test.mjs",
     "test:watch": "vitest"
