@@ -7,7 +7,7 @@ const API_PROXY_PREFIX = '/api-proxy'
 const API_PROXY_BASE_URL_HEADER = 'x-api-base-url'
 const API_PROXY_TRANSPORT_HEADER = 'x-api-proxy-transport'
 const API_PROXY_TRANSPORT_EVENT_STREAM = 'event-stream'
-const DEFAULT_API_PROXY_URL = 'https://api.proxy2it.com/v1'
+const DEFAULT_API_PROXY_URL = 'https://cn.proxy2it.com/v1'
 
 const HOP_BY_HOP_HEADERS = new Set([
   'connection',

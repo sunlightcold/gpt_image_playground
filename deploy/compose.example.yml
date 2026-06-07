@@ -7,7 +7,7 @@ services:
       - "${APP_HOST:-127.0.0.1}:${APP_PORT:-8080}:80"
     environment:
       DEFAULT_API_URL: ${DEFAULT_API_URL:-}
-      API_PROXY_URL: ${API_PROXY_URL:-https://api.proxy2it.com/v1}
+      API_PROXY_URL: ${API_PROXY_URL:-https://cn.proxy2it.com/v1}
       API_PROXY_HEARTBEAT_MS: ${API_PROXY_HEARTBEAT_MS:-15000}
       API_PROXY_READ_TIMEOUT: ${API_PROXY_READ_TIMEOUT:-600s}
       API_PROXY_SEND_TIMEOUT: ${API_PROXY_SEND_TIMEOUT:-600s}

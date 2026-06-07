@@ -18,7 +18,7 @@ import { isApiProxyDynamic, normalizeBaseUrl, shouldUseApiProxy } from './devPro
 import { readRuntimeEnv } from './runtimeEnv'
 import { isImportableConfigUrl } from './customProviderConfigUrl'
 
-const OPENAI_DEFAULT_BASE_URL = 'https://api.proxy2it.com/v1'
+const OPENAI_DEFAULT_BASE_URL = 'https://cn.proxy2it.com/v1'
 const RAW_DEFAULT_API_URL = readRuntimeEnv(import.meta.env.VITE_DEFAULT_API_URL)
 const DEFAULT_OPENAI_API_PROXY = true
 const DEFAULT_OPENAI_STREAM_IMAGES = false
