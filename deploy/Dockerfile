@@ -15,6 +15,9 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
+# ---- Runtime Node stage ----
+FROM --platform=$TARGETPLATFORM node:22-alpine AS node-runtime
+
 # ---- Production stage ----
 FROM nginx:alpine
 
@@ -33,8 +36,11 @@ ENV PROMPT_CASE_DATASET_URL=https://raw.githubusercontent.com/sunlightcold/gpt_i
 ENV PROMPT_CASE_DATASET_CACHE_SECONDS=600
 ENV PROMPT_CASE_DATASET_FALLBACK_FILE=/usr/share/nginx/html/data/gpt-image-2/cases.json
 
-COPY --from=node:22-alpine /usr/local/bin/node /usr/local/bin/node
-COPY --from=node:22-alpine /usr/local/lib/node_modules /usr/local/lib/node_modules
+RUN apk add --no-cache libstdc++
+
+COPY --from=node-runtime /usr/local/bin/node /usr/local/bin/node
+COPY --from=node-runtime /usr/local/lib/node_modules /usr/local/lib/node_modules
+RUN node --version | grep -E '^v22\.'
 
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY deploy/nginx.conf /etc/nginx/templates/default.conf.template
