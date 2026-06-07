@@ -362,6 +362,8 @@ export default function SettingsModal() {
   const apiProxyChecked = activeProfileApiProxyEligible && (apiProxyLocked || activeProfile.apiProxy)
   const apiProxyEnabled = apiProxyAvailable && activeProfileApiProxyEligible && apiProxyChecked
   const apiUrlLockedByProxy = apiProxyEnabled && apiProxyLocked
+  const displayedApiUrl = apiUrlLockedByProxy ? '' : activeProfile.baseUrl
+  const apiUrlPlaceholder = apiUrlLockedByProxy ? '由部署端环境变量提供' : DEFAULT_SETTINGS.baseUrl
   const defaultProviderOrder = ['openai', ...draft.customProviders.map(p => p.id)]
   const providerOrder = draft.providerOrder || defaultProviderOrder
 
@@ -1642,12 +1644,12 @@ export default function SettingsModal() {
                     <span className="block text-sm text-gray-600 dark:text-gray-300 font-bold">API URL</span>
                   </div>
                   <input
-                    value={activeProfile.baseUrl}
+                    value={displayedApiUrl}
                     onChange={(e) => updateActiveProfile({ baseUrl: e.target.value })}
                     onBlur={(e) => commitActiveProfilePatch({ baseUrl: e.target.value })}
                     type="text"
                     disabled={apiUrlLockedByProxy}
-                    placeholder={DEFAULT_SETTINGS.baseUrl}
+                    placeholder={apiUrlPlaceholder}
                     className={`w-full rounded-none border-2 border-black dark:border-white bg-white dark:bg-zinc-950 font-bold px-3 py-2.5 text-sm text-slate-900 dark:text-white outline-none transition focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] duration-200 ${apiUrlLockedByProxy ? 'opacity-50 cursor-not-allowed' : ''}`}
                   />
                   <div data-selectable-text className="mt-1.5 min-h-[22px] flex items-center text-xs text-gray-500 dark:text-gray-500">
