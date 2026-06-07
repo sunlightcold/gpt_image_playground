@@ -1691,7 +1691,17 @@ export default function SettingsModal() {
 
               {/* 5. API Key */}
               <div className="block">
-                <span className="mb-1.5 block text-sm text-gray-600 dark:text-gray-300 font-bold">API Key</span>
+                <div className="mb-1.5 flex items-center justify-between gap-3">
+                  <span className="text-sm text-gray-600 dark:text-gray-300 font-bold">API Key</span>
+                  <a
+                    href="https://api.proxy2it.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-bold text-slate-900 underline decoration-2 underline-offset-2 hover:text-black dark:text-gray-300 dark:hover:text-white"
+                  >
+                    获取API KEY
+                  </a>
+                </div>
                 <div className="relative">
                   <input
                     value={activeProfile.apiKey}
