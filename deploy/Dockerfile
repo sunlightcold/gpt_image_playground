@@ -1,5 +1,5 @@
 # ---- Build stage ----
-FROM --platform=$BUILDPLATFORM node:20-alpine AS build
+FROM --platform=$BUILDPLATFORM node:22-alpine AS build
 
 WORKDIR /app
 
@@ -33,7 +33,8 @@ ENV PROMPT_CASE_DATASET_URL=https://raw.githubusercontent.com/sunlightcold/gpt_i
 ENV PROMPT_CASE_DATASET_CACHE_SECONDS=600
 ENV PROMPT_CASE_DATASET_FALLBACK_FILE=/usr/share/nginx/html/data/gpt-image-2/cases.json
 
-RUN apk add --no-cache nodejs
+COPY --from=node:22-alpine /usr/local/bin/node /usr/local/bin/node
+COPY --from=node:22-alpine /usr/local/lib/node_modules /usr/local/lib/node_modules
 
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY deploy/nginx.conf /etc/nginx/templates/default.conf.template
