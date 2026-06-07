@@ -5,7 +5,7 @@ import { formatImageRatio } from '../lib/size'
 import { getParamDisplay, ActualValueBadge } from '../lib/paramDisplay'
 import { DEFAULT_IMAGES_MODEL } from '../lib/apiProfiles'
 import { isAgentTaskPromptPending } from '../lib/taskPromptDisplay'
-import { CodeIcon } from './icons'
+import { CodeIcon, TransparentBgIcon } from './icons'
 import ViewportTooltip from './ViewportTooltip'
 
 interface Props {
@@ -314,6 +314,7 @@ const TaskCard: React.FC<Props> = ({
   const isAgentTask = task.sourceMode === 'agent' || Boolean(task.agentConversationId || task.agentRoundId)
   const showPendingPrompt = isAgentTaskPromptPending(task)
   const showN = !isAgentTask && (task.params.n > 1 || nDisplay.isMismatch)
+  const showTransparentOutput = Boolean(task.transparentOutput || task.params.transparent_output)
 
   const showModel = task.apiModel && task.apiModel !== DEFAULT_IMAGES_MODEL
   const isInterrupted = task.status === 'error' && task.error === '已停止生成。'
@@ -564,6 +565,12 @@ const TaskCard: React.FC<Props> = ({
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                     </svg>
                     局部重绘
+                  </span>
+                )}
+                {showTransparentOutput && (
+                  <span className="flex h-6 items-center gap-1 px-2 rounded-md bg-emerald-100 dark:bg-emerald-950/45 text-emerald-700 dark:text-emerald-300 text-[10px] font-bold flex-shrink-0">
+                    <TransparentBgIcon className="w-3.5 h-3.5 flex-shrink-0" />
+                    透明背景
                   </span>
                 )}
                 {/* Params: only show if not default or mismatch */}

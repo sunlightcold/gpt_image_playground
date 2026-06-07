@@ -22,6 +22,7 @@ interface SelectProps {
   options: Option[]
   disabled?: boolean
   className?: string
+  onOpenChange?: (open: boolean) => void
 }
 
 const Select: React.FC<SelectProps> = ({
@@ -31,6 +32,7 @@ const Select: React.FC<SelectProps> = ({
   options,
   disabled,
   className,
+  onOpenChange,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [menuMaxHeight, setMenuMaxHeight] = useState(DEFAULT_DROPDOWN_MAX_HEIGHT)
@@ -54,6 +56,11 @@ const Select: React.FC<SelectProps> = ({
   const triggerRef = useRef<HTMLDivElement>(null)
 
   const selectedOption = options.find((o) => o.value === value)
+
+  const updateOpen = (open: boolean) => {
+    setIsOpen(open)
+    onOpenChange?.(open)
+  }
 
   useEffect(() => {
     return () => {
@@ -87,12 +94,12 @@ const Select: React.FC<SelectProps> = ({
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
-        setIsOpen(false)
+        updateOpen(false)
       }
     }
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
+  }, [onOpenChange])
 
   useEffect(() => {
     if (!isOpen) return
@@ -144,16 +151,16 @@ const Select: React.FC<SelectProps> = ({
     if (disabled) return
     e.preventDefault()
     e.stopPropagation()
-    setIsOpen(!isOpen)
+    updateOpen(!isOpen)
   }
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (disabled) return
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
-      setIsOpen(!isOpen)
+      updateOpen(!isOpen)
     } else if (e.key === 'Escape') {
-      setIsOpen(false)
+      updateOpen(false)
     }
   }
 
@@ -351,14 +358,14 @@ const Select: React.FC<SelectProps> = ({
               if ((e.target as HTMLElement).closest('button, [data-drag-handle]')) return
               e.preventDefault()
               onChange(option.value)
-              setIsOpen(false)
+              updateOpen(false)
             }
 
             const handleItemKeyDown = (e: React.KeyboardEvent) => {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault()
                 onChange(option.value)
-                setIsOpen(false)
+                updateOpen(false)
               }
             }
 
@@ -418,7 +425,7 @@ const Select: React.FC<SelectProps> = ({
                         event.preventDefault()
                         event.stopPropagation()
                         action.onClick()
-                        setIsOpen(false)
+                        updateOpen(false)
                       }
                       return (
                         <button

@@ -172,6 +172,15 @@ export function PromptBookIcon(props: SVGProps<SVGSVGElement>) {
   )
 }
 
+export function TransparentBgIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 10l4 4M14 10l-4 4" />
+    </svg>
+  )
+}
+
 export function FavoriteIcon({ filled, ...props }: SVGProps<SVGSVGElement> & { filled?: boolean }) {
   return (
     <svg fill={filled ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24" {...props}>

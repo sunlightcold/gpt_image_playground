@@ -75,6 +75,13 @@ vi.mock('./lib/api', () => ({
     revisedPrompts: [],
   })),
 }))
+vi.mock('./lib/transparentImage', async () => {
+  const actual = await vi.importActual<typeof import('./lib/transparentImage')>('./lib/transparentImage')
+  return {
+    ...actual,
+    removeKeyedBackgroundFromDataUrl: vi.fn(async (dataUrl: string) => `${dataUrl}-transparent`),
+  }
+})
 vi.mock('./lib/agentApi', () => ({
   callAgentConversationTitleApi: vi.fn(async () => '标题'),
   callAgentResponsesApi: vi.fn(() => new Promise(() => {})),
@@ -95,9 +102,11 @@ vi.mock('./lib/agentApi', () => ({
     }
   }),
 }))
-import { clearAgentConversations, clearImages, clearTasks, getAllAgentConversations, getAllTasks, putAgentConversation, putImage, putTask as putDbTask } from './lib/db'
+import { clearAgentConversations, clearImages, clearTasks, getAllAgentConversations, getAllImages, getAllTasks, putAgentConversation, putImage, putTask as putDbTask } from './lib/db'
+import { callImageApi } from './lib/api'
 import { callAgentResponsesApi, callBatchImageSingle } from './lib/agentApi'
-import { cleanStaleAgentInputDrafts, deleteAgentRoundFromConversation, deleteFavoriteCollection, editOutputs, getActiveAgentRounds, getErrorToastMessage, getPersistedState, getTaskApiProfile, importData, initStore, markInterruptedOpenAIRunningTasks, migratePersistedState, regenerateAgentAssistantMessage, remapAgentRoundMentionsForPathChange, removeTask, reuseConfig, submitAgentMessage, submitTask, useStore } from './store'
+import { removeKeyedBackgroundFromDataUrl } from './lib/transparentImage'
+import { cleanStaleAgentInputDrafts, clearFailedTasks, deleteAgentRoundFromConversation, deleteFavoriteCollection, editOutputs, getActiveAgentRounds, getErrorToastMessage, getPersistedState, getTaskApiProfile, importData, initStore, markInterruptedOpenAIRunningTasks, migratePersistedState, regenerateAgentAssistantMessage, remapAgentRoundMentionsForPathChange, removeTask, reuseConfig, submitAgentMessage, submitTask, useStore } from './store'
 
 const imageA = { id: 'image-a', dataUrl: 'data:image/png;base64,a' }
 const imageB = { id: 'image-b', dataUrl: 'data:image/png;base64,b' }
@@ -202,7 +211,18 @@ describe('favorite collection deletion', () => {
 })
 
 describe('mask draft lifecycle in store actions', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
+    await clearTasks()
+    await clearImages()
+    vi.mocked(callImageApi).mockReset()
+    vi.mocked(callImageApi).mockResolvedValue({
+      images: [],
+      actualParams: {},
+      actualParamsList: [],
+      revisedPrompts: [],
+    })
+    vi.mocked(removeKeyedBackgroundFromDataUrl).mockReset()
+    vi.mocked(removeKeyedBackgroundFromDataUrl).mockImplementation(async (dataUrl: string) => `${dataUrl}-transparent`)
     useStore.setState({
       settings: { ...DEFAULT_SETTINGS, apiKey: 'test-key' },
       prompt: 'prompt',
@@ -259,6 +279,67 @@ describe('mask draft lifecycle in store actions', () => {
     const state = useStore.getState()
     expect(state.tasks).toHaveLength(1)
     expect(state.showToast).toHaveBeenCalledWith('任务已提交', 'success')
+  })
+
+  it('submits transparent background tasks with an augmented prompt and stores original outputs', async () => {
+    vi.mocked(callImageApi).mockResolvedValueOnce({
+      images: ['data:image/png;base64,output'],
+      actualParams: { output_format: 'png' },
+      actualParamsList: [{ output_format: 'png' }],
+      revisedPrompts: ['prompt'],
+    })
+    useStore.setState({
+      params: { ...DEFAULT_PARAMS, transparent_output: true },
+    })
+
+    await submitTask()
+    for (let i = 0; i < 5 && useStore.getState().tasks[0]?.status === 'running'; i++) {
+      await new Promise((resolve) => setTimeout(resolve, 0))
+    }
+
+    expect(callImageApi).toHaveBeenCalledWith(expect.objectContaining({
+      prompt: expect.stringContaining('[背景指令]'),
+      params: expect.objectContaining({ output_format: 'png', transparent_output: true }),
+    }))
+    expect(removeKeyedBackgroundFromDataUrl).toHaveBeenCalledWith('data:image/png;base64,output')
+    const storedTask = useStore.getState().tasks[0]
+    expect(storedTask).toMatchObject({
+      status: 'done',
+      transparentOutput: true,
+      transparentPrompt: expect.stringContaining('[背景指令]'),
+    })
+    expect(storedTask.outputImages).toHaveLength(1)
+    expect(storedTask.transparentOriginalImages).toHaveLength(1)
+    const storedImages = await getAllImages()
+    expect(storedImages.map((image) => image.dataUrl)).toEqual([
+      'data:image/png;base64,output',
+      'data:image/png;base64,output-transparent',
+    ])
+  })
+
+  it('falls back to original image when transparent post-processing fails', async () => {
+    vi.mocked(callImageApi).mockResolvedValueOnce({
+      images: ['data:image/png;base64,raw-output'],
+      actualParams: { output_format: 'png' },
+      actualParamsList: [{ output_format: 'png' }],
+      revisedPrompts: [],
+    })
+    vi.mocked(removeKeyedBackgroundFromDataUrl).mockRejectedValueOnce(new Error('canvas failed'))
+    useStore.setState({
+      params: { ...DEFAULT_PARAMS, transparent_output: true },
+    })
+
+    await submitTask()
+    for (let i = 0; i < 5 && useStore.getState().tasks[0]?.status === 'running'; i++) {
+      await new Promise((resolve) => setTimeout(resolve, 0))
+    }
+
+    const storedTask = useStore.getState().tasks[0]
+    expect(storedTask.status).toBe('done')
+    expect(storedTask.outputImages).toHaveLength(1)
+    expect(storedTask.transparentOriginalImages).toEqual([''])
+    const storedImages = await getAllImages()
+    expect(storedImages.map((image) => image.dataUrl)).toEqual(['data:image/png;base64,raw-output'])
   })
 
   it('preserves selected image mentions when replacing a mask target with an equivalent image id', () => {
@@ -1436,6 +1517,25 @@ describe('agent context for removed outputs', () => {
     const serializedConversations = JSON.stringify(state.agentConversations)
     expect(serializedConversations).toContain('function_call_output')
     expect(serializedConversations).not.toContain('batch-deleted-base64')
+  })
+
+  it('clears only failed gallery tasks', async () => {
+    const failedA = task({ id: 'failed-a', status: 'error', error: '生成失败', outputImages: ['failed-image-a'] })
+    const failedB = task({ id: 'failed-b', status: 'error', error: '生成失败', outputImages: ['failed-image-b'] })
+    const done = task({ id: 'done-task', status: 'done', outputImages: ['done-image'] })
+    const running = task({ id: 'running-task', status: 'running', finishedAt: null, elapsed: null })
+    useStore.setState({
+      tasks: [failedA, done, failedB, running],
+      selectedTaskIds: ['failed-a', 'done-task', 'failed-b'],
+      showToast: vi.fn(),
+    })
+
+    await clearFailedTasks()
+
+    const state = useStore.getState()
+    expect(state.tasks.map((item) => item.id)).toEqual(['done-task', 'running-task'])
+    expect(state.selectedTaskIds).toEqual(['done-task'])
+    expect(state.showToast).toHaveBeenCalledWith('已删除 2 个任务', 'success')
   })
 })
 

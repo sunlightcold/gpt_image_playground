@@ -788,6 +788,8 @@ export default function InputBar() {
     setPrompt(getContentEditablePlainText(el))
   }, [setPrompt])
   const agentAutoImageCount = appMode === 'agent' && activeProfile.provider === 'openai' && activeProfile.apiMode === 'responses'
+  const showTransparentOutputControl = appMode === 'gallery' && params.output_format === 'png'
+  const transparentOutputEnabled = showTransparentOutputControl && params.transparent_output
   const compressionDisabled = params.output_format === 'png'
   const outputImageLimit = getOutputImageLimitForSettings(effectiveSettings)
   const nDraftValue = Number(nInput)
@@ -807,6 +809,10 @@ export default function InputBar() {
   const atImageLimit = inputImages.length >= API_MAX_IMAGES
   const uploadImageTooltipText = atImageLimit ? `参考图数量已达上限（${API_MAX_IMAGES} 张），无法继续添加` : '上传图片'
   const compressionHint = useHintTooltip({ enabled: () => compressionDisabled })
+  const transparentOutputHint = useHintTooltip()
+  const handleTransparentOutputMenuOpenChange = useCallback((open: boolean) => {
+    if (open) transparentOutputHint.hide()
+  }, [transparentOutputHint.hide])
   const qualityHint = useHintTooltip({ enabled: () => settings.codexCli })
   const nLimitHint = useHintTooltip({ autoHideMs: 2000 })
   const maskTargetImage = maskDraft
@@ -1974,7 +1980,10 @@ export default function InputBar() {
         <span className="text-gray-400 dark:text-gray-500 ml-1">格式</span>
         <Select
           value={params.output_format}
-          onChange={(val) => setParams({ output_format: val as any })}
+          onChange={(val) => setParams({
+            output_format: val as any,
+            ...(val === 'png' ? { output_compression: null } : { transparent_output: false }),
+          })}
           options={[
             { label: 'PNG', value: 'png' },
             { label: 'JPEG', value: 'jpeg' },
@@ -1983,36 +1992,64 @@ export default function InputBar() {
           className={selectClass}
         />
       </label>
-      <label
-        className="relative flex flex-col gap-0.5"
-        onMouseEnter={compressionHint.show}
-        onMouseLeave={compressionHint.hide}
-        onTouchStart={compressionHint.startTouch}
-        onTouchEnd={compressionHint.clearTimer}
-        onTouchCancel={compressionHint.hide}
-        onClick={compressionHint.show}
-      >
-        <span className="text-gray-400 dark:text-gray-500 ml-1">压缩率</span>
-        <input
-          value={outputCompressionInput}
-          onChange={(e) => setOutputCompressionInput(e.target.value)}
-          onBlur={commitOutputCompression}
-          disabled={compressionDisabled}
-          type="number"
-          min={0}
-          max={100}
-          placeholder="0-100"
-          className={`px-3 py-1.5 rounded-none border-2 border-black dark:border-white focus:outline-none text-xs transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] font-bold ${
-            compressionDisabled
-              ? 'bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed opacity-50'
-              : 'bg-white dark:bg-zinc-950 text-slate-900 dark:text-white'
-            }`}
-        />
-        <ButtonTooltip
-          visible={compressionHint.visible}
-          text="仅 JPEG 和 WebP 支持压缩率"
-        />
-      </label>
+      {showTransparentOutputControl ? (
+        <label
+          className="relative flex flex-col gap-0.5"
+          onMouseEnter={transparentOutputHint.show}
+          onMouseLeave={transparentOutputHint.hide}
+          onTouchStart={transparentOutputHint.startTouch}
+          onTouchEnd={transparentOutputHint.clearTimer}
+          onTouchCancel={transparentOutputHint.hide}
+          onClick={transparentOutputHint.show}
+        >
+          <span className="text-gray-400 dark:text-gray-500 ml-1">透明背景</span>
+          <Select
+            value={transparentOutputEnabled ? 'on' : 'off'}
+            onChange={(val) => setParams({ transparent_output: val === 'on', output_compression: null })}
+            options={[
+              { label: 'false', value: 'off' },
+              { label: 'true', value: 'on' },
+            ]}
+            className={selectClass}
+            onOpenChange={handleTransparentOutputMenuOpenChange}
+          />
+          <ButtonTooltip
+            visible={transparentOutputHint.visible}
+            text="通过纯色背景提示词和本地后处理生成透明背景"
+          />
+        </label>
+      ) : (
+        <label
+          className="relative flex flex-col gap-0.5"
+          onMouseEnter={compressionHint.show}
+          onMouseLeave={compressionHint.hide}
+          onTouchStart={compressionHint.startTouch}
+          onTouchEnd={compressionHint.clearTimer}
+          onTouchCancel={compressionHint.hide}
+          onClick={compressionHint.show}
+        >
+          <span className="text-gray-400 dark:text-gray-500 ml-1">压缩率</span>
+          <input
+            value={outputCompressionInput}
+            onChange={(e) => setOutputCompressionInput(e.target.value)}
+            onBlur={commitOutputCompression}
+            disabled={compressionDisabled}
+            type="number"
+            min={0}
+            max={100}
+            placeholder="0-100"
+            className={`px-3 py-1.5 rounded-none border-2 border-black dark:border-white focus:outline-none text-xs transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] font-bold ${
+              compressionDisabled
+                ? 'bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-600 cursor-not-allowed opacity-50'
+                : 'bg-white dark:bg-zinc-950 text-slate-900 dark:text-white'
+              }`}
+          />
+          <ButtonTooltip
+            visible={compressionHint.visible}
+            text="仅 JPEG 和 WebP 支持压缩率"
+          />
+        </label>
+      )}
       <label className="flex flex-col gap-0.5">
         <span className="text-gray-400 dark:text-gray-500 ml-1">审核</span>
         <Select

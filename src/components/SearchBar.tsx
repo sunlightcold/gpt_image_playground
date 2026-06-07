@@ -1,7 +1,7 @@
 import type React from 'react'
-import { useStore } from '../store'
+import { clearFailedTasks, useStore } from '../store'
 import Select from './Select'
-import { ChevronLeftIcon, FavoriteIcon, CollectionManageIcon } from './icons'
+import { ChevronLeftIcon, FavoriteIcon, CollectionManageIcon, TrashIcon } from './icons'
 
 const SearchBar: React.FC = () => {
   const searchQuery = useStore((s) => s.searchQuery)
@@ -13,7 +13,10 @@ const SearchBar: React.FC = () => {
   const activeFavoriteCollectionId = useStore((s) => s.activeFavoriteCollectionId)
   const setActiveFavoriteCollectionId = useStore((s) => s.setActiveFavoriteCollectionId)
   const openManageCollectionsModal = useStore((s) => s.openManageCollectionsModal)
+  const tasks = useStore((s) => s.tasks)
+  const setConfirmDialog = useStore((s) => s.setConfirmDialog)
   const inCollectionOverview = filterFavorite && !activeFavoriteCollectionId
+  const failedCount = tasks.filter((task) => task.status === 'error').length
 
   const handleFavoriteClick = () => {
     if (activeFavoriteCollectionId) {
@@ -21,6 +24,20 @@ const SearchBar: React.FC = () => {
       return
     }
     setFilterFavorite(!filterFavorite)
+  }
+
+  const handleClearFailed = () => {
+    if (failedCount === 0) return
+    setConfirmDialog({
+      title: '清除失败记录',
+      message: `确定要删除 ${failedCount} 条失败记录吗？关联的孤立图片资源也会被清理。`,
+      confirmText: '删除',
+      cancelText: '取消',
+      tone: 'danger',
+      action: () => {
+        void clearFailedTasks()
+      },
+    })
   }
 
   return (
@@ -47,19 +64,31 @@ const SearchBar: React.FC = () => {
           </button>
         )}
         {!inCollectionOverview && (
-          <div className="relative w-28">
-            <Select
-              value={filterStatus}
-              onChange={(val) => setFilterStatus(val as any)}
-              options={[
-                { label: '全部状态', value: 'all' },
-                { label: '已完成', value: 'done' },
-                { label: '生成中', value: 'running' },
-                { label: '失败', value: 'error' },
-              ]}
-              className="px-3 py-2.5 rounded-sm border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-sm font-bold text-slate-700 dark:text-zinc-200 focus:outline-none shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:bg-slate-50 transition-all cursor-pointer"
-            />
-          </div>
+          <>
+            <div className="relative w-28">
+              <Select
+                value={filterStatus}
+                onChange={(val) => setFilterStatus(val as any)}
+                options={[
+                  { label: '全部状态', value: 'all' },
+                  { label: '已完成', value: 'done' },
+                  { label: '生成中', value: 'running' },
+                  { label: '失败', value: 'error' },
+                ]}
+                className="px-3 py-2.5 rounded-sm border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-sm font-bold text-slate-700 dark:text-zinc-200 focus:outline-none shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:bg-slate-50 transition-all cursor-pointer"
+              />
+            </div>
+            <button
+              type="button"
+              onClick={handleClearFailed}
+              disabled={failedCount === 0}
+              title={failedCount > 0 ? `清理 ${failedCount} 条失败记录` : '没有失败记录'}
+              aria-label={failedCount > 0 ? `清理 ${failedCount} 条失败记录` : '没有失败记录'}
+              className="p-2.5 rounded-sm border-2 border-black dark:border-white bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all duration-200 active:scale-95 enabled:hover:-translate-x-0.5 enabled:hover:-translate-y-0.5 enabled:hover:bg-[#FFE66D] enabled:hover:text-black disabled:cursor-not-allowed disabled:opacity-45"
+            >
+              <TrashIcon className="w-5 h-5" />
+            </button>
+          </>
         )}
       </div>
       <div className="relative flex-1 z-10">
