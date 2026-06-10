@@ -4,6 +4,7 @@ import {
   DEFAULT_OPENAI_PROFILE_ID,
   DEFAULT_SETTINGS,
   createDefaultOpenAIProfile,
+  getActiveApiProfile,
   findEquivalentApiProfile,
   importCustomProviderDefinitionFromJson,
   importCustomProviderSettingsFromJson,
@@ -569,13 +570,15 @@ describe('custom providers', () => {
     expect(profile.model).toBe('custom-source-model')
   })
 
-  it('disables upstream streaming by default and preserves partial image count', () => {
+  it('uses API-mode specific streaming defaults and preserves partial image count', () => {
     expect(createDefaultOpenAIProfile().streamImages).toBe(false)
+    expect(createDefaultOpenAIProfile({ apiMode: 'responses' }).streamImages).toBe(true)
     expect(createDefaultOpenAIProfile().streamPartialImages).toBe(1)
     expect(DEFAULT_SETTINGS.streamImages).toBe(false)
     expect(DEFAULT_SETTINGS.streamPartialImages).toBe(1)
     expect(DEFAULT_SETTINGS.profiles[0].streamImages).toBe(false)
     expect(DEFAULT_SETTINGS.profiles[0].streamPartialImages).toBe(1)
+    expect(normalizeSettings({ apiMode: 'responses' }).streamImages).toBe(true)
 
     const normalized = normalizeSettings({
       profiles: [
@@ -626,6 +629,57 @@ describe('custom providers', () => {
 
     expect(normalized.streamImages).toBe(true)
     expect(normalized.profiles[0].streamImages).toBe(true)
+  })
+
+  it('normalizes custom providers to Images API mode', () => {
+    const settings = normalizeSettings({
+      customProviders: [{ id: 'custom-json', name: 'Custom JSON', submit: { path: 'images/generations' } }],
+      profiles: [{
+        id: 'custom-profile',
+        name: 'Custom Profile',
+        provider: 'custom-json',
+        baseUrl: 'https://custom.example.com/v1',
+        apiKey: 'custom-key',
+        model: 'custom-model',
+        apiMode: 'responses',
+        streamImages: true,
+      }],
+    })
+
+    expect(settings.profiles[0]).toMatchObject({
+      provider: 'custom-json',
+      apiMode: 'images',
+      streamImages: false,
+    })
+  })
+
+  it('keeps active custom providers in Images API mode when legacy apiMode is responses', () => {
+    const settings = normalizeSettings({
+      apiMode: 'responses',
+      customProviders: [{ id: 'custom-json', name: 'Custom JSON', submit: { path: 'images/generations' } }],
+      activeProfileId: 'custom-profile',
+      profiles: [{
+        id: 'custom-profile',
+        name: 'Custom Profile',
+        provider: 'custom-json',
+        baseUrl: 'https://custom.example.com/v1',
+        apiKey: 'custom-key',
+        model: 'custom-model',
+      }],
+    })
+
+    const activeProfile = getActiveApiProfile({ ...settings, apiMode: 'responses', streamImages: true })
+    expect(activeProfile.apiMode).toBe('images')
+    expect(activeProfile.streamImages).toBe(false)
+  })
+
+  it('keeps non-OpenAI providers in Images API mode when switching providers', () => {
+    const provider = { id: 'custom-json', name: 'Custom JSON', submit: { path: 'images/generations' } }
+    const openaiProfile = createDefaultOpenAIProfile({ apiMode: 'responses', streamImages: true })
+
+    const customProfile = switchApiProfileProvider(openaiProfile, provider.id, provider)
+
+    expect(customProfile).toMatchObject({ provider: provider.id, apiMode: 'images', streamImages: false })
   })
 
   it('enables Agent submit auto scroll by default', () => {
