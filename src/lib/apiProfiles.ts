@@ -19,7 +19,6 @@ import { readRuntimeEnv } from './runtimeEnv'
 import { isImportableConfigUrl } from './customProviderConfigUrl'
 
 const OPENAI_DEFAULT_BASE_URL = 'https://img.proxy2it.com/v1'
-const LEGACY_OPENAI_DEFAULT_BASE_URLS = ['https://cn.proxy2it.com/v1']
 const RAW_DEFAULT_API_URL = readRuntimeEnv(import.meta.env.VITE_DEFAULT_API_URL)
 const DEFAULT_OPENAI_API_PROXY = true
 const DEFAULT_OPENAI_STREAM_IMAGES = false
@@ -403,9 +402,7 @@ function normalizeProviderDrafts(input: unknown, customProviderIds: Set<string>)
 
 function isKnownDefaultOpenAIBaseUrl(baseUrl: unknown): boolean {
   if (typeof baseUrl !== 'string' || !baseUrl.trim()) return false
-  const normalized = normalizeBaseUrl(baseUrl)
-  return normalized === normalizeBaseUrl(OPENAI_DEFAULT_BASE_URL) ||
-    LEGACY_OPENAI_DEFAULT_BASE_URLS.some((legacy) => normalized === normalizeBaseUrl(legacy))
+  return normalizeBaseUrl(baseUrl) === normalizeBaseUrl(OPENAI_DEFAULT_BASE_URL)
 }
 
 function isDefaultOpenAIBaseUrl(baseUrl: unknown): boolean {
